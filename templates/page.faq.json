@@ -1,0 +1,178 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "120ch"
+      }
+    },
+    "rich_text_wWLGdy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UEVbQf": {
+          "type": "heading",
+          "settings": {
+            "text": "Faq's",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_g4xqMh": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Find quick answers to common questions about orders, shipping, returns, and more. Need help? Contact our support team!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UEVbQf",
+        "richtext_g4xqMh"
+      ],
+      "settings": {
+        "full_width": false,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "faq_jmNM7H": {
+      "type": "faq",
+      "blocks": {
+        "item_HkLFtD": {
+          "type": "item",
+          "settings": {
+            "title": "What is the delivery time for orders placed on Mobile Direct PK?",
+            "content": "<p>We offer delivery across Pakistan. Orders are usually delivered within <strong>2 to 5 business days</strong>, depending on your location.</p>"
+          }
+        },
+        "item_QXxypF": {
+          "type": "item",
+          "settings": {
+            "title": "What are the delivery charges?",
+            "content": "<p>Our delivery charges range between <strong>PKR 150 to PKR 300</strong>, depending on the weight and location of your order.</p>"
+          }
+        },
+        "item_Pp7MPA": {
+          "type": "item",
+          "settings": {
+            "title": "Can I track my order?",
+            "content": "<p>Yes, once your order is shipped, we will send you a tracking number via email so you can monitor your delivery status.</p>"
+          }
+        },
+        "item_LN6FFT": {
+          "type": "item",
+          "settings": {
+            "title": "Do you offer cash on delivery (COD)?",
+            "content": "<p>Yes, we offer <strong>Cash on Delivery</strong> across Pakistan for most products.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_HkLFtD",
+        "item_QXxypF",
+        "item_Pp7MPA",
+        "item_LN6FFT"
+      ],
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Shopping",
+        "content": "<p>Get detailed information about our shipping methods, delivery timelines, and order handling. We aim to deliver your products safely and on time across Pakistan.</p>",
+        "team_avatar_width": 160,
+        "support_hours": "",
+        "answer_time": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "background": "rgba(0,0,0,0)",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "#ffffff",
+        "accordion_text_color": ""
+      }
+    },
+    "faq_wjY9Bm": {
+      "type": "faq",
+      "blocks": {
+        "item_PjnEXD": {
+          "type": "item",
+          "settings": {
+            "title": "Do I need to create an account to place an order?",
+            "content": "<p>No, you can place an order as a <strong>guest</strong>. However, creating an account allows you to track orders, manage returns, and access exclusive offers.</p>"
+          }
+        },
+        "item_fr44bV": {
+          "type": "item",
+          "settings": {
+            "title": "How do I create an account on Mobile Direct PK?",
+            "content": "<p>Click on the “Account” icon or button on our website, enter your name, email, password, and you're ready to go!</p>"
+          }
+        },
+        "item_K6a7jh": {
+          "type": "item",
+          "settings": {
+            "title": "Is my personal information secure on your site?",
+            "content": "<p>Yes, we prioritize your privacy and use secure encryption protocols to protect all user data. Please read our <a href=\"#\">Privacy Policy</a> for more details.</p>"
+          }
+        },
+        "item_DpPqxT": {
+          "type": "item",
+          "settings": {
+            "title": "Can I update my address and contact details after placing an order?",
+            "content": "<p>You can update your details from your account dashboard. If the order is already placed, contact us immediately so we can update the shipping info before dispatch.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_PjnEXD",
+        "item_fr44bV",
+        "item_K6a7jh",
+        "item_DpPqxT"
+      ],
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Account",
+        "content": "<p>Manage your orders with ease by creating an account. Track your purchases, save shipping details, and enjoy a personalized shopping experience with Mobile Direct PK.</p>",
+        "team_avatar_width": 160,
+        "support_hours": "",
+        "answer_time": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "#ffffff",
+        "accordion_text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_wWLGdy",
+    "faq_jmNM7H",
+    "faq_wjY9Bm"
+  ]
+}

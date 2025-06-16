@@ -1,0 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "free-shipping": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Free shipping",
+            "content": "<p>Delivered in 1-3 business days</p>"
+          }
+        },
+        "customer-support": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Customer service",
+            "content": "<p>Outstanding premium support</p>"
+          }
+        },
+        "discount": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-star",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Returns",
+            "content": "<p>We offer easy returns</p>"
+          }
+        },
+        "payment": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Secure payment",
+            "content": "<p>Diverse secure payment choices</p>"
+          }
+        }
+      },
+      "block_order": [
+        "free-shipping",
+        "customer-support",
+        "discount",
+        "payment"
+      ],
+      "custom_css": [
+        ".text-with-icons {justify-content: stretch;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
+        "heading_tag": "h6",
+        "text_alignment": "center",
+        "icon_spacing": "small",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text_Gmrz9R": {
+          "type": "text",
+          "settings": {
+            "title": "About",
+            "content": "<p>509 Floor A1, 77 E1 Main Boulevard Gulberg, Block E 1 Gulberg III, Lahore, 54000<a href=\"https://maps.app.goo.gl/vnKYbDQP8s25u7yx8\" title=\"https://maps.app.goo.gl/vnKYbDQP8s25u7yx8\"><br/></a>Email: <a href=\"mailto:info@mobiledirect.pk\" target=\"_blank\" title=\"mailto:info@mobiledirect.pk\">info@mobiledirect.pk</a><a href=\"mailto:info@mobiledirectonline.co.uk\" title=\"mailto:info@mobiledirectonline.co.uk\"><strong><br/></strong></a>Call Us: <a href=\"https://wa.me/923008450344\" title=\"https://wa.me/923008450344\">+92 300 8450344</a></p>",
+            "enable_follow_on_shop": false
+          }
+        },
+        "links": {
+          "type": "links",
+          "settings": {
+            "menu": "footer",
+            "show_menu_title": true,
+            "menu_title": "Policies & Support"
+          }
+        },
+        "links_PzVmhp": {
+          "type": "links",
+          "settings": {
+            "menu": "customer-account-main-menu",
+            "show_menu_title": true,
+            "menu_title": "Company Info"
+          }
+        },
+        "links_mDEKyc": {
+          "type": "links",
+          "settings": {
+            "menu": "shop",
+            "show_menu_title": true,
+            "menu_title": "Shop"
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "image_width": 150,
+            "heading_size": "h6",
+            "title": "Sign Up for Email",
+            "content": "<p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Gmrz9R",
+        "links",
+        "links_PzVmhp",
+        "links_mDEKyc",
+        "newsletter"
+      ],
+      "custom_css": [
+        "@media (min-width: 993px) {.footer__wrapper {gap: 0px; }}"
+      ],
+      "settings": {
+        "show_social_media": true,
+        "show_payment_icons": true,
+        "show_policy_links": false,
+        "show_country_selector": false,
+        "show_country_flag": false,
+        "show_country_name": false,
+        "show_locale_selector": false
+      }
+    }
+  },
+  "order": [
+    "text-with-icons",
+    "footer"
+  ]
+}

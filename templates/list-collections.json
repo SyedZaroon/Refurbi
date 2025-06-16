@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "custom_css": [
+        ".collection-card__content-wrapper.place-self-center.text-center.text-custom {position: absolute; bottom: 50px; left: 0px;}",
+        "svg.icon.icon-circle-button-right-clipped {display: none;}"
+      ],
+      "settings": {
+        "collections": [],
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 5,
+        "text_color": "#1a1a1a",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

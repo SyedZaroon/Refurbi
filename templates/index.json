@@ -1,0 +1,622 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1.png",
+            "mobile_image": "shopify://shop_images/Artboard_2.png",
+            "content_max_width": 400,
+            "mobile_text_position": "place-self-start-center text-center",
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "subheading": "Top Picks Only",
+            "title": "Experience the Future Today",
+            "heading_tag": "h1",
+            "button_text": "Buy Now",
+            "button_link": "shopify://collections/mobile-phones",
+            "text_color": "#000000",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 3,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide-2"
+      ],
+      "settings": {
+        "full_width": false,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade",
+        "autoplay": true,
+        "cycle_speed": 6,
+        "background": "#f2f2f2",
+        "background_gradient": "linear-gradient(60deg, rgba(241, 243, 246, 1), rgba(NaN, NaN, NaN, 0))"
+      }
+    },
+    "image-link-blocks": {
+      "type": "image-link-blocks",
+      "blocks": {
+        "e4a0ef18-1856-4ddd-83d8-871a60d7acac": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/apple_logo_499b3868-bae9-45c8-b5ef-ea3bdd19dbb6.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/iphone",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "1664424046b00c932c-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/samsung_logo_0f6bb408-6ab7-4dfd-ad13-5b8c62c523df.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/samsung",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "1664424046b00c932c-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/tecno_logo_c34ca8ec-334c-4ca4-8e86-d98bf90df004.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/tecno",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "1664424046b00c932c-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/xiaomi_logo_e5f0db71-4e10-4af4-93b4-0b1db2f07cc5.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/xiaomi",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "1664424046b00c932c-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oppo_logo_0a96baaa-934a-4dad-b749-3a0c800c939f.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/oppo",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_ggcAQE": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/infinix_logo_fb77deba-d29f-4676-95d0-016f9afe0f2f.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/infinix",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "e4a0ef18-1856-4ddd-83d8-871a60d7acac",
+        "1664424046b00c932c-1",
+        "1664424046b00c932c-0",
+        "1664424046b00c932c-2",
+        "1664424046b00c932c-3",
+        "item_ggcAQE"
+      ],
+      "settings": {
+        "full_width": false,
+        "block_size": "medium",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "featured_collection_xjxjUg": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "mobile-phones",
+        "products": [],
+        "full_width": false,
+        "stack_products": false,
+        "show_progress_bar": false,
+        "products_count": 5,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "",
+        "title": "Mobile Phones",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "rich_text_V3PazG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xPnqtK": {
+          "type": "heading",
+          "settings": {
+            "text": "iPhone 16",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_hx37Ph": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Strength meets style.iPhone 16 comes in five vibrant colors, from black to ultramarine.</p>"
+          }
+        },
+        "image_nidXCX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/all_colors__flhn5cmb1t26_xlarge_2x-removebg-preview.png",
+            "width_mode": "custom",
+            "max_width": 600,
+            "mobile_max_width": 400
+          }
+        }
+      },
+      "block_order": [
+        "heading_xPnqtK",
+        "richtext_hx37Ph",
+        "image_nidXCX"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "media-grid": {
+      "type": "media-grid",
+      "blocks": {
+        "video_3wzdXi": {
+          "type": "video",
+          "settings": {
+            "external_video_url": "https://www.youtube.com/watch?v=eDqfg_LexCQ",
+            "show_video_controls": false,
+            "title": "",
+            "heading_tag": "h4",
+            "link_url": "shopify://collections/iphone",
+            "link_text": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 2,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/promotion1.png",
+            "title": "Apple Intelligence",
+            "heading_tag": "h5",
+            "link_url": "",
+            "link_text": "",
+            "mobile_text_position": "place-self-start text-start",
+            "desktop_column_span": 1,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-start sm:text-start",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "item-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/promotion2.png",
+            "title": "New Dimension",
+            "heading_tag": "h5",
+            "link_url": "",
+            "link_text": "",
+            "mobile_text_position": "place-self-start-center text-center",
+            "desktop_column_span": 1,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-start-center sm:text-center",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "video_bcnxcq": {
+          "type": "video",
+          "settings": {
+            "external_video_url": "https://www.youtube.com/watch?v=2dI9ql8KSH4",
+            "show_video_controls": false,
+            "title": "Camera Control",
+            "heading_tag": "h4",
+            "link_url": "",
+            "link_text": "",
+            "mobile_text_position": "place-self-start-end text-end",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-start-end sm:text-end",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "video_3wzdXi",
+        "item-2",
+        "item-3",
+        "video_bcnxcq"
+      ],
+      "settings": {
+        "full_width": true,
+        "reduce_width": false,
+        "desktop_row_height": 290,
+        "mobile_row_height": 150,
+        "background": "",
+        "background_gradient": ""
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "watch",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "tablets",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "ipad",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection_dHa6xV": {
+          "type": "collection",
+          "settings": {
+            "collection": "mac",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection_XCnbaW": {
+          "type": "collection",
+          "settings": {
+            "collection": "headphones",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3",
+        "collection_dHa6xV",
+        "collection_XCnbaW"
+      ],
+      "settings": {
+        "full_width": false,
+        "stack_collections": false,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 5,
+        "show_progress_bar": false,
+        "subheading": "",
+        "title": "Collection list",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "accessories",
+        "products": [],
+        "full_width": false,
+        "stack_products": false,
+        "show_progress_bar": false,
+        "products_count": 5,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "",
+        "title": "Accessories",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "collection_list_EpbWFA": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_Cx6EhA": {
+          "type": "collection",
+          "settings": {
+            "collection": "cables",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection_f4pRDW": {
+          "type": "collection",
+          "settings": {
+            "collection": "charger",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection_WpyyWe": {
+          "type": "collection",
+          "settings": {
+            "collection": "airpods",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection_mpNVjK": {
+          "type": "collection",
+          "settings": {
+            "collection": "airtag",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection_UQDacn": {
+          "type": "collection",
+          "settings": {
+            "collection": "apple-pencil",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        }
+      },
+      "block_order": [
+        "collection_Cx6EhA",
+        "collection_f4pRDW",
+        "collection_WpyyWe",
+        "collection_mpNVjK",
+        "collection_UQDacn"
+      ],
+      "settings": {
+        "full_width": false,
+        "stack_collections": false,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 5,
+        "show_progress_bar": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "166442457738b23caf-0": {
+          "type": "item",
+          "settings": {
+            "title": "Do you ship overseas?",
+            "content": "<p>We only deliver in the cities of Pakistan currently.</p>"
+          }
+        },
+        "166442457738b23caf-1": {
+          "type": "item",
+          "settings": {
+            "title": "How do I cancel my order?",
+            "content": "<p>You can cancel your order by calling us directly on our helpline at +92 326 5280000. If your order has already been dispatched, you can refuse to accept the order at the time of delivery and return it to our Rider. Our team will identify your order as canceled, and the advance payment will be reimbursed.</p>"
+          }
+        },
+        "166442457738b23caf-2": {
+          "type": "item",
+          "settings": {
+            "title": "Can I modify the shipping address of my order after it has been placed?",
+            "content": "<p>Once the order has been placed, you cannot change the delivery address. You have to cancel the order and re-order the product with the correct address. The already made payments will be refunded to you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "166442457738b23caf-0",
+        "166442457738b23caf-1",
+        "166442457738b23caf-2"
+      ],
+      "settings": {
+        "full_width": false,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "<p>Have questions about our products or shipping? We're here to help! </p>",
+        "team_avatar_width": 160,
+        "support_hours": "Our customer support is available Monday to Friday: 09am-05pm.",
+        "answer_time": "Average answer time: 24h",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "image-link-blocks",
+    "featured_collection_xjxjUg",
+    "rich_text_V3PazG",
+    "media-grid",
+    "collection-list",
+    "featured-collection",
+    "collection_list_EpbWFA",
+    "faq"
+  ]
+}
