@@ -8680,7 +8680,7 @@ shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
 }
 
 .tabs {
-  max-width: var(--tabs-max-width);
+  /* max-width: var(--tabs-max-width); */
   margin-inline-start: auto;
   margin-inline-end: auto;
   display: grid;
