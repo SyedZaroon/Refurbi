@@ -112,13 +112,16 @@
             "icon": "none",
             "icon_width": 20,
             "title": "Product Description",
-            "content": "<p>{{ product.description }}</p>",
+            "content": "{{ product.description }}",
             "page": ""
           }
         }
       },
       "block_order": [
         "item_mJ8Wwg"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 1150px) {.section-stack__main {width: 100%; }}"
       ],
       "name": "Accordion content",
       "settings": {
