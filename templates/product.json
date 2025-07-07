@@ -103,6 +103,43 @@
         "input_text_color": ""
       }
     },
+    "accordion_content_jYnbDT": {
+      "type": "accordion-content",
+      "blocks": {
+        "item_mJ8Wwg": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Product Description",
+            "content": "<p>hi</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_mJ8Wwg"
+      ],
+      "name": "Accordion content",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
+    },
     "tabs_fPN4GH": {
       "type": "tabs",
       "blocks": {
@@ -367,6 +404,7 @@
   },
   "order": [
     "main",
+    "accordion_content_jYnbDT",
     "tabs_fPN4GH",
     "video_fiLXww",
     "what_in_the_box_X7j8GX",
