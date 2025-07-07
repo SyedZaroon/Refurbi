@@ -112,7 +112,7 @@
             "icon": "none",
             "icon_width": 20,
             "title": "Product Description",
-            "content": "<p>hi</p>",
+            "content": "<p>{{ product.description }}</p>",
             "page": ""
           }
         }
@@ -138,36 +138,6 @@
         "button_text_color": "",
         "accordion_background": "",
         "accordion_text_color": ""
-      }
-    },
-    "tabs_fPN4GH": {
-      "type": "tabs",
-      "blocks": {
-        "tab_XiFGGV": {
-          "type": "tab",
-          "settings": {
-            "title": "Product Description",
-            "content": "{{ product.description }}",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_XiFGGV"
-      ],
-      "name": "Tabs",
-      "settings": {
-        "full_width": true,
-        "content_size": "medium",
-        "subheading": "",
-        "title": "",
-        "text_alignment": "left",
-        "first_tab_open": false,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
       }
     },
     "video_fiLXww": {
@@ -405,7 +375,6 @@
   "order": [
     "main",
     "accordion_content_jYnbDT",
-    "tabs_fPN4GH",
     "video_fiLXww",
     "what_in_the_box_X7j8GX",
     "image_with_text_overlay_3NMRyM",
