@@ -10134,3 +10134,11 @@ shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
   display: -webkit-box;
   overflow: hidden;
 }
+
+
+/* phone check css */
+
+.phonecheck{
+  display: flex;
+  cursor: pointer;
+}
