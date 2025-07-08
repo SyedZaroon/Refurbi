@@ -1,3 +1,2 @@
 [environment.development]
-store="mobiledirectpk.myshopify.com"
-theme_id = "177053532456"
+store = "mobiledirectpk.myshopify.com"
