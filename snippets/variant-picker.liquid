@@ -18,6 +18,8 @@ Supported variables
 * block: the block itself, for theme-specific options (such as selector types)
 {%- endcomment -%}
 
+{% render 'custom-drawer' %}
+
 {%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
 {%- assign size_label_list = 'general.label.size' | t | replace: ', ', ',' | downcase | split: ',' -%}
 {%- assign variant_image_options = block.settings.variant_image_options | replace: ', ', ',' | downcase | split: ',' -%}
@@ -152,3 +154,36 @@ Supported variables
     {%- endfor -%}
   </variant-picker>
 {%- endunless -%}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const phoneCheckDiv = document.querySelector(".phonecheck");
+    const header = document.querySelector(".shopify-section--header");
+    const drawer = document.getElementById("custom-drawer");
+    const closeBtn = drawer.querySelector("button[aria-label='Close']");
+const overlay = drawer.shadowRoot.querySelector('[part="overlay"]');
+
+    if (phoneCheckDiv && drawer && closeBtn) {
+      phoneCheckDiv.addEventListener("click", () => {
+        drawer.style.visibility = "visible";
+        drawer.style.opacity = "1";
+        drawer.setAttribute("open", "");
+        drawer.classList.add("animate", "open");
+        header.style.zIndex="-1"
+      });
+
+      closeBtn.addEventListener("click", () => {
+        drawer.style.opacity = "0";
+        drawer.style.visibility = "hidden";
+        drawer.removeAttribute("open");
+        drawer.classList.remove("open");
+        header.style.zIndex="10"
+      });
+      overlay.addEventListener("click", () => {
+        header.style.zIndex="10"
+      });
+    }
+  });
+</script>
+
+

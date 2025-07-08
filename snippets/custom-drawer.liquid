@@ -1,0 +1,151 @@
+<cart-drawer
+  class="cart-drawer drawer drawer--lg show-close-cursor"
+  id="custom-drawer"
+  role="dialog"
+  aria-modal="true"
+  style="left: auto; right: 0px; top: 0px; opacity: 1; visibility: hidden;"
+>
+  <!-- Close button -->
+  <button is="close-button" aria-label="Close">
+    <svg role="presentation" stroke-width="2" focusable="false" width="24" height="24" class="icon icon-close" viewBox="0 0 24 24">
+      <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+    </svg>
+  </button>
+
+  <!-- 🔄 Custom content here -->
+  <div class="custom-drawer-content align-self-start">
+    <div class="custom-drawer__icon-wrapper">
+      <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Phone Check" width="40" height="40">
+      <p class="h5">Phone Check</p>
+    </div>
+
+    <div class="certification-box">
+    <p class="">This device has passed the following tests via our 90-point PhoneCheck inspection by our tech expert engineers and is PhoneCheck Certified.</p>
+    
+    <div class="highlights">
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Battery Health</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Main Microphone</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Battery Charge Cycles</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Earpiece</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Fingerprint Sensor</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Headset Port</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>WiFi</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Cameras</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>GPS</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Flashlight</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Bluetooth</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Touch Screen</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Power Button</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Network Connectivity</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Home Button</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>SIM Reader</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Volume Buttons</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Screen</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Loud Speaker</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Liquid Damage</span>
+      </div>
+      <div class="highlight-item">
+        <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="20px" height="20px">
+        <span>Secondary Microphone</span>
+      </div>
+    </div>
+  </div>
+  </div>
+</cart-drawer>
+
+<style>
+    #custom-drawer{
+    z-index:99999
+}
+
+.custom-drawer__icon-wrapper{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.certification-box,
+.highlights{
+    margin-top:40px
+}
+
+.highlights{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap:20px; 
+}
+
+.highlight-item{
+    display:flex;
+    justify-content:start;
+    gap:5px
+}
+
+@media screen and (max-width:416px){
+    .highlights{
+    display:grid;
+    grid-template-columns: 1fr;
+    row-gap:10px; 
+}
+}
+
+</style>
