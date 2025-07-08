@@ -161,15 +161,15 @@ Supported variables
     const header = document.querySelector(".shopify-section--header");
     const drawer = document.getElementById("custom-drawer");
     const closeBtn = drawer.querySelector("button[aria-label='Close']");
-const overlay = drawer.shadowRoot.querySelector('[part="overlay"]');
+    const overlay = drawer.shadowRoot.querySelector('[part="overlay"]');
 
-    if (phoneCheckDiv && drawer && closeBtn) {
+    if (phoneCheckDiv && drawer && closeBtn && overlay) {
       phoneCheckDiv.addEventListener("click", () => {
         drawer.style.visibility = "visible";
         drawer.style.opacity = "1";
         drawer.setAttribute("open", "");
         drawer.classList.add("animate", "open");
-        header.style.zIndex="-1"
+        header.style.zIndex = "-1";
       });
 
       closeBtn.addEventListener("click", () => {
@@ -177,13 +177,22 @@ const overlay = drawer.shadowRoot.querySelector('[part="overlay"]');
         drawer.style.visibility = "hidden";
         drawer.removeAttribute("open");
         drawer.classList.remove("open");
-        header.style.zIndex="10"
+
+        // Delay the z-index reset by 1.5 seconds (1500 ms)
+        setTimeout(() => {
+          header.style.zIndex = "10";
+        }, 1000);
       });
+
       overlay.addEventListener("click", () => {
-        header.style.zIndex="10"
+        setTimeout(() => {
+          header.style.zIndex = "10";
+        }, 1000);
       });
     }
   });
 </script>
+
+
 
 
