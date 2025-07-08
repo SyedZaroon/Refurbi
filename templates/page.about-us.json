@@ -106,34 +106,19 @@
             "overlay_color": "#000000",
             "overlay_opacity": 30
           }
-        },
-        "collection_imcCCf": {
-          "type": "collection",
-          "settings": {
-            "collection": "accessories",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h5",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
         }
       },
       "block_order": [
         "collection_6ieB9T",
         "collection_XxNxce",
         "collection_NwhyQY",
-        "collection_dnCgDe",
-        "collection_imcCCf"
+        "collection_dnCgDe"
       ],
       "settings": {
         "full_width": false,
         "stack_collections": false,
         "collections_per_row_mobile": "2",
-        "collections_per_row": 5,
+        "collections_per_row": 4,
         "show_progress_bar": false,
         "subheading": "",
         "title": "We meet all your buying needs",
