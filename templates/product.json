@@ -285,50 +285,6 @@
     },
     "faq_eC7LDB": {
       "type": "faq",
-      "blocks": {
-        "item_yLpVEB": {
-          "type": "item",
-          "settings": {
-            "title": "{{ product.metafields.custom.question_1.value }}",
-            "content": "<p>{{ product.metafields.custom.answer_1 | metafield_tag }}</p>"
-          }
-        },
-        "item_xzitBE": {
-          "type": "item",
-          "settings": {
-            "title": "{{ product.metafields.custom.question_2.value }}",
-            "content": "<p>{{ product.metafields.custom.answer_2 | metafield_tag }}</p>"
-          }
-        },
-        "item_JhfRWV": {
-          "type": "item",
-          "settings": {
-            "title": "{{ product.metafields.custom.question_3.value }}",
-            "content": "<p>{{ product.metafields.custom.answer_3 | metafield_tag }}</p>"
-          }
-        },
-        "item_cMBNtB": {
-          "type": "item",
-          "settings": {
-            "title": "{{ product.metafields.custom.question_4.value }}",
-            "content": "<p>{{ product.metafields.custom.answer_4 | metafield_tag }}</p>"
-          }
-        },
-        "item_QjpXbM": {
-          "type": "item",
-          "settings": {
-            "title": "{{ product.metafields.custom.question_5.value }}",
-            "content": "<p>{{ product.metafields.custom.answer_5 | metafield_tag }}</p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_yLpVEB",
-        "item_xzitBE",
-        "item_JhfRWV",
-        "item_cMBNtB",
-        "item_QjpXbM"
-      ],
       "settings": {
         "full_width": false,
         "subheading": "",
