@@ -261,8 +261,6 @@
             "icon": "none",
             "icon_width": 48,
             "subheading": "",
-            "title": "{{ product.metafields.custom.product_right_heading.value }}",
-            "content": "<p>{{ product.metafields.custom.product_right_description | metafield_tag }}</p>",
             "link_text": "",
             "link_url": "",
             "background": "#000000",
