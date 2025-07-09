@@ -192,30 +192,51 @@
       "blocks": {
         "item_TYx3WL": {
           "type": "item",
+          "name": "Question 1",
           "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "title": "{{ product.metafields.custom.product_faq_question_1.value }}",
+            "content": "{{ product.metafields.custom.product_faq_answer_1 | metafield_tag }}"
           }
         },
         "item_jJafUi": {
           "type": "item",
+          "name": "Question 2",
           "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "title": "{{ product.metafields.custom.product_faq_question_2.value }}",
+            "content": "{{ product.metafields.custom.product_faq_answer_2 | metafield_tag }}"
           }
         },
         "item_wn3jLr": {
           "type": "item",
+          "name": "Question 3",
           "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "title": "{{ product.metafields.custom.product_faq_question_3.value }}",
+            "content": "{{ product.metafields.custom.product_faq_answer_3 | metafield_tag }}"
+          }
+        },
+        "item_gEq9dp": {
+          "type": "item",
+          "name": "Question 4",
+          "settings": {
+            "title": "{{ product.metafields.custom.product_faq_question_4.value }}",
+            "content": "{{ product.metafields.custom.product_faq_answer_4 | metafield_tag }}"
+          }
+        },
+        "item_C7X4hb": {
+          "type": "item",
+          "name": "Question 5",
+          "settings": {
+            "title": "{{ product.metafields.custom.product_faq_question_5.value }}",
+            "content": "{{ product.metafields.custom.product_faq_answer_5 | metafield_tag }}"
           }
         }
       },
       "block_order": [
         "item_TYx3WL",
         "item_jJafUi",
-        "item_wn3jLr"
+        "item_wn3jLr",
+        "item_gEq9dp",
+        "item_C7X4hb"
       ],
       "name": "FAQ",
       "settings": {
