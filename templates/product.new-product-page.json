@@ -186,80 +186,11 @@
         "overlay_color": "#000000",
         "overlay_opacity": 30
       }
-    },
-    "faq_eC7LDB": {
-      "type": "faq",
-      "blocks": {
-        "item_yLpVEB": {
-          "type": "item",
-          "settings": {
-            "title": "{{ product.metafields.custom.question_1.value }}",
-            "content": "<p>{{ product.metafields.custom.answer_1 | metafield_tag }}</p>"
-          }
-        },
-        "item_xzitBE": {
-          "type": "item",
-          "settings": {
-            "title": "{{ product.metafields.custom.question_2.value }}",
-            "content": "<p>{{ product.metafields.custom.answer_2 | metafield_tag }}</p>"
-          }
-        },
-        "item_JhfRWV": {
-          "type": "item",
-          "settings": {
-            "title": "{{ product.metafields.custom.question_3.value }}",
-            "content": "<p>{{ product.metafields.custom.answer_3 | metafield_tag }}</p>"
-          }
-        },
-        "item_cMBNtB": {
-          "type": "item",
-          "settings": {
-            "title": "{{ product.metafields.custom.question_4.value }}",
-            "content": "<p>{{ product.metafields.custom.answer_4 | metafield_tag }}</p>"
-          }
-        },
-        "item_QjpXbM": {
-          "type": "item",
-          "settings": {
-            "title": "{{ product.metafields.custom.question_5.value }}",
-            "content": "<p>{{ product.metafields.custom.answer_5 | metafield_tag }}</p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_yLpVEB",
-        "item_xzitBE",
-        "item_JhfRWV",
-        "item_cMBNtB",
-        "item_QjpXbM"
-      ],
-      "settings": {
-        "full_width": false,
-        "subheading": "",
-        "title": "FAQ",
-        "content": "<h2>Have a question ? We are here to help.</h2>",
-        "team_avatar_width": 160,
-        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
-        "answer_time": "Average answer time: 24h",
-        "button_text": "",
-        "button_url": "",
-        "text_position": "start",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "button_background": "",
-        "button_text_color": "",
-        "accordion_background": "",
-        "accordion_text_color": ""
-      }
     }
   },
   "order": [
     "main",
     "accordion_content_jYnbDT",
-    "video_fiLXww",
-    "faq_eC7LDB"
+    "video_fiLXww"
   ]
 }
