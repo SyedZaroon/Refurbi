@@ -1,0 +1,389 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "badges",
+        "price",
+        "rating",
+        "payment_terms",
+        "separator",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_fixed_add_to_cart": false,
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "accordion_content_jYnbDT": {
+      "type": "accordion-content",
+      "blocks": {
+        "item_mJ8Wwg": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Product Description",
+            "content": "{{ product.description }}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_mJ8Wwg"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 1150px) {.section-stack__main {width: 100%; }}"
+      ],
+      "name": "Accordion content",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "background": "rgba(0,0,0,0)",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "#ffffff",
+        "button_text_color": "",
+        "accordion_background": "#ffffff",
+        "accordion_text_color": ""
+      }
+    },
+    "video_fiLXww": {
+      "type": "video",
+      "blocks": {
+        "play_6rjzHR": {
+          "type": "play",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "play_6rjzHR"
+      ],
+      "settings": {
+        "full_width": false,
+        "allow_transparent_header": false,
+        "autoplay": true,
+        "video_size": "auto",
+        "external_video_url": "https://www.youtube.com/watch?v=GDlkCkcIqTs",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "what_in_the_box_X7j8GX": {
+      "type": "what-in-the-box",
+      "settings": {
+        "full_width": true,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "chart_background": "",
+        "chart_text_color": "",
+        "chart_true_false_color": "",
+        "heading1": "{{ product.metafields.custom.product_specification_heading_1_.value }}",
+        "value1": "<p>{{ product.metafields.custom.product_specification_value_1.value }}</p>",
+        "heading2": "{{ product.metafields.custom.product_specification_heading_2.value }}",
+        "value2": "<p>{{ product.metafields.custom.product_specification_value_2.value }}</p>",
+        "heading3": "{{ product.metafields.custom.product_specification_heading_3.value }}",
+        "value3": "<p>{{ product.metafields.custom.product_specification_value_3.value }}</p>",
+        "heading4": "{{ product.metafields.custom.product_specification_heading_4.value }}",
+        "value4": "<p>{{ product.metafields.custom.product_specification_value_4.value }}</p>",
+        "heading5": "{{ product.metafields.custom.product_specification_heading_5.value }}",
+        "value5": "<p>{{ product.metafields.custom.product_specification_value_5.value }}</p>",
+        "image_1": "{{ product.metafields.custom.box_image_1.value }}",
+        "text_1": "{{ product.metafields.custom.box_image_title_1.value }}",
+        "image_2": "{{ product.metafields.custom.box_image_2.value }}",
+        "text_2": "{{ product.metafields.custom.box_image_title_2.value }}",
+        "image_3": "{{ product.metafields.custom.box_image_3.value }}",
+        "text_3": "{{ product.metafields.custom.box_image_title_3.value }}",
+        "image_4": "{{ product.metafields.custom.box_image_4.value }}",
+        "text_4": "{{ product.metafields.custom.box_image_title_4.value }}",
+        "image_5": "{{ product.metafields.custom.box_image_5.value }}",
+        "text_5": "{{ product.metafields.custom.box_image_title_5.value }}"
+      }
+    },
+    "image_with_text_overlay_3NMRyM": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "full_width": false,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "{{ product.metafields.custom.product_main_image.value }}",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "rich_text_tm6cBa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Agpyw9": {
+          "type": "heading",
+          "settings": {
+            "text": "Great powers comewith great privacy.",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_gtYd3P": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Apple Intelligence isdesigned to protect your privacy at every step. It’s integrated into the core of iPhone through on‑device processing. So it’s aware of your personal information without collecting your personal information. And withgroundbreaking Private Cloud Compute, Apple Intelligence can draw on larger Apple‑designed server‑based models, running on Apple silicon, to handle more complex requests for you while protecting your privacy.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Agpyw9",
+        "richtext_gtYd3P"
+      ],
+      "settings": {
+        "full_width": false,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "media_with_text_xXABRf": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_dLbXqw": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.custom.product_left_image.value }}",
+            "media_width": 30,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "{{ product.metafields.custom.product_right_heading.value }}",
+            "content": "<p>{{ product.metafields.custom.product_right_description | metafield_tag }}</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_dLbXqw"
+      ],
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
+    },
+    "faq_eC7LDB": {
+      "type": "faq",
+      "blocks": {
+        "item_yLpVEB": {
+          "type": "item",
+          "settings": {
+            "title": "{{ product.metafields.custom.question_1.value }}",
+            "content": "<p>{{ product.metafields.custom.answer_1 | metafield_tag }}</p>"
+          }
+        },
+        "item_xzitBE": {
+          "type": "item",
+          "settings": {
+            "title": "{{ product.metafields.custom.question_2.value }}",
+            "content": "<p>{{ product.metafields.custom.answer_2 | metafield_tag }}</p>"
+          }
+        },
+        "item_JhfRWV": {
+          "type": "item",
+          "settings": {
+            "title": "{{ product.metafields.custom.question_3.value }}",
+            "content": "<p>{{ product.metafields.custom.answer_3 | metafield_tag }}</p>"
+          }
+        },
+        "item_cMBNtB": {
+          "type": "item",
+          "settings": {
+            "title": "{{ product.metafields.custom.question_4.value }}",
+            "content": "<p>{{ product.metafields.custom.answer_4 | metafield_tag }}</p>"
+          }
+        },
+        "item_QjpXbM": {
+          "type": "item",
+          "settings": {
+            "title": "{{ product.metafields.custom.question_5.value }}",
+            "content": "<p>{{ product.metafields.custom.answer_5 | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_yLpVEB",
+        "item_xzitBE",
+        "item_JhfRWV",
+        "item_cMBNtB",
+        "item_QjpXbM"
+      ],
+      "settings": {
+        "full_width": false,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "<h2>Have a question ? We are here to help.</h2>",
+        "team_avatar_width": 160,
+        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
+        "answer_time": "Average answer time: 24h",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "recommendations_count": 6,
+        "products": [],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "You may also like",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "accordion_content_jYnbDT",
+    "video_fiLXww",
+    "what_in_the_box_X7j8GX",
+    "image_with_text_overlay_3NMRyM",
+    "rich_text_tm6cBa",
+    "media_with_text_xXABRf",
+    "faq_eC7LDB",
+    "related-products"
+  ]
+}
