@@ -219,7 +219,7 @@
       ],
       "name": "FAQ",
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "subheading": "",
         "title": "FAQ",
         "content": "<h2>Have a question ? We are here to help.</h2>",
