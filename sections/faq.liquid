@@ -8,7 +8,7 @@
     --section-stack-main: {% if text_position == 'center' %}60%{% else %}50%{% endif %};
   }
 </style>
-
+{%- if section.settings.team_avatar != blank or section.settings.support_hours != blank or section.settings.answer_time != blank -%}
 <div {% render 'section-properties' %}>
   <div class="section-stack {% if text_position != 'center' %}section-stack--horizontal{% else %}section-stack--center{% endif %} {% if text_position == 'end' %}section-stack--reverse{% endif %}">
     {%- capture content -%}
@@ -93,7 +93,7 @@
     </div>
   </div>
 </div>
-
+{%- endif -%}
 {%- comment -%}On the FAQ page, we also output the content with JSON microdata for SEO{%- endcomment -%}
 
 <script type="application/ld+json">
