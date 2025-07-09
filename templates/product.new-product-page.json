@@ -115,10 +115,32 @@
             "content": "{{ product.description }}",
             "page": ""
           }
+        },
+        "item_giDGLT": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Title",
+            "content": "<p>Write content to help your customers to better understand your products or policies.</p>",
+            "page": ""
+          }
+        },
+        "item_7pY96N": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Title",
+            "content": "<p>Write content to help your customers to better understand your products or policies.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
-        "item_mJ8Wwg"
+        "item_mJ8Wwg",
+        "item_giDGLT",
+        "item_7pY96N"
       ],
       "custom_css": [
         "@media screen and (min-width: 1150px) {.section-stack__main {width: 100%; }}"
