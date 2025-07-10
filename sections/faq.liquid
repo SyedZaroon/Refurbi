@@ -8,7 +8,17 @@
     --section-stack-main: {% if text_position == 'center' %}60%{% else %}50%{% endif %};
   }
 </style>
-{% if block.settings.title != blank and block.settings.content != blank %}
+
+{% assign visible_block_count = 0 %}
+
+{% for block in section.blocks %}
+  {% if block.settings.title != blank or block.settings.content != blank %}
+    {% assign visible_block_count = visible_block_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+
+{% if visible_block_count > 0 %}
   
 <div {% render 'section-properties' %}>
   <div class="section-stack {% if text_position != 'center' %}section-stack--horizontal{% else %}section-stack--center{% endif %} {% if text_position == 'end' %}section-stack--reverse{% endif %}">
