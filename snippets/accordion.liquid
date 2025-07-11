@@ -50,3 +50,26 @@ Supported parameters
     {{- content -}}
   </div>
 </details>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const accordions = document.querySelectorAll('details.accordion');
+
+  accordions.forEach((accordion) => {
+    accordion.addEventListener('click', function () {
+      // Wait a tick to let the browser toggle it
+      setTimeout(() => {
+        if (accordion.open) {
+          accordions.forEach((otherAccordion) => {
+            if (otherAccordion !== accordion && otherAccordion.open) {
+              otherAccordion.removeAttribute('open');
+            }
+          });
+        }
+      }, 0);
+    });
+  });
+});
+
+
+</script>
