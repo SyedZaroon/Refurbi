@@ -67,7 +67,7 @@
           "type": "mega_menu",
           "settings": {
             "menu_item": "Tablets",
-            "layout": "horizontal",
+            "layout": "drawer",
             "submenu_style": "bold_heading",
             "image_heading_1": "",
             "image_link_1": "",
