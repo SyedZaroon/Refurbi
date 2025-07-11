@@ -62,34 +62,10 @@
             "stretch_promo": false,
             "drawer_link_image": "hide"
           }
-        },
-        "mega_menu_cmcPb7": {
-          "type": "mega_menu",
-          "settings": {
-            "menu_item": "Tablets",
-            "layout": "horizontal_center",
-            "submenu_style": "bold_heading",
-            "image_heading_1": "",
-            "image_link_1": "",
-            "image_text_color_1": "#ffffff",
-            "image_heading_2": "",
-            "image_link_2": "",
-            "image_text_color_2": "#ffffff",
-            "image_heading_3": "",
-            "image_link_3": "",
-            "image_text_color_3": "#ffffff",
-            "product": "",
-            "product_card_background": "",
-            "product_card_text_color": "",
-            "promo_content_layout": "grid",
-            "stretch_promo": false,
-            "drawer_link_image": "hide"
-          }
         }
       },
       "block_order": [
-        "mega_menu_6aEmUi",
-        "mega_menu_cmcPb7"
+        "mega_menu_6aEmUi"
       ],
       "custom_css": [
         "div#mega-menu-mega_menu_6aEmUi {width: fit-content !important; margin-left: 20px !important;}"
