@@ -52,16 +52,22 @@ Supported parameters
 </details>
 
 <script>
+
 document.addEventListener('DOMContentLoaded', function () {
   const accordions = document.querySelectorAll('details.accordion');
 
   accordions.forEach((accordion) => {
+    if (accordion.closest('.collection__facets')) return;
+
     accordion.addEventListener('click', function () {
-      // Wait a tick to let the browser toggle it
       setTimeout(() => {
         if (accordion.open) {
           accordions.forEach((otherAccordion) => {
-            if (otherAccordion !== accordion && otherAccordion.open) {
+            if (
+              otherAccordion !== accordion &&
+              otherAccordion.open &&
+              !otherAccordion.closest('.collection__facets')
+            ) {
               otherAccordion.removeAttribute('open');
             }
           });
@@ -70,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
 
 
 </script>
