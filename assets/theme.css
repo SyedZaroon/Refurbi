@@ -403,8 +403,8 @@ height-observer, visibility-progress, scroll-area, video-media, model-media, med
 .accordion {
   --accordion-spacing: var(--spacing-5);
   box-sizing: content-box;
-  border-block-start-width: 1px;
-  border-block-end-width: 1px;
+  border-block-start-width: 2px;
+  /* border-block-end-width: 1px; */
 }
 
 .accordion__toggle {
