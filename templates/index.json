@@ -298,26 +298,16 @@
             "title": "Heading 1",
             "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
           }
-        },
-        "item_hXTALk": {
-          "type": "item",
-          "settings": {
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Heading 2",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
         }
       },
       "block_order": [
-        "item_n68JNM",
-        "item_hXTALk"
+        "item_n68JNM"
       ],
       "name": "Images and text scrolling",
       "settings": {
         "full_width": true,
         "stack_on_mobile": false,
-        "show_counter": true,
+        "show_counter": false,
         "desktop_image_effect": "reveal",
         "image_position": "end",
         "background": "",
