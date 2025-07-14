@@ -51,6 +51,90 @@
         "background_gradient": "linear-gradient(60deg, rgba(241, 243, 246, 1), rgba(NaN, NaN, NaN, 0))"
       }
     },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "watch",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "tablets",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "ipad",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection_dHa6xV": {
+          "type": "collection",
+          "settings": {
+            "collection": "mac",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3",
+        "collection_dHa6xV"
+      ],
+      "settings": {
+        "full_width": false,
+        "stack_collections": false,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 3,
+        "show_progress_bar": false,
+        "subheading": "",
+        "title": "Collection list",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "image-link-blocks": {
       "type": "image-link-blocks",
       "blocks": {
@@ -335,106 +419,6 @@
         "background_gradient": ""
       }
     },
-    "collection-list": {
-      "type": "collection-list",
-      "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "watch",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h5",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "tablets",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h5",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "ipad",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h5",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          }
-        },
-        "collection_dHa6xV": {
-          "type": "collection",
-          "settings": {
-            "collection": "mac",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h5",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          }
-        },
-        "collection_XCnbaW": {
-          "type": "collection",
-          "settings": {
-            "collection": "headphones",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h5",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          }
-        }
-      },
-      "block_order": [
-        "collection-1",
-        "collection-2",
-        "collection-3",
-        "collection_dHa6xV",
-        "collection_XCnbaW"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "stack_collections": false,
-        "collections_per_row_mobile": "2",
-        "collections_per_row": 5,
-        "show_progress_bar": false,
-        "subheading": "",
-        "title": "Collection list",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
-      }
-    },
     "featured-collection": {
       "type": "featured-collection",
       "disabled": true,
@@ -617,11 +601,11 @@
   },
   "order": [
     "slideshow",
+    "collection-list",
     "image-link-blocks",
     "featured_collection_xjxjUg",
     "rich_text_V3PazG",
     "media-grid",
-    "collection-list",
     "featured-collection",
     "collection_list_EpbWFA",
     "faq"
