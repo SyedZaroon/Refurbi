@@ -141,6 +141,7 @@
         "1664424046b00c932c-3",
         "item_ggcAQE"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "block_size": "medium",
@@ -158,6 +159,7 @@
     },
     "featured_collection_xjxjUg": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "mobile-phones",
         "products": [],
@@ -413,6 +415,7 @@
         "collection_dHa6xV",
         "collection_XCnbaW"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "stack_collections": false,
@@ -433,6 +436,7 @@
     },
     "featured-collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "accessories",
         "products": [],
@@ -537,6 +541,7 @@
         "collection_mpNVjK",
         "collection_UQDacn"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "stack_collections": false,
@@ -585,6 +590,7 @@
         "166442457738b23caf-1",
         "166442457738b23caf-2"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "subheading": "",
