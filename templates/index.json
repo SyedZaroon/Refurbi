@@ -323,7 +323,8 @@
         "image_JzBfDJ": {
           "type": "image",
           "settings": {
-            "title": "Promote your products",
+            "image": "shopify://shop_images/frame1.png",
+            "title": "",
             "heading_tag": "h4",
             "link_url": "",
             "link_text": "",
@@ -344,7 +345,8 @@
         "image_jEQJ3E": {
           "type": "image",
           "settings": {
-            "title": "Promote your products",
+            "image": "shopify://shop_images/frame2.png",
+            "title": "",
             "heading_tag": "h4",
             "link_url": "",
             "link_text": "",
