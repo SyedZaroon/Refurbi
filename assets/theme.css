@@ -10136,9 +10136,15 @@ shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
 }
 
 
+/* Custom css */
+
 /* phone check css */
 
 .phonecheck{
   display: flex;
   cursor: pointer;
+}
+
+.product-card__figure img{
+  padding: 10px;
 }
