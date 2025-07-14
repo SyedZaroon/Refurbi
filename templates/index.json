@@ -135,138 +135,6 @@
         "heading_gradient": ""
       }
     },
-    "image-link-blocks": {
-      "type": "image-link-blocks",
-      "blocks": {
-        "e4a0ef18-1856-4ddd-83d8-871a60d7acac": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/apple_logo_499b3868-bae9-45c8-b5ef-ea3bdd19dbb6.png",
-            "stretch_image": true,
-            "link_text": "",
-            "link_url": "shopify://collections/iphone",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "1664424046b00c932c-1": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/samsung_logo_0f6bb408-6ab7-4dfd-ad13-5b8c62c523df.png",
-            "stretch_image": true,
-            "link_text": "",
-            "link_url": "shopify://collections/samsung",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "1664424046b00c932c-0": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/tecno_logo_c34ca8ec-334c-4ca4-8e86-d98bf90df004.png",
-            "stretch_image": true,
-            "link_text": "",
-            "link_url": "shopify://collections/tecno",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "1664424046b00c932c-2": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/xiaomi_logo_e5f0db71-4e10-4af4-93b4-0b1db2f07cc5.png",
-            "stretch_image": true,
-            "link_text": "",
-            "link_url": "shopify://collections/xiaomi",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "1664424046b00c932c-3": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/oppo_logo_0a96baaa-934a-4dad-b749-3a0c800c939f.png",
-            "stretch_image": true,
-            "link_text": "",
-            "link_url": "shopify://collections/oppo",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "item_ggcAQE": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/infinix_logo_fb77deba-d29f-4676-95d0-016f9afe0f2f.png",
-            "stretch_image": true,
-            "link_text": "",
-            "link_url": "shopify://collections/infinix",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "e4a0ef18-1856-4ddd-83d8-871a60d7acac",
-        "1664424046b00c932c-1",
-        "1664424046b00c932c-0",
-        "1664424046b00c932c-2",
-        "1664424046b00c932c-3",
-        "item_ggcAQE"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": false,
-        "block_size": "medium",
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "link_url": "",
-        "link_text": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
-      }
-    },
-    "featured_collection_xjxjUg": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "collection": "mobile-phones",
-        "products": [],
-        "full_width": false,
-        "stack_products": false,
-        "show_progress_bar": false,
-        "products_count": 5,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 5,
-        "subheading": "",
-        "title": "Mobile Phones",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
-      }
-    },
     "rich_text_V3PazG": {
       "type": "rich-text",
       "blocks": {
@@ -417,6 +285,72 @@
         "mobile_row_height": 150,
         "background": "",
         "background_gradient": ""
+      }
+    },
+    "images_with_text_scrolling_p3Vthz": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_n68JNM": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading 1",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "item_hXTALk": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading 2",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_n68JNM",
+        "item_hXTALk"
+      ],
+      "name": "Images and text scrolling",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "show_counter": true,
+        "desktop_image_effect": "reveal",
+        "image_position": "end",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "featured_collection_xjxjUg": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "mobile-phones",
+        "products": [],
+        "full_width": false,
+        "stack_products": false,
+        "show_progress_bar": false,
+        "products_count": 5,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "",
+        "title": "Mobile Phones",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
       }
     },
     "featured-collection": {
@@ -597,17 +531,124 @@
         "accordion_background": "",
         "accordion_text_color": ""
       }
+    },
+    "image-link-blocks": {
+      "type": "image-link-blocks",
+      "blocks": {
+        "e4a0ef18-1856-4ddd-83d8-871a60d7acac": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/apple_logo_499b3868-bae9-45c8-b5ef-ea3bdd19dbb6.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/iphone",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "1664424046b00c932c-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/samsung_logo_0f6bb408-6ab7-4dfd-ad13-5b8c62c523df.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/samsung",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "1664424046b00c932c-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/tecno_logo_c34ca8ec-334c-4ca4-8e86-d98bf90df004.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/tecno",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "1664424046b00c932c-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/xiaomi_logo_e5f0db71-4e10-4af4-93b4-0b1db2f07cc5.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/xiaomi",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "1664424046b00c932c-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/oppo_logo_0a96baaa-934a-4dad-b749-3a0c800c939f.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/oppo",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_ggcAQE": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/infinix_logo_fb77deba-d29f-4676-95d0-016f9afe0f2f.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "shopify://collections/infinix",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "e4a0ef18-1856-4ddd-83d8-871a60d7acac",
+        "1664424046b00c932c-1",
+        "1664424046b00c932c-0",
+        "1664424046b00c932c-2",
+        "1664424046b00c932c-3",
+        "item_ggcAQE"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "block_size": "medium",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
     }
   },
   "order": [
     "slideshow",
     "collection-list",
-    "image-link-blocks",
-    "featured_collection_xjxjUg",
     "rich_text_V3PazG",
     "media-grid",
+    "images_with_text_scrolling_p3Vthz",
+    "featured_collection_xjxjUg",
     "featured-collection",
     "collection_list_EpbWFA",
-    "faq"
+    "faq",
+    "image-link-blocks"
   ]
 }
