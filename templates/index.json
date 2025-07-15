@@ -40,7 +40,7 @@
       ],
       "name": "Search Banner",
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "image_size": "auto",
         "background": "#F2F2F2",
         "background_gradient": "",
