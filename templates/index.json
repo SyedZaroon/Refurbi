@@ -9,46 +9,42 @@
  */
 {
   "sections": {
-    "slideshow": {
-      "type": "slideshow",
+    "custom_search_banner_YFxJUP": {
+      "type": "custom-search-banner",
       "blocks": {
-        "slide-2": {
+        "image_3ny6ha": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Artboard_1.png",
             "mobile_image": "shopify://shop_images/Artboard_2.png",
-            "content_max_width": 400,
-            "mobile_text_position": "place-self-start-center text-center",
-            "desktop_text_position": "sm:place-self-center-start sm:text-start",
-            "subheading": "Top Picks Only",
-            "title": "Experience the Future Today",
-            "heading_tag": "h1",
-            "button_text": "Buy Now",
-            "button_link": "shopify://collections/mobile-phones",
-            "text_color": "#000000",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 3,
+            "overlay_opacity": 0,
             "background": "",
             "background_gradient": ""
           }
         }
       },
       "block_order": [
-        "slide-2"
+        "image_3ny6ha"
       ],
+      "name": "Search Banner",
       "settings": {
         "full_width": false,
-        "allow_transparent_header": true,
-        "show_initial_transition": false,
         "image_size": "auto",
-        "controls_type": "dots",
-        "transition_type": "fade",
-        "autoplay": true,
-        "cycle_speed": 6,
-        "background": "#f2f2f2",
-        "background_gradient": "linear-gradient(60deg, rgba(241, 243, 246, 1), rgba(NaN, NaN, NaN, 0))"
+        "background": "#F2F2F2",
+        "background_gradient": "",
+        "search_placeholder": "Search for products..."
       }
     },
     "collection-list": {
@@ -714,7 +710,7 @@
     }
   },
   "order": [
-    "slideshow",
+    "custom_search_banner_YFxJUP",
     "collection-list",
     "rich_text_V3PazG",
     "media-grid",
