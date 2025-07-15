@@ -261,3 +261,57 @@
   ]
 }
 {% endschema %}
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const input = document.getElementById('predictive-search-input');
+  const resultsDropdown = document.getElementById('search-results-dropdown');
+
+  input.addEventListener('input', function () {
+    const query = input.value.trim();
+
+    if (query.length <= 2) {
+      resultsDropdown.innerHTML = '';
+      resultsDropdown.classList.remove('active');
+      return;
+    }
+
+    fetch(`/search/suggest.json?q=${encodeURIComponent(query)}&resources[type]=product`)
+      .then(response => response.json())
+      .then(data => {
+        const products = data.resources.results.products;
+
+        if (!products || products.length === 0) {
+          resultsDropdown.innerHTML = '<div class="no-results">No products found</div>';
+        } else {
+          resultsDropdown.innerHTML = products.map(product => `
+            <a href="${product.url}" class="search-result-item">
+              <img src="${product.image}" alt="${product.title}" />
+              <div class="search-result-item-info">
+                <div class="search-result-item-title">${product.title}</div>
+                ${product.price ? `<div class="search-result-item-price">${product.price}</div>` : ''}
+              </div>
+            </a>
+          `).join('');
+        }
+
+        resultsDropdown.classList.add('active');
+      })
+      .catch(err => {
+        console.error('Predictive search fetch failed:', err);
+        resultsDropdown.innerHTML = '<div class="no-results">Error loading results</div>';
+        resultsDropdown.classList.add('active');
+      });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.search-input-wrapper')) {
+      resultsDropdown.classList.remove('active');
+    }
+  });
+});
+</script>
