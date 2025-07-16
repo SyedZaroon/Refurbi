@@ -44,12 +44,21 @@ CSS
   }
   
   .search-input {
-    width: 100%;
+   flex:1;
+   border:0px;
+  }
+
+  .search-icon{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+         width: 100%;
     padding: 15px 20px;
     border-radius: 50px;
     border: none;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     font-size: 16px;
+    background-color:white
   }
   
   .search-results-dropdown {
@@ -110,9 +119,13 @@ CSS
   }
 
   .search-input-container input:focus{
-    border:1px solid #000;
+    border:0px;
     outline:#000;
 } 
+
+.search-icon:has(input:focus) svg {
+  display: none;
+}
 </style>
 
 {%- comment -%}
@@ -210,14 +223,21 @@ LIQUID
 <div class="search-banner-box">
   <div class="search-input-container">
     <div class="search-input-wrapper">
+      <label>
+      <div class=" search-icon ">
       <input
         type="text"
         id="predictive-search-input"
-        class="search-input"
         placeholder="Search for products"
         autocomplete="off"
         aria-label="Search products"
       />
+      <svg role="presentation" stroke-width="2" focusable="false" width="22" height="22" class="icon icon-search" viewBox="0 0 22 22">
+        <circle cx="11" cy="10" r="7" fill="none" stroke="currentColor"></circle>
+        <path d="m16 15 3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      </div>
+      </label>
       <div class="search-results-dropdown" id="search-results-dropdown"></div>
     </div>
   </div>
@@ -230,7 +250,7 @@ LIQUID
 
 
 
-<script>
+ <script>
 document.addEventListener('DOMContentLoaded', function () {
   const input = document.getElementById('predictive-search-input');
   const resultsDropdown = document.getElementById('search-results-dropdown');
@@ -257,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <img src="${product.image}" alt="${product.title}" />
               <div class="search-result-item-info">
                 <div class="search-result-item-title">${product.title}</div>
-                ${product.price ? `<div class="search-result-item-price">${product.price}</div>` : ''}
+                ${product.price ? `<div class="search-result-item-price">From ${product.price}</div>` : ''}
               </div>
             </a>
           `).join('');
@@ -278,7 +298,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-</script>
+</script> 
+
+
+
+
 
 
 

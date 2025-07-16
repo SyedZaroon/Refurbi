@@ -176,11 +176,7 @@
           }
         }
       },
-      "block_order": [
-        "tab_jUWYDH",
-        "tab_MXnNRH",
-        "tab_Bnp434"
-      ],
+      "block_order": ["tab_jUWYDH", "tab_MXnNRH", "tab_Bnp434"],
       "settings": {
         "full_width": true,
         "content_size": "medium",
@@ -197,6 +193,7 @@
     },
     "faq_eC7LDB": {
       "type": "faq",
+      /*
       "blocks": {
         "item_yLpVEB": {
           "type": "item",
@@ -240,7 +237,8 @@
         "item_JhfRWV",
         "item_cMBNtB",
         "item_QjpXbM"
-      ],
+      ], 
+     */
       "settings": {
         "full_width": false,
         "subheading": "",
