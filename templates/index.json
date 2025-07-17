@@ -42,246 +42,15 @@
       "settings": {
         "full_width": false,
         "image_size": "auto",
-        "background": "#F2F2F2",
+        "background": "#f2f2f2",
         "background_gradient": "",
         "search_placeholder": "Search for products..."
       }
     },
-    "collection-list": {
-      "type": "collection-list",
-      "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "watch",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h5",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "tablets",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h5",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "ipad",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h5",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          }
-        },
-        "collection_dHa6xV": {
-          "type": "collection",
-          "settings": {
-            "collection": "mac",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h5",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          }
-        }
-      },
-      "block_order": [
-        "collection-1",
-        "collection-2",
-        "collection-3",
-        "collection_dHa6xV"
-      ],
-      "settings": {
-        "full_width": false,
-        "stack_collections": false,
-        "collections_per_row_mobile": "2",
-        "collections_per_row": 4,
-        "show_progress_bar": false,
-        "subheading": "",
-        "title": "Collection list",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
-      }
-    },
-    "rich_text_V3PazG": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_xPnqtK": {
-          "type": "heading",
-          "settings": {
-            "text": "iPhone",
-            "heading_tag": "h1",
-            "text_color": "",
-            "gradient": ""
-          }
-        },
-        "richtext_hx37Ph": {
-          "type": "richtext",
-          "disabled": true,
-          "settings": {
-            "content": "<p>Strength meets style.iPhone 16 comes in five vibrant colors, from black to ultramarine.</p>"
-          }
-        },
-        "image_nidXCX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/all_colors__flhn5cmb1t26_xlarge_2x-removebg-preview.png",
-            "width_mode": "custom",
-            "max_width": 600,
-            "mobile_max_width": 400
-          }
-        }
-      },
-      "block_order": [
-        "heading_xPnqtK",
-        "richtext_hx37Ph",
-        "image_nidXCX"
-      ],
-      "settings": {
-        "full_width": true,
-        "content_width": "small",
-        "text_position": "center",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "media-grid": {
-      "type": "media-grid",
-      "blocks": {
-        "video_3wzdXi": {
-          "type": "video",
-          "settings": {
-            "external_video_url": "https://www.youtube.com/watch?v=eDqfg_LexCQ",
-            "show_video_controls": false,
-            "title": "",
-            "heading_tag": "h4",
-            "link_url": "shopify://collections/iphone",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
-            "desktop_row_span": 2,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "item-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/promotion1.png",
-            "title": "Apple Intelligence",
-            "heading_tag": "h5",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-start text-start",
-            "desktop_column_span": 1,
-            "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-start sm:text-start",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "item-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/promotion2.png",
-            "title": "New Dimension",
-            "heading_tag": "h5",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-start-center text-center",
-            "desktop_column_span": 1,
-            "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-start-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "video_bcnxcq": {
-          "type": "video",
-          "settings": {
-            "external_video_url": "https://www.youtube.com/watch?v=2dI9ql8KSH4",
-            "show_video_controls": false,
-            "title": "Camera Control",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-start-end text-end",
-            "desktop_column_span": 2,
-            "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-start-end sm:text-end",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "video_3wzdXi",
-        "item-2",
-        "item-3",
-        "video_bcnxcq"
-      ],
-      "settings": {
-        "full_width": true,
-        "reduce_width": false,
-        "desktop_row_height": 290,
-        "mobile_row_height": 150,
-        "background": "",
-        "background_gradient": ""
-      }
+    "bento_grid_tnK4rr": {
+      "type": "bento-grid",
+      "name": "Bento Grid",
+      "settings": {}
     },
     "images_with_text_scrolling_p3Vthz": {
       "type": "images-with-text-scrolling",
@@ -299,6 +68,7 @@
       "block_order": [
         "item_n68JNM"
       ],
+      "disabled": true,
       "name": "Images and text scrolling",
       "settings": {
         "full_width": true,
@@ -311,90 +81,6 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": ""
-      }
-    },
-    "media_grid_mPH9fN": {
-      "type": "media-grid",
-      "blocks": {
-        "image_JzBfDJ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/frame1.png",
-            "title": "",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 1,
-            "desktop_row_span": 2,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "image_jEQJ3E": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/frame2.png",
-            "title": "",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 1,
-            "desktop_row_span": 2,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "image_93GpCC": {
-          "type": "image",
-          "settings": {
-            "title": "Promote your products",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
-            "desktop_row_span": 2,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "image_JzBfDJ",
-        "image_jEQJ3E",
-        "image_93GpCC"
-      ],
-      "name": "Media grid",
-      "settings": {
-        "full_width": true,
-        "reduce_width": false,
-        "desktop_row_height": 290,
-        "mobile_row_height": 150,
-        "background": "",
-        "background_gradient": ""
       }
     },
     "featured_collection_xjxjUg": {
@@ -711,11 +397,8 @@
   },
   "order": [
     "custom_search_banner_YFxJUP",
-    "collection-list",
-    "rich_text_V3PazG",
-    "media-grid",
+    "bento_grid_tnK4rr",
     "images_with_text_scrolling_p3Vthz",
-    "media_grid_mPH9fN",
     "featured_collection_xjxjUg",
     "featured-collection",
     "collection_list_EpbWFA",
