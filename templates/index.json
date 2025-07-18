@@ -16,9 +16,9 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Rectangle_640.png",
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 1200,
+            "mobile_text_position": "place-self-start-center text-center",
+            "desktop_text_position": "sm:place-self-start-center sm:text-center",
             "subheading": "",
             "title": "Refurbished. Reliable. Ready.",
             "heading_tag": "h0",
