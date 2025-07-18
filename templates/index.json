@@ -15,7 +15,6 @@
         "image_3ny6ha": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Artboard_1.png",
             "mobile_image": "shopify://shop_images/Artboard_2.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
@@ -30,7 +29,7 @@
             "button_text_color": "#000000",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
-            "background": "",
+            "background": "#fbffee",
             "background_gradient": ""
           }
         }
@@ -51,6 +50,58 @@
       "type": "bento-grid",
       "name": "Bento Grid",
       "settings": {}
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "166442457738b23caf-0": {
+          "type": "item",
+          "settings": {
+            "title": "Do you ship overseas?",
+            "content": "<p>We only deliver in the cities of Pakistan currently.</p>"
+          }
+        },
+        "166442457738b23caf-1": {
+          "type": "item",
+          "settings": {
+            "title": "How do I cancel my order?",
+            "content": "<p>You can cancel your order by calling us directly on our helpline at +92 326 5280000. If your order has already been dispatched, you can refuse to accept the order at the time of delivery and return it to our Rider. Our team will identify your order as canceled, and the advance payment will be reimbursed.</p>"
+          }
+        },
+        "166442457738b23caf-2": {
+          "type": "item",
+          "settings": {
+            "title": "Can I modify the shipping address of my order after it has been placed?",
+            "content": "<p>Once the order has been placed, you cannot change the delivery address. You have to cancel the order and re-order the product with the correct address. The already made payments will be refunded to you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "166442457738b23caf-0",
+        "166442457738b23caf-1",
+        "166442457738b23caf-2"
+      ],
+      "settings": {
+        "full_width": false,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "<p>Have questions about our products or shipping? We're here to help! </p>",
+        "team_avatar_width": 160,
+        "support_hours": "Our customer support is available Monday to Friday: 09am-05pm.",
+        "answer_time": "Average answer time: 24h",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
     },
     "images_with_text_scrolling_p3Vthz": {
       "type": "images-with-text-scrolling",
@@ -233,58 +284,6 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": ""
-      }
-    },
-    "faq": {
-      "type": "faq",
-      "blocks": {
-        "166442457738b23caf-0": {
-          "type": "item",
-          "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>We only deliver in the cities of Pakistan currently.</p>"
-          }
-        },
-        "166442457738b23caf-1": {
-          "type": "item",
-          "settings": {
-            "title": "How do I cancel my order?",
-            "content": "<p>You can cancel your order by calling us directly on our helpline at +92 326 5280000. If your order has already been dispatched, you can refuse to accept the order at the time of delivery and return it to our Rider. Our team will identify your order as canceled, and the advance payment will be reimbursed.</p>"
-          }
-        },
-        "166442457738b23caf-2": {
-          "type": "item",
-          "settings": {
-            "title": "Can I modify the shipping address of my order after it has been placed?",
-            "content": "<p>Once the order has been placed, you cannot change the delivery address. You have to cancel the order and re-order the product with the correct address. The already made payments will be refunded to you.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "166442457738b23caf-0",
-        "166442457738b23caf-1",
-        "166442457738b23caf-2"
-      ],
-      "settings": {
-        "full_width": false,
-        "subheading": "",
-        "title": "FAQ",
-        "content": "<p>Have questions about our products or shipping? We're here to help! </p>",
-        "team_avatar_width": 160,
-        "support_hours": "Our customer support is available Monday to Friday: 09am-05pm.",
-        "answer_time": "Average answer time: 24h",
-        "button_text": "",
-        "button_url": "",
-        "text_position": "start",
-        "background": "#ffffff",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "button_background": "",
-        "button_text_color": "",
-        "accordion_background": "",
-        "accordion_text_color": ""
       }
     },
     "image-link-blocks": {
