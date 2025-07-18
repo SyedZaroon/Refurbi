@@ -15,7 +15,7 @@
         "image_3ny6ha": {
           "type": "image",
           "settings": {
-            "mobile_image": "shopify://shop_images/Artboard_2.png",
+            "image": "shopify://shop_images/Rectangle_640.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
