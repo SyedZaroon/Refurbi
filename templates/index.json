@@ -265,7 +265,6 @@
         "166442457738b23caf-1",
         "166442457738b23caf-2"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "subheading": "",
@@ -398,11 +397,11 @@
   "order": [
     "custom_search_banner_YFxJUP",
     "bento_grid_tnK4rr",
+    "faq",
     "images_with_text_scrolling_p3Vthz",
     "featured_collection_xjxjUg",
     "featured-collection",
     "collection_list_EpbWFA",
-    "faq",
     "image-link-blocks"
   ]
 }
