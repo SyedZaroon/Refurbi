@@ -26,9 +26,10 @@ CSS
   {%- endfor -%}
 
   /* Search input styles */
-  .search-banner-container {
+  .slideshow__slide {
     position: relative;
     width: 100%;
+    overflow:hidden;
   }
   
    .search-banner-box {
@@ -126,6 +127,17 @@ CSS
 .search-icon:has(input:focus) svg {
   display: none;
 }
+
+.gradient-box {
+    width: 854px;
+    height: 854px;
+    border-radius: 9999px;
+    background: linear-gradient(179.99deg, #E7FF9F 0.01%, rgba(236, 236, 236, 0) 18.06%);
+    position: absolute;
+    bottom: -663px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 </style>
 
 {%- comment -%}
@@ -220,8 +232,10 @@ LIQUID
     </slideshow-carousel>
 
             <!-- Search Input -->
-<div class="search-banner-box">
-  <div class="search-input-container">
+
+            <div class="search-banner-box">
+  
+              <div class="search-input-container">
     <div class="search-input-wrapper">
       <label>
       <div class=" search-icon ">
@@ -243,6 +257,9 @@ LIQUID
   </div>
 </div>
 
+            <!-- Gradient Box -->
+
+            <div class="gradient-box" ></div>
 
   </x-slideshow>
 
