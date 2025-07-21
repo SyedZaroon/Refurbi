@@ -1,67 +1,49 @@
-{%- comment -%}
-------------------------------------------------------------------------------------------------------------------------
-CSS
-------------------------------------------------------------------------------------------------------------------------
-{%- endcomment -%}
 <style>
-  #shopify-section-{{ section.id }} {
-    --slideshow-background: {{ section.blocks.first.settings.background_gradient | default: section.blocks.first.settings.background | default: section.settings.background_gradient | default: section.settings.background }};
-    --slideshow-controls-background: {{ controls_background.rgb }};
-    --slideshow-controls-color: {{ controls_color.rgb }};
+
+  .search-banner{
+    background:#FBFFEE;
+    height:509px;
+    position:relative;
   }
 
-  {%- for block in section.blocks -%}
-    #block-{{ block.id }} {
-      {%- if section.settings.controls_type == 'filled_arrows' -%}
-        {%- assign controls_background = block.settings.button_background -%}
-        {%- assign controls_color = block.settings.button_text_color -%}
-      {%- else -%}
-        {%- assign controls_color = block.settings.text_color -%}
-      {%- endif -%}
-
-      --slideshow-slide-background: {{ block.settings.background_gradient | default: block.settings.background | default: section.settings.background_gradient | default: section.settings.background }};
-      --slideshow-slide-controls-background: {{ controls_background.rgb }};
-      --slideshow-slide-controls-color: {{ controls_color.rgb }};
-    }
-  {%- endfor -%}
-
-  /* Search input styles */
   .slideshow__slide {
     position: relative;
     width: 100%;
-    overflow:hidden;
+    overflow: hidden;
   }
-  
-   .search-banner-box {
+
+  .search-banner-box {
     position: absolute;
-    top: 50%;
+    top: 150px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 600px;
+    z-index:2;
+    
   }
   .search-input-wrapper {
     position: relative;
   }
-  
+
   .search-input {
-   flex:1;
-   border:0px;
+    flex: 1;
+    
   }
 
-  .search-icon{
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-         width: 100%;
+  .search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     padding: 15px 20px;
     border-radius: 50px;
-    border: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border: 1px solid black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-size: 16px;
-    background-color:white
+    background-color: white;
   }
-  
+
   .search-results-dropdown {
     position: absolute;
     top: 100%;
@@ -69,28 +51,28 @@ CSS
     width: 90%;
     background: white;
     border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-height: 400px;
     overflow-y: auto;
     display: none;
     z-index: 100;
   }
-  
+
   .search-results-dropdown.active {
     display: block;
   }
-  
+
   .search-result-item {
     padding: 12px 20px;
     border-bottom: 1px solid #eee;
     display: flex;
     align-items: center;
   }
-  
+
   .search-result-item:hover {
     background: #f9f9f9;
   }
-  
+
   .search-result-item img {
     width: 50px;
     height: 50px;
@@ -98,198 +80,136 @@ CSS
     margin-right: 15px;
     border-radius: 4px;
   }
-  
+
   .search-result-item-info {
     flex: 1;
   }
-  
+
   .search-result-item-title {
     font-weight: 600;
     margin-bottom: 4px;
   }
-  
+
   .search-result-item-price {
     color: var(--text-color);
     font-size: 14px;
   }
-  
+
   .no-results {
     padding: 15px 20px;
     text-align: center;
     color: #666;
   }
 
-  .search-input-container input:focus{
-    border:0px;
-    outline:#000;
-} 
+  .search-input-container input:focus {
+    border: 0px;
+    outline: #000;
+  }
 
-.search-icon:has(input:focus) svg {
-  display: none;
-}
+  .search-icon:has(input:focus) svg {
+    display: none;
+  }
 
-.gradient-box {
+   .search-icon:focus{
+    border:0;
+  }
+
+  .gradient-box {
     width: 854px;
     height: 854px;
     border-radius: 9999px;
-    background: linear-gradient(179.99deg, #E7FF9F 0.01%, rgba(236, 236, 236, 0) 18.06%);
+    background: linear-gradient(179.99deg, #e7ff9f 0.01%, rgba(236, 236, 236, 0) 18.06%);
     position: absolute;
     bottom: -663px;
     left: 50%;
     transform: translateX(-50%);
-}
+    z-index:1;
+  }
+  .banner-text{
+    text-align:center;
+    position:relative;
+  }
+  .banner-text span{
+    color: #C6CBB6;
+
+  }
+
+  .icon-search{
+    min-width:22px;
+  }
 </style>
 
-{%- comment -%}
-------------------------------------------------------------------------------------------------------------------------
-LIQUID
-------------------------------------------------------------------------------------------------------------------------
-{%- endcomment -%}
+<!-- Search Input -->
 
-{%- assign slideshow_id = 'slideshow-' | append: section.id -%}
+<div class="section section-boxed search-banner " >
 
-<div class="search-banner-container">
-  <x-slideshow class="slideshow {% unless section.settings.full_width %}slideshow--boxed{% endunless %} {% if section.blocks.size > 1 %}slideshow--multiple-slides{% endif %}" {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}>
-    {%- unless section.settings.full_width -%}
-      <span class="slideshow__slide-background"></span>
-    {%- endunless -%}
+  <div class="h1 banner-text " >
+    Refurbished. <span>Reliable.</span> Ready.
 
-    <slideshow-carousel id="{{ slideshow_id }}" class="slideshow__carousel" {% if section.settings.show_initial_transition %}reveal-on-scroll="true"{% endif %} selector=".slideshow__slide" transition="{{ section.settings.transition_type }}" {% if section.settings.autoplay %}autoplay="{{ section.settings.cycle_speed }}"{% endif %} role="region">
-      {%- unless section.blocks.size == 1 or section.settings.controls_type contains 'arrows' -%}
-        <custom-cursor class="slideshow__cursor circle-button circle-button--lg circle-button--fill" aria-hidden="true">
-          {%- render 'icon' with 'chevron-right' -%}
-
-          <svg class="slideshow__cursor-ring" viewBox="-28 -28 56 56" width="56" height="56" fill="none" stroke="currentColor" stroke-width="2">
-            <circle r="27" stroke-dasharray="158.33626974092556" stroke-dashoffset="158.33626974092556px"></circle>
-          </svg>
-        </custom-cursor>
-      {%- endunless -%}
-
-      {%- for block in section.blocks -%}
-        {%- capture slide -%}
-          <div class="content-over-media content-over-media--{{ section.settings.image_size }} {% unless section.settings.full_width %}rounded{% endunless %}" style="--content-over-media-content-max-width: {{ block.settings.content_max_width }}px; --content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }}">
-            {%- comment -%}---------------- MEDIA ----------------{%- endcomment -%}
-            {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}min({{ settings.page_width }}px, 100vw){% endif %}{%- endcapture -%}
-
-            {%- if block.type == 'image' -%}
-              {%- if block.settings.image != blank -%}
-                {%- capture loading_strategy -%}{% if forloop.first %}eager{% else %}lazy{% endif %}{%- endcapture -%}
-                {%- capture fetch_priority -%}{% if forloop.first %}high{% else %}low{% endif %}{%- endcapture -%}
-
-                <picture>
-                  {%- if block.settings.mobile_image != blank -%}
-                    <source
-                      media="(max-width: 699px)"
-                      srcset="{{ block.settings.mobile_image | image_url: width: 400 }} 400w, {{ block.settings.mobile_image | image_url: width: 600 }} 600w, {{ block.settings.mobile_image | image_url: width: 800 }} 800w, {{ block.settings.mobile_image | image_url: width: 1000 }} 1000w, {{ block.settings.mobile_image | image_url: width: 1200 }} 1200w"
-                      width="{{ block.settings.mobile_image.width }}"
-                      height="{{ block.settings.mobile_image.height }}"
-                    >
-                  {%- endif -%}
-
-                  {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading_strategy, fetchpriority: fetch_priority, sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
-                </picture>
-              {%- else -%}
-                {%- capture placeholder_image -%}{% cycle 'placeholder': 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
-                {{- placeholder_image | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
-              {%- endif -%}
-            {%- endif -%}
-
-            {%- comment -%}---------------- CONTENT ----------------{%- endcomment -%}
-            {%- capture content_class -%}{{ block.settings.mobile_text_position }} {{ block.settings.desktop_text_position }}{%- endcapture -%}
-
-            <div {% render 'surface', class: content_class, text_color: block.settings.text_color %}>
-              <div class="prose">
-                {%- if block.settings.subheading != blank -%}
-                  <p class="subheading" data-sequence="subheading">{{ block.settings.subheading | escape }}</p>
-                {%- endif -%}
-
-                {%- if block.settings.title != blank -%}
-                  <p class="{{ block.settings.heading_tag }}" data-sequence="heading">
-                    {%- render 'styled-text', content: block.settings.title, apparition_effect: true -%}
-                  </p>
-                {%- endif -%}
-
-                {%- if block.settings.button_text != blank -%}
-                  {%- render 'button', href: block.settings.button_link, content: block.settings.button_text, size: 'xl', background: block.settings.button_background, text_color: block.settings.button_text_color -%}
-                {%- endif -%}
-              </div>
-            </div>
-          </div>
-        {%- endcapture -%}
-
-        {%- if block.settings.button_link != blank and block.settings.button_text == blank -%}
-          <a id="block-{{ block.id }}" href="{{ block.settings.button_link }}" class="slideshow__slide {% if forloop.first %}is-selected{% endif %}" data-slide-type="{{ block.type }}" role="group" {{ block.shopify_attributes }}>
-            {{- slide -}}
-          </a>
-        {%- else -%}
-          <div id="block-{{ block.id }}" class="slideshow__slide {% if forloop.first %}is-selected{% endif %}" data-slide-type="{{ block.type }}" role="group" {{ block.shopify_attributes }}>
-            {{- slide -}}
-          </div>
-        {%- endif -%}
-      {%- endfor -%}
-
-
-    </slideshow-carousel>
-
-            <!-- Search Input -->
-
-            <div class="search-banner-box">
-  
-              <div class="search-input-container">
+    <div class="search-banner-box">
+  <div class="search-input-container">
     <div class="search-input-wrapper">
       <label>
-      <div class=" search-icon ">
-      <input
-        type="text"
-        id="predictive-search-input"
-        placeholder="Search for products"
-        autocomplete="off"
-        aria-label="Search products"
-      />
-      <svg role="presentation" stroke-width="2" focusable="false" width="22" height="22" class="icon icon-search" viewBox="0 0 22 22">
-        <circle cx="11" cy="10" r="7" fill="none" stroke="currentColor"></circle>
-        <path d="m16 15 3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-      </div>
+        <div class=" search-icon ">
+          <input
+            type="text"
+            id="predictive-search-input"
+            placeholder="Search for products"
+            autocomplete="off"
+            aria-label="Search products"
+          >
+          <svg
+            role="presentation"
+            stroke-width="2"
+            focusable="false"
+            width="22"
+            height="22"
+            class="icon icon-search"
+            viewBox="0 0 22 22"
+          >
+            <circle cx="11" cy="10" r="7" fill="none" stroke="#596066"></circle>
+            <path d="m16 15 3 3" stroke="#596066" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
       </label>
       <div class="search-results-dropdown" id="search-results-dropdown"></div>
     </div>
   </div>
 </div>
+  </div>
 
-            <!-- Gradient Box -->
 
-            <div class="gradient-box" ></div>
 
-  </x-slideshow>
+<div class="gradient-box"></div>
 
 </div>
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('predictive-search-input');
+    const resultsDropdown = document.getElementById('search-results-dropdown');
 
- <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const input = document.getElementById('predictive-search-input');
-  const resultsDropdown = document.getElementById('search-results-dropdown');
+    input.addEventListener('input', function () {
+      const query = input.value.trim();
 
-  input.addEventListener('input', function () {
-    const query = input.value.trim();
+      if (query.length < 2) {
+        resultsDropdown.innerHTML = '';
+        resultsDropdown.classList.remove('active');
+        return;
+      }
 
-    if (query.length < 2) {
-      resultsDropdown.innerHTML = '';
-      resultsDropdown.classList.remove('active');
-      return;
-    }
+      fetch(`/search/suggest.json?q=${encodeURIComponent(query)}&resources[type]=product`)
+        .then((response) => response.json())
+        .then((data) => {
+          const products = data.resources.results.products;
 
-    fetch(`/search/suggest.json?q=${encodeURIComponent(query)}&resources[type]=product`)
-      .then(response => response.json())
-      .then(data => {
-        const products = data.resources.results.products;
-
-        if (!products || products.length === 0) {
-          resultsDropdown.innerHTML = '<div class="no-results">No products found</div>';
-        } else {
-          resultsDropdown.innerHTML = products.map(product => `
+          if (!products || products.length === 0) {
+            resultsDropdown.innerHTML = '<div class="no-results">No products found</div>';
+          } else {
+            resultsDropdown.innerHTML = products
+              .map(
+                (product) => `
             <a href="${product.url}" class="search-result-item">
               <img src="${product.image}" alt="${product.title}" />
               <div class="search-result-item-info">
@@ -297,252 +217,35 @@ document.addEventListener('DOMContentLoaded', function () {
                 ${product.price ? `<div class="search-result-item-price">From ${product.price}</div>` : ''}
               </div>
             </a>
-          `).join('');
-        }
+          `
+              )
+              .join('');
+          }
 
-        resultsDropdown.classList.add('active');
-      })
-      .catch(err => {
-        console.error('Predictive search fetch failed:', err);
-        resultsDropdown.innerHTML = '<div class="no-results">Error loading results</div>';
-        resultsDropdown.classList.add('active');
-      });
+          resultsDropdown.classList.add('active');
+        })
+        .catch((err) => {
+          console.error('Predictive search fetch failed:', err);
+          resultsDropdown.innerHTML = '<div class="no-results">Error loading results</div>';
+          resultsDropdown.classList.add('active');
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.search-input-wrapper')) {
+        resultsDropdown.classList.remove('active');
+      }
+    });
   });
-
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.search-input-wrapper')) {
-      resultsDropdown.classList.remove('active');
-    }
-  });
-});
-</script> 
-
-
-
-
-
-
-
+</script>
 
 {% schema %}
 {
   "name": "Search Banner",
-  "class": "shopify-section--slideshow",
-  "tag": "section",
-  "max_blocks": 1,
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "Full width",
-      "default": true
-    },
-    {
-      "type": "select",
-      "id": "image_size",
-      "label": "Media size",
-      "options": [
-        { "value": "auto", "label": "Original media ratio" },
-        { "value": "sm", "label": "Small" },
-        { "value": "md", "label": "Medium" },
-        { "value": "lg", "label": "Large" },
-        { "value": "fill", "label": "Fill screen height" }
-      ],
-      "info": "Choose \"Original media ratio\" to not cut media.",
-      "default": "auto"
-    },
-    {
-      "type": "header",
-      "content": "Background"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Background",
-      "default": "#F2F2F2"
-    },
-    {
-      "type": "color_background",
-      "id": "background_gradient",
-      "label": "Background gradient"
-    },
-    {
-      "type": "header",
-      "content": "Search Input"
-    },
-    {
-      "type": "text",
-      "id": "search_placeholder",
-      "label": "Placeholder text",
-      "default": "Search for products..."
-    }
-  ],
-  "blocks": [
-    {
-      "type": "image",
-      "name": "Image",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "info": "2800 x 1000px .jpg recommended",
-          "label": "Image"
-        },
-        {
-          "type": "image_picker",
-          "id": "mobile_image",
-          "label": "Mobile image",
-          "info": "1200 x 1600px .jpg recommended"
-        },
-        {
-          "type": "header",
-          "content": "Content"
-        },
-        {
-          "type": "range",
-          "id": "content_max_width",
-          "label": "Content maximum width",
-          "min": 400,
-          "max": 1200,
-          "step": 20,
-          "unit": "px",
-          "default": 780
-        },
-        {
-          "type": "select",
-          "id": "mobile_text_position",
-          "label": "Mobile content position",
-          "options": [
-            { "value": "place-self-start text-start", "label": "Top left" },
-            { "value": "place-self-start-center text-center", "label": "Top center" },
-            { "value": "place-self-start-end text-end", "label": "Top right" },
-            { "value": "place-self-center-start text-start", "label": "Middle left" },
-            { "value": "place-self-center text-center", "label": "Middle center" },
-            { "value": "place-self-center-end text-end", "label": "Middle right" },
-            { "value": "place-self-end-start text-start", "label": "Bottom left" },
-            { "value": "place-self-end-center text-center", "label": "Bottom center" }
-          ],
-          "default": "place-self-center text-center"
-        },
-        {
-          "type": "select",
-          "id": "desktop_text_position",
-          "label": "Desktop content position",
-          "options": [
-            { "value": "sm:place-self-start sm:text-start", "label": "Top left" },
-            { "value": "sm:place-self-start-center sm:text-center", "label": "Top center" },
-            { "value": "sm:place-self-start-end sm:text-end", "label": "Top right" },
-            { "value": "sm:place-self-center-start sm:text-start", "label": "Middle left" },
-            { "value": "sm:place-self-center sm:text-center", "label": "Middle center" },
-            { "value": "sm:place-self-center-end sm:text-end", "label": "Middle right" },
-            { "value": "sm:place-self-end-start sm:text-start", "label": "Bottom left" },
-            { "value": "sm:place-self-end-center sm:text-center", "label": "Bottom center" }
-          ],
-          "default": "sm:place-self-center sm:text-center"
-        },
-        {
-          "type": "text",
-          "id": "subheading",
-          "label": "Subheading",
-          "default": "Tell your story"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Heading",
-          "default": "Slide title"
-        },
-        {
-          "type": "select",
-          "id": "heading_tag",
-          "label": "Heading size",
-          "options": [
-            { "value": "h0", "label": "XX-Large" },
-            { "value": "h1", "label": "X-Large" },
-            { "value": "h2", "label": "Large" },
-            { "value": "h3", "label": "Medium" },
-            { "value": "h4", "label": "Small" },
-            { "value": "h5", "label": "X-Small" },
-            { "value": "h6", "label": "XX-Small" }
-          ],
-          "default": "h0"
-        },
-        {
-          "type": "text",
-          "id": "button_text",
-          "label": "Button text"
-        },
-        {
-          "type": "url",
-          "id": "button_link",
-          "label": "Button link"
-        },
-        {
-          "type": "header",
-          "content": "Slide colors"
-        },
-        {
-          "type": "color",
-          "id": "text_color",
-          "label": "Text",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
-          "id": "button_background",
-          "label": "Button background",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
-          "id": "button_text_color",
-          "label": "Button text",
-          "default": "#000000"
-        },
-        {
-          "type": "color",
-          "id": "overlay_color",
-          "label": "Overlay",
-          "default": "#000000"
-        },
-        {
-          "type": "range",
-          "id": "overlay_opacity",
-          "label": "Overlay opacity",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "default": 30
-        },
-        {
-          "type": "header",
-          "content": "Background"
-        },
-        {
-          "type": "color",
-          "id": "background",
-          "label": "Background"
-        },
-        {
-          "type": "color_background",
-          "id": "background_gradient",
-          "label": "Background gradient"
-        }
-      ]
-    }
-  ],
+  "settings": [],
   "presets": [
     {
-      "name": "Search Banner",
-      "blocks": [
-        {
-          "type": "image",
-          "settings": {
-            "title": "Search Banner"
-          }
-        }
-      ]
+      "name": "Search Banner"
     }
   ]
 }
