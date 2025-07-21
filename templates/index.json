@@ -11,40 +11,8 @@
   "sections": {
     "custom_search_banner_YFxJUP": {
       "type": "custom-search-banner",
-      "blocks": {
-        // "image_3ny6ha": {
-        //   "type": "image",
-        //   "settings": {
-        //     "image": "shopify://shop_images/Rectangle_640.png",
-        //     "content_max_width": 1200,
-        //     "mobile_text_position": "place-self-start-center text-center",
-        //     "desktop_text_position": "sm:place-self-start-center sm:text-center",
-        //     "subheading": "",
-        //     "title": "Refurbished. Reliable. Ready.",
-        //     "heading_tag": "h0",
-        //     "button_text": "",
-        //     "button_link": "",
-        //     "text_color": "#1a1a1a",
-        //     "button_background": "#ffffff",
-        //     "button_text_color": "#000000",
-        //     "overlay_color": "#000000",
-        //     "overlay_opacity": 0,
-        //     "background": "rgba(0,0,0,0)",
-        //     "background_gradient": ""
-        //   }
-        // }
-      },
-      "block_order": [
-        "image_3ny6ha"
-      ],
       "name": "Search Banner",
-      "settings": {
-        "full_width": false,
-        "image_size": "auto",
-        "background": "#f2f2f2",
-        "background_gradient": "",
-        "search_placeholder": "Search for products..."
-      }
+      "settings": {}
     },
     "bento_grid_tnK4rr": {
       "type": "bento-grid",
