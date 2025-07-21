@@ -1,26 +1,17 @@
 <style>
-
-  .search-banner{
-    background:#F3F6E9;
-    height:509px;
-    position:relative;
-  }
-
-  .slideshow__slide {
+  .search-banner {
+    background: #fff;
+    height: 509px;
     position: relative;
-    width: 100%;
-    overflow: hidden;
+    overflow:hidden;
   }
+
 
   .search-banner-box {
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 80%;
     max-width: 600px;
-    z-index:2;
-        font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family)
+    z-index: 2;
+    font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family);
   }
   .search-input-wrapper {
     position: relative;
@@ -28,7 +19,6 @@
 
   .search-input {
     flex: 1;
-    
   }
 
   .search-icon {
@@ -38,8 +28,7 @@
     width: 100%;
     padding: 15px 20px;
     border-radius: 50px;
-        border: 1px solid black;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1.5px solid #F7EED0;
     font-size: 16px;
     background-color: white;
   }
@@ -83,7 +72,7 @@
 
   .search-result-item-info {
     flex: 1;
-    text-align:start;
+    text-align: start;
   }
 
   .search-result-item-title {
@@ -111,80 +100,116 @@
     display: none;
   }
 
-   .search-icon:focus{
-    border:0;
+  .search-icon:focus {
+    border: 0;
   }
 
   .gradient-box {
-    width: 854px;
-    height: 854px;
+    width: 1030px;
+    height: 1030px;
     border-radius: 9999px;
-    background: linear-gradient(179.99deg, #e7ff9f 0.01%, rgba(236, 236, 236, 0) 18.06%);
+    background: linear-gradient(179.99deg, #FFBF00 0.01%, rgba(236, 236, 236, 0) 28.6%);
     position: absolute;
-    bottom: -663px;
+    bottom: -754px;
     left: 50%;
     transform: translateX(-50%);
-    z-index:1;
+    z-index: 1;
   }
   .banner-text{
-    text-align:center;
-    position:relative;
+    text-transform:uppercase;
+        text-align: center;
   }
-  .banner-text span{
-    color: #C6CBB6;
+  .banner-text span {
+   background: linear-gradient(180deg, #000000 64.4%, #FFC20D 100%);
+    background-clip: text; 
+  color: transparent; 
+
 
   }
 
-  .icon-search{
-    min-width:22px;
+  .icon-search {
+    min-width: 22px;
+  }
+
+  .content{
+    display:flex;
+    flex-direction:column;
+    gap:73px;
+    align-items:center;
+
+    position:absolute;
+    top:45%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    width:100%;
+    z-index:2;
+  }
+  .hero-union{
+    position:absolute;
+    bottom:-35px;
+    left:0;
+  }
+  .right-birds{
+     position:absolute;
+    bottom:48px;
+    right:80px;
+  }
+  .left-birds{
+    position:absolute;
+    bottom:51px;
+    left:133px;
   }
 </style>
 
 <!-- Search Input -->
 
-<div class="section section-boxed search-banner " >
+<div class="section section-boxed search-banner ">
 
-  <div class="h1 banner-text " >
-    Refurbished. <span>Reliable.</span> Ready.
+  <div class="content" >
+ 
+  <div class="h1 banner-text ">Refurb. <span>Reliable.</span> Ready.</div>
 
-    <div class="search-banner-box">
-  <div class="search-input-container">
-    <div class="search-input-wrapper">
-      <label>
-        <div class=" search-icon ">
-          <input
-            type="text"
-            id="predictive-search-input"
-            placeholder="Search for products"
-            autocomplete="off"
-            aria-label="Search products"
-          >
-          <svg
-            role="presentation"
-            stroke-width="2"
-            focusable="false"
-            width="22"
-            height="22"
-            class="icon icon-search"
-            viewBox="0 0 22 22"
-          >
-            <circle cx="11" cy="10" r="7" fill="none" stroke="#596066"></circle>
-            <path d="m16 15 3 3" stroke="#596066" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-      </label>
-      <div class="search-results-dropdown" id="search-results-dropdown"></div>
+  <div class="search-banner-box">
+    <div class="search-input-container">
+      <div class="search-input-wrapper">
+        <label>
+          <div class=" search-icon ">
+            <input
+              type="text"
+              id="predictive-search-input"
+              placeholder="Search for products"
+              autocomplete="off"
+              aria-label="Search products"
+            >
+            <svg
+              role="presentation"
+              stroke-width="2"
+              focusable="false"
+              width="22"
+              height="22"
+              class="icon icon-search"
+              viewBox="0 0 22 22"
+            >
+              <circle cx="11" cy="10" r="7" fill="none" stroke="#596066"></circle>
+              <path d="m16 15 3 3" stroke="#596066" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </label>
+        <div class="search-results-dropdown" id="search-results-dropdown"></div>
+      </div>
     </div>
   </div>
-</div>
+
   </div>
 
-
-
-<div class="gradient-box"></div>
+  <div class="gradient-box"></div>
+  <div class="hero-union"><img src="{{ 'HeroUnion.png' | asset_url }}" alt="herounion" width="100%" height="100%">
+</div>
+<div class="right-birds" ><img src="{{ 'rightbirds.png' | asset_url }}" alt="rightBirds" width="405px" height="149px" ></div>
+<div class="left-birds" ><img src="{{ 'leftbird.png' | asset_url }}" alt="leftBirds" width="235px" height="76px" ></div>
 
 </div>
-
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
