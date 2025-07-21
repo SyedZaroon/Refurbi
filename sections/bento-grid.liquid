@@ -1,468 +1,488 @@
 <div class="section   section-blends section-full">
   <div class="bento-grid">
-    <div class="item galaxy-watch">
-      <span class="galaxy-watch-text bold text ">Galaxy Watch</span>
-      <div class="circle-gradient"></div>
-      <div class="galaxy-watch-img">
-        <img src="{{ 'Galaxywatch.png' | asset_url }}" width="100%" height="100%" alt="Galaxy Watch">
+
+    <a class="item galaxy-watch" href="https://refurbi.co.uk/collections/galaxy-watches">
+      <div>
+        <span class="galaxy-watch-text bold text ">Galaxy Watch</span>
+        <div class="circle-gradient"></div>
+        <div class="galaxy-watch-img">
+          <img src="{{ 'Galaxywatch.png' | asset_url }}" width="100%" height="100%" alt="Galaxy Watch">
+        </div>
       </div>
-    </div>
-    <div class="item galaxy-tab">
-      <span class="galaxy-tab-text bold text">Galaxy Tab</span>
-      <div class="galaxy-tab-img">
-        <img src="{{ 'glaxytab.png' | asset_url }}" width="100%" height="100%" alt="Galaxy Tab">
+    </a>
+
+    <a class="item galaxy-tab" href="https://refurbi.co.uk/collections/samsung-tablet">
+      <div >
+        <span class="galaxy-tab-text bold text">Galaxy Tab</span>
+        <div class="galaxy-tab-img">
+          <img src="{{ 'glaxytab.png' | asset_url }}" width="100%" height="100%" alt="Galaxy Tab">
+        </div>
       </div>
-    </div>
-    <div class="item google-pixel">
-      <span class="google-pixel-text bold text">Google Pixel</span>
-      <div class="google-pixel-img">
-        <img src="{{ 'googlepixel.png' | asset_url }}" width="100%" height="100%" alt="Google Pixel">
+    </a>
+
+    <a class="item google-pixel" href="https://refurbi.co.uk/collections/google-pixel">
+      <div >
+        <span class="google-pixel-text bold text">Google Pixel</span>
+        <div class="google-pixel-img">
+          <img src="{{ 'googlepixel.png' | asset_url }}" width="100%" height="100%" alt="Google Pixel">
+        </div>
       </div>
-    </div>
-    <div class="item samsung-galaxy">
-      <span class="samsung-galaxy-text bold h6 text ">Samsung Galaxy</span>
-      <div class="samsung-galaxy-overlay"></div>
-      <div class="samsung-galaxy-img">
-        <img src="{{ 'SamsungGalaxy.png' | asset_url }}" width="100%" height="100%px" alt="Samsung Galaxy">
+    </a>
+
+    <a class="item samsung-galaxy" href="https://refurbi.co.uk/collections/samsung">
+      <div >
+        <span class="samsung-galaxy-text bold h6 text ">Samsung Galaxy</span>
+        <div class="samsung-galaxy-overlay"></div>
+        <div class="samsung-galaxy-img">
+          <img src="{{ 'SamsungGalaxy.png' | asset_url }}" width="100%" height="100%px" alt="Samsung Galaxy">
+        </div>
       </div>
-    </div>
-    <div class="item iphone">
-      <span class="iphone-text bold h2 text ">iPhone</span>
-      <div class="iphone-siriglow">
-        <img src="{{ 'siriglow.png' | asset_url }}" width="100%" height="100%" alt="Siri Glow">
+    </a>
+
+    <a class="item iphone" href="https://refurbi.co.uk/collections/iphone">
+      <div >
+        <span class="iphone-text bold h2 text ">iPhone</span>
+        <div class="iphone-siriglow">
+          <img src="{{ 'siriglow.png' | asset_url }}" width="100%" height="100%" alt="Siri Glow">
+        </div>
+        <div class="iphone-img">
+          <img src="{{ 'iphoneimg.png' | asset_url }}" width="100%" height="100%" alt="iPhone">
+        </div>
       </div>
-      <div class="iphone-img">
-        <img src="{{ 'iphoneimg.png' | asset_url }}" width="100%" height="100%" alt="iPhone">
+    </a>
+
+    <a class="item apple-watch" href="https://refurbi.co.uk/collections/apple-watches">
+      <div >
+        <span class="apple-watch-text bold h3 text ">Apple Watch</span>
+        <div class="apple-watch-ellipse-up"></div>
+        <div class="apple-watch-img-up">
+          <img src="{{ 'applewatchup.png' | asset_url }}" width="100%" height="100%" alt="Apple Watch Up">
+        </div>
+        <div class="apple-watch-ellipse-down"></div>
+        <div class="apple-watch-img-down">
+          <img src="{{ 'applewatchdown.png' | asset_url }}" width="100%" height="100%" alt="Apple Watch Down">
+        </div>
       </div>
-    </div>
-    <div class="item apple-watch">
-      <span class="apple-watch-text bold h3 text ">Apple Watch</span>
-      <div class="apple-watch-ellipse-up"></div>
-      <div class="apple-watch-img-up">
-        <img src="{{ 'applewatchup.png' | asset_url }}" width="100%" height="100%" alt="Apple Watch Up">
+    </a>
+
+    <a class="item ipad" href="https://refurbi.co.uk/collections/ipad">
+      <div>
+        <span class="ipad-text bold h3 text ">iPad</span>
+        <div class="ipad-img">
+          <img src="{{ 'ipad.png' | asset_url }}" width="100%" height="100%" alt="iPad">
+        </div>
       </div>
-      <div class="apple-watch-ellipse-down"></div>
-      <div class="apple-watch-img-down">
-        <img src="{{ 'applewatchdown.png' | asset_url }}" width="100%" height="100%" alt="Apple Watch Down">
-      </div>
-    </div>
-    <div class="item ipad">
-      <span class="ipad-text bold h3 text ">iPad</span>
-      <div class="ipad-img">
-        <img src="{{ 'ipad.png' | asset_url }}" width="100%" height="100%" alt="iPad">
-      </div>
-    </div>
+    </a>
+
   </div>
 </div>
 
 <style>
-    .item {
-      overflow: hidden;
-      position: relative;
-      border-radius: 16px;
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-    }
+  .item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+  }
 
-    .item::after {
-      content: '→';
-      position: absolute;
-      width: 30px;
-      height: 20px;
-      right: 0;
-      top: 20px;
-      opacity: 0;
-      transform: translateX(-30px);
-      transition: all 0.3s ease-in-out;
-      pointer-events: none;
-    }
+  .item::after {
+    content: '→';
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    right: 0;
+    top: 20px;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+  }
 
+  .item:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
+  .item img {
+    transition: all 0.3s ease-in-out;
+  }
 
-    .item:hover::after {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  .item:hover img:not(.iphone-siriglow) {
+    transform: scale(1.1);
+  }
+  .item:hover .iphone-siriglow img {
+    transform: none;
+  }
+  .bento-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 2fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 16px;
+    margin: auto;
+    border-radius: 16px;
+    justify-content: center;
+  }
+  .galaxy-watch {
+    grid-area: 1/ 1 / 2 / 2;
+    background: #fbffee;
+    height: 188px;
+    position: relative;
+  }
 
-    .item img {
-      transition: all 0.3s ease-in-out;
-    }
+  .circle-gradient {
+    position: absolute;
+    width: 88px;
+    height: 88px;
+    border-radius: 9999px;
+    right: -36px;
+    bottom: -40px;
+    transform: rotate(305deg);
+    background: linear-gradient(183.56deg, #e7ff9f 2.93%, rgba(236, 236, 236, 0) 48.24%);
+  }
 
-    .item:hover img:not(.iphone-siriglow) {
-      transform: scale(1.1);
-    }
-    .item:hover .iphone-siriglow img {
-      transform: none;
-    }
+  .galaxy-watch-img {
+    position: absolute;
+    left: 35px;
+    bottom: -10px;
+  }
+
+  .galaxy-watch-text,
+  .galaxy-tab-text,
+  .google-pixel-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .galaxy-tab {
+    grid-area: 1 / 2 / 2 / 3;
+    background: linear-gradient(135deg, #d1f2ff, #f0ffff);
+  }
+
+  .galaxy-tab-img {
+    position: absolute;
+    left: 4px;
+    bottom: -10px;
+  }
+
+  .google-pixel {
+    grid-area: 2 / 1 / 3 / 3;
+    background: #f6f6f6;
+    height: 153px;
+  }
+
+  .google-pixel-img {
+    position: absolute;
+    bottom: 0px;
+    right: 22px;
+  }
+
+  .samsung-galaxy {
+    grid-area: 3 / 1 / 5 / 3;
+    background: rgba(195, 175, 151, 0.3);
+    height: 293px;
+  }
+
+  .samsung-galaxy-overlay {
+    background: linear-gradient(360deg, #ede7e0 60%, rgba(237, 231, 224, 0) 100%);
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 79px;
+    bottom: 0;
+  }
+
+  .samsung-galaxy-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 270px;
+    width: 100%;
+  }
+
+  .samsung-galaxy-text {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+
+  .iphone {
+    grid-area: 1 / 3 / 5 / 4;
+  }
+
+  .iphone-img {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 515px;
+    width: 100%;
+  }
+
+  .iphone-siriglow {
+    position: absolute;
+    top: 0px;
+    opacity: 25%;
+  }
+
+  .iphone-text {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .apple-watch {
+    grid-area: 1 / 4 / 4 / 5;
+    background: #ececec;
+  }
+
+  .apple-watch-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  .apple-watch-ellipse-up {
+    position: absolute;
+    width: 332px;
+    height: 332px;
+    border-radius: 9999px;
+    background: linear-gradient(183.56deg, #c2eb72 2.93%, rgba(236, 236, 236, 0) 48.24%);
+    filter: blur(6px);
+    transform: rotate(-189deg);
+    top: -120px;
+  }
+
+  .apple-watch-img-up {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 251px;
+  }
+
+  .apple-watch-ellipse-down {
+    position: absolute;
+    width: 332px;
+    height: 332px;
+    border-radius: 9999px;
+    background: linear-gradient(183.56deg, #ff8486 1%, rgba(236, 236, 236, 0) 50%);
+    filter: blur(6px);
+    transform: rotate(-3deg);
+    bottom: -120px;
+  }
+
+  .apple-watch-img-down {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 251px;
+  }
+
+  .ipad {
+    grid-area: 4 / 4 / 5 / 5;
+    height: 153px;
+    background: #f4f4f4;
+  }
+
+  .ipad-text {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ipad-img {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media screen and (max-width: 900px) {
     .bento-grid {
       display: grid;
-      grid-template-columns: 0.5fr 0.5fr 2fr 1fr;
-      grid-template-rows: repeat(4, auto);
-      gap: 16px;
-      margin: auto;
-      border-radius: 16px;
-      justify-content: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      text-align: left;
     }
+
+    .iphone {
+      grid-area: 1 / 1 / 2 /2;
+    }
+
+    .apple-watch {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .ipad {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .samsung-galaxy {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+
     .galaxy-watch {
-      grid-area: 1/ 1 / 2 / 2;
-      background: #fbffee;
-      height: 188px;
-      position: relative;
-    }
-
-    .circle-gradient {
-      position: absolute;
-      width: 88px;
-      height: 88px;
-      border-radius: 9999px;
-      right: -36px;
-      bottom: -40px;
-      transform: rotate(305deg);
-      background: linear-gradient(183.56deg, #e7ff9f 2.93%, rgba(236, 236, 236, 0) 48.24%);
-    }
-
-    .galaxy-watch-img {
-      position: absolute;
-      left: 35px;
-      bottom: -10px;
-    }
-
-    .galaxy-watch-text,
-    .galaxy-tab-text,
-    .google-pixel-text {
-      position: absolute;
-      top: 20px;
-      left: 20px;
+      grid-area: 3 / 1 / 4 / 2;
     }
 
     .galaxy-tab {
-      grid-area: 1 / 2 / 2 / 3;
-      background: linear-gradient(135deg, #d1f2ff, #f0ffff);
+      grid-area: 3 / 2 / 4 / 3;
+    }
+    .google-pixel {
+      grid-area: 4;
+    }
+
+    .item {
+      height: 192px;
+    }
+
+    .text {
+      font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family);
+      top: 50px;
+      left: 28px;
+      position: absolute;
+    }
+
+    .galaxy-watch-img {
+      right: 0px;
+      left: unset;
     }
 
     .galaxy-tab-img {
       position: absolute;
-      left: 4px;
-      bottom: -10px;
-    }
-
-    .google-pixel {
-      grid-area: 2 / 1 / 3 / 3;
-      background: #f6f6f6;
-      height: 153px;
+      right: 0px;
+      left: unset;
     }
 
     .google-pixel-img {
-      position: absolute;
-      bottom: 0px;
-      right: 22px;
+      right: 20px;
     }
-
-    .samsung-galaxy {
-      grid-area: 3 / 1 / 5 / 3;
-      background: rgba(195, 175, 151, 0.3);
-      height: 293px;
-    }
-
-    .samsung-galaxy-overlay {
-      background: linear-gradient(360deg, #ede7e0 60%, rgba(237, 231, 224, 0) 100%);
-      z-index: 1;
-      position: absolute;
-      width: 100%;
-      height: 79px;
-      bottom: 0;
-    }
-
-    .samsung-galaxy-img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      max-width: 270px;
-      width: 100%;
-    }
-
-    .samsung-galaxy-text {
-      position: absolute;
-      left: 50%;
-      bottom: 20px;
-      z-index: 2;
-      transform: translateX(-50%);
-    }
-
-    .iphone {
-      grid-area: 1 / 3 / 5 / 4;
-    }
-
     .iphone-img {
-      position: absolute;
-      bottom: 0px;
-      left: 50%;
-      transform: translateX(-50%);
-      max-width: 515px;
-      width: 100%;
-    }
-
-    .iphone-siriglow {
-      position: absolute;
-      top: 0px;
-      opacity: 25%;
-    }
-
-    .iphone-text {
-      position: absolute;
-      top: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .apple-watch {
-      grid-area: 1 / 4 / 4 / 5;
-      background: #ececec;
-    }
-
-    .apple-watch-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      text-align: center;
-    }
-
-    .apple-watch-ellipse-up {
-      position: absolute;
-      width: 332px;
-      height: 332px;
-      border-radius: 9999px;
-      background: linear-gradient(183.56deg, #c2eb72 2.93%, rgba(236, 236, 236, 0) 48.24%);
-      filter: blur(6px);
-      transform: rotate(-189deg);
-      top: -120px;
-    }
-
-    .apple-watch-img-up {
-      position: absolute;
-      top: -2px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 251px;
-    }
-
-    .apple-watch-ellipse-down {
-      position: absolute;
-      width: 332px;
-      height: 332px;
-      border-radius: 9999px;
-      background: linear-gradient(183.56deg, #ff8486 1%, rgba(236, 236, 236, 0) 50%);
-      filter: blur(6px);
-      transform: rotate(-3deg);
-      bottom: -120px;
-    }
-
-    .apple-watch-img-down {
-      position: absolute;
-      bottom: -2px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 251px;
-    }
-
-    .ipad {
-      grid-area: 4 / 4 / 5 / 5;
-      height: 153px;
-      background: #f4f4f4;
-    }
-
-    .ipad-text {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
+      right: 20px;
+      max-width: 156px;
+      transform: unset;
+      left: unset;
     }
 
     .ipad-img {
-      position: absolute;
+      right: 20px;
+      left: unset;
+      transform: unset;
+      max-width: 197px;
+    }
+
+    .samsung-galaxy-overlay {
+      display: none;
+    }
+
+    .apple-watch-img-down,
+    .apple-watch-img-up {
+      width: 100px;
+      right: 20px;
+      left: unset;
+      transform: unset;
+      z-index: 1;
+    }
+    .apple-watch-ellipse-down,
+    .apple-watch-ellipse-up {
+      width: 150px;
+      height: 150px;
+      right: 5px;
+      top: unset;
+      z-index: 0;
+    }
+
+    .apple-watch-ellipse-up {
+      top: -93px !important;
+    }
+
+    .samsung-galaxy-img {
+      width: 100%;
+      max-width: 170px;
+      right: 10px;
       bottom: 0px;
-      left: 50%;
-      transform: translateX(-50%);
+      transform: unset;
+      top: unset;
+      left: unset;
     }
 
-    @media screen and (max-width: 900px) {
-
-      .bento-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        text-align: left;
-      }
-
-      .iphone{
-            grid-area: 1 / 1 / 2 /2;
-    }
-
-    .apple-watch{
-            grid-area: 1 / 2 / 2 / 3;
-    }
-    .ipad{
-            grid-area: 2 / 1 / 3 / 2;
-    }
-
-    .samsung-galaxy{
-            grid-area: 2 / 2 / 3 / 3;
-    }
-
-    .galaxy-watch{
-            grid-area: 3 / 1 / 4 / 2;
-    }
-
-    .galaxy-tab{
-        grid-area: 3 / 2 / 4 / 3;
-    }
-    .google-pixel{
-        grid-area: 4;
-    }
-
-      .item {
-        height: 192px;
-      }
-
-      .text {
-        font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family);
-        top: 50px;
-        left: 28px;
-        position: absolute;
-      }
-
-      .galaxy-watch-img {
-        right: 0px;
-        left: unset;
-      }
-
-      .galaxy-tab-img {
-        position: absolute;
-        right: 0px;
-        left: unset;
-      }
-
-      .google-pixel-img {
-        right: 20px;
-      }
-      .iphone-img {
-        right: 20px;
-        max-width: 156px;
-        transform: unset;
-        left: unset;
-      }
-
-      .ipad-img {
-        right: 20px;
-        left: unset;
-        transform: unset;
-        max-width: 197px;
-      }
-
-      .samsung-galaxy-overlay {
-        display: none;
-      }
-
-      .apple-watch-img-down,
-      .apple-watch-img-up {
-        width: 100px;
-        right: 20px;
-        left: unset;
-        transform: unset;
-        z-index: 1;
-      }
-      .apple-watch-ellipse-down,
-      .apple-watch-ellipse-up {
-        width: 150px;
-        height: 150px;
-        right: 5px;
-        top: unset;
-        z-index: 0;
-      }
-
-      .apple-watch-ellipse-up{
-          top: -93px !important;
-  }
-
-      .samsung-galaxy-img {
-        width: 100%;
-        max-width: 170px;
-        right: 10px;
-        bottom: 0px;
-        transform:unset;
-        top:unset;
-        left:unset;
-      }
-
-      .samsung-galaxy-text.bold.h6.text,
-      .apple-watch-text.bold.h3.text {
+    .samsung-galaxy-text.bold.h6.text,
+    .apple-watch-text.bold.h3.text {
       left: 80px;
-  }
-  .iphone-text.bold.h2.text,
-  .ipad-text.bold.h3.text {
+    }
+    .iphone-text.bold.h2.text,
+    .ipad-text.bold.h3.text {
       left: 50px;
-  }
+    }
 
     .item::before {
       content: 'Shop Now →';
       position: absolute;
-            font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family);
+      font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family);
 
       left: 28px;
       top: 70px;
       opacity: 1;
     }
     .item.ipad::before {
-    left: 34px;
-}
-.item.apple-watch::before {
-    top: 60px;
-    left: 42px;
-}
-}
-
-    @media screen and (max-width:699px){
-        .item.samsung-galaxy::before {
-    left: 32px;
-}
+      left: 34px;
     }
+    .item.apple-watch::before {
+      top: 60px;
+      left: 42px;
+    }
+  }
 
-    @media screen and (max-width: 550px) {
-      .bento-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
+  @media screen and (max-width: 699px) {
+    .item.samsung-galaxy::before {
+      left: 32px;
+    }
+  }
 
-      .iphone{
-                    grid-area: 1 / 1 / 2 / 2;
+  @media screen and (max-width: 550px) {
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr;
     }
 
-    .apple-watch{
-                    grid-area: 2 / 1 / 3 / 2;
-    }
-    .ipad{
-                    grid-area: 3 / 1 / 4 / 2;
+    .iphone {
+      grid-area: 1 / 1 / 2 / 2;
     }
 
-    .samsung-galaxy{
-                    grid-area: 4 / 1 / 5 / 2;
+    .apple-watch {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    .ipad {
+      grid-area: 3 / 1 / 4 / 2;
     }
 
-    .galaxy-watch{
-                    grid-area: 5 / 1 / 6 / 2;
+    .samsung-galaxy {
+      grid-area: 4 / 1 / 5 / 2;
     }
 
-    .galaxy-tab{
-                grid-area: 6 / 1 / 7 / 2;
+    .galaxy-watch {
+      grid-area: 5 / 1 / 6 / 2;
     }
-    .google-pixel{
-                grid-area: 7 / 1 / 8 / 2;
+
+    .galaxy-tab {
+      grid-area: 6 / 1 / 7 / 2;
     }
+    .google-pixel {
+      grid-area: 7 / 1 / 8 / 2;
     }
+  }
 </style>
 
 {% schema %}
