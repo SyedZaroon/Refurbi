@@ -68,7 +68,8 @@
         "mega_menu_6aEmUi"
       ],
       "custom_css": [
-        "div#mega-menu-mega_menu_6aEmUi {width: fit-content !important; margin-left: 20px !important;}"
+        "div#mega-menu-mega_menu_6aEmUi {width: fit-content !important; margin-left: 20px !important;}",
+        "ul.header__icon-list li:first-child {display: none;}"
       ],
       "settings": {
         "enable_sticky": true,
