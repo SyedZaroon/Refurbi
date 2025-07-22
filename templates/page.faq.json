@@ -61,8 +61,8 @@
         "item_QXxypF": {
           "type": "item",
           "settings": {
-            "title": "What are the delivery charges?",
-            "content": "<p>Our delivery charges range between <strong>PKR 150 to PKR 300</strong>, depending on the weight and location of your order.</p>"
+            "title": "What if the customer receives a damaged parcel?",
+            "content": "<p>If the parcel looks opened or damaged upon delivery, please refuse to accept it and report to us immediately. All other damages to be reported within 3 days of delivery. To help us resolve the problem, provide reference images of the damaged parcel.</p>"
           }
         },
         "item_Pp7MPA": {
