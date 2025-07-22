@@ -60,22 +60,22 @@
         "166442457738b23caf-0": {
           "type": "item",
           "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>We only deliver in the cities of Pakistan currently.</p>"
+            "title": "What is the meaning of Like new phone?",
+            "content": "<p>Like New phones are in impeccable condition, featuring excellent battery health and an appearance that’s as close to new as possible. While they do not come with original packaging (unless specified), they are shipped in a beautiful generic box—ideal for gifts and ready for immediate use, ensuring you receive a premium experience.</p>"
           }
         },
         "166442457738b23caf-1": {
           "type": "item",
           "settings": {
-            "title": "How do I cancel my order?",
-            "content": "<p>You can cancel your order by calling us directly on our helpline at +92 326 5280000. If your order has already been dispatched, you can refuse to accept the order at the time of delivery and return it to our Rider. Our team will identify your order as canceled, and the advance payment will be reimbursed.</p>"
+            "title": "When will my order be delivered?",
+            "content": "<p>Standard delivery generally takes 1-3 working days. For quicker delivery, choose our next-day delivery service.</p>"
           }
         },
         "166442457738b23caf-2": {
           "type": "item",
           "settings": {
-            "title": "Can I modify the shipping address of my order after it has been placed?",
-            "content": "<p>Once the order has been placed, you cannot change the delivery address. You have to cancel the order and re-order the product with the correct address. The already made payments will be refunded to you.</p>"
+            "title": " What payment methods do you accept?",
+            "content": "<p>We accept a range of payment methods to make your shopping experience smooth and convenient. You can pay using credit/debit cards, PayPal, and digital payment options like Klarna and Clearpay. Simply choose your preferred method at checkout.</p>"
           }
         }
       },
