@@ -14,35 +14,6 @@
       "name": "Search Banner",
       "settings": {}
     },
-    "rich_text_RcdBUi": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_9Gc6ty": {
-          "type": "heading",
-          "settings": {
-            "text": "Heading",
-            "heading_tag": "h1",
-            "text_color": "",
-            "gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_9Gc6ty"
-      ],
-      "custom_css": [
-        "section.section-blends.section-full {padding-top: 0px; padding-bottom: 36px;}"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "full_width": true,
-        "content_width": "small",
-        "text_position": "start",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "bento_grid_tnK4rr": {
       "type": "bento-grid",
       "name": "Bento Grid",
@@ -401,7 +372,6 @@
   },
   "order": [
     "custom_search_banner_YFxJUP",
-    "rich_text_RcdBUi",
     "bento_grid_tnK4rr",
     "featured_collection_xjxjUg",
     "faq",
