@@ -30,6 +30,9 @@
       "block_order": [
         "heading_9Gc6ty"
       ],
+      "custom_css": [
+        "section.section-blends.section-full {padding-top: 0px; padding-bottom: 36px;}"
+      ],
       "name": "Rich text",
       "settings": {
         "full_width": true,
