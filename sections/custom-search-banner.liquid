@@ -235,7 +235,7 @@
     transform: translateX(-50%) scale(1.05);
   }
 
-}
+} 
 
 
 .arc-one{
@@ -268,7 +268,51 @@
     bottom: -980px;
      opacity:0.2;
 
-} 
+}
+
+@media screen and (max-width:440px){
+  .search-banner{
+        height: 321px;
+  }
+
+  .gradient-box {
+    width: 506px;
+    height: 506px;
+    bottom:unset;
+      top: 145px;
+
+}
+.content{
+    gap: 44px;
+  }
+
+  .right-birds{
+    width:240px;
+    height:88px;
+    bottom:3px;
+    right:-60px;
+  
+  }
+  .left-birds{
+    width:160px;
+    height:52px;
+    bottom:23px;
+    left:29px;
+  
+  }
+
+  .cloud-one{top:11px; right:22px;}
+  .cloud-two{top:23px; right:73px; width:51px; height:20px;}
+  .cloud-three{top:37px; right:171px; width:46px; height:22px}
+  .cloud-four{top:12px; left:136px; width:34px; height:18px}
+  .cloud-five{top:23px; left:14px; width:59px; height:24px}
+  .cloud-six{display:none;}
+
+  .arc-one{width:560px;height:560px; bottom:-361px}
+  .arc-two{width:615px;height:615px;bottom:-382px}
+  .arc-three{width:670px;height:670px;bottom:-400px}
+  .arc-four{width:724px;height:724px;bottom:-410px}
+}
 
 
 
@@ -282,7 +326,7 @@
 
   <div class="content" >
  
-  <div class="h1 banner-text ">Refurb. <span>Reliable.</span> Ready.</div>
+  <div class="h2 banner-text ">Refurb. <span>Reliable.</span> Ready.</div>
 
   <div class="search-banner-box">
     <div class="search-input-container">
@@ -292,7 +336,7 @@
             <input
               type="text"
               id="predictive-search-input"
-              placeholder="Search for products"
+              placeholder="Search device"
               autocomplete="off"
               aria-label="Search products"
             >
@@ -322,9 +366,6 @@
    <div class="arc-two arc" > </div>
     <div class="arc-three arc" > </div>
      <div class="arc-four arc" > </div>
-
-   {% comment %} <div class="hero-union"><img src="{{ 'HeroUnion.png' | asset_url }}" alt="herounion" width="100%" height="100%">
-</div>  {% endcomment %}
 
 
 
