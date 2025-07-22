@@ -6,6 +6,10 @@
     overflow:hidden;
   }
 
+  .section.section-boxed.search-banner {
+    box-shadow: unset !important;
+}
+
 
   .search-banner-box {
     width: 80%;
@@ -32,6 +36,8 @@
     font-size: 16px;
     background-color: white;
   }
+
+
 
   .search-results-dropdown {
     position: absolute;
@@ -99,6 +105,10 @@
   .search-icon:has(input:focus) svg {
     display: none;
   }
+
+ .search-icon:has(input:focus) {
+  border-color: #FEC416;
+}
 
   .search-icon:focus {
     border: 0;
@@ -192,83 +202,14 @@
     left:53px;
   }
 
-  /*  */
-{% comment %} .review_section_gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background:
-    radial-gradient(
-      circle at 50% 135%,
-
-      #FEC416 0px,
-      #FEC416 1px,
-      rgba(255, 255, 255, 0) 1px 560px,
-
-       rgba(254, 196, 22, 0.8) 560px,
-      rgba(254, 196, 22, 0.8) 561px,
-      rgba(254, 196, 22, 0) 561px 600px,
-
-      rgba(254, 196, 22, 0.8) 601px,
-      rgba(254, 196, 22, 0.8) 602px,
-      rgba(254, 196, 22, 0) 602px 650px,
-
-       rgba(254, 196, 22, 0.8) 651px,
-      rgba(254, 196, 22, 0.8) 652px,
-      rgba(254, 196, 22, 0) 652px 653px
-
-
-
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(248, 248, 255, 0) 0%,
-      rgba(245, 244, 252, 0) 50%,
-      rgba(243, 241, 252, 0) 100%
-    );
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}   {% endcomment %}
-
-.arc{
+.arc {
   border-radius: 50%;
   position: absolute;
-  left:50%;
-    transform:translateX(-50%);
-
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  animation: ripple 10s linear infinite;
 }
-
-.arc-one{
-    width: 1150px;
-    height: 1150px;
-    bottom: -830px;
-    
-}
-
-
- .arc-two{
-    width: 1262px;
-    height: 1262px;
-    bottom: -880px;
-
-}
-
-.arc-three{
-    width: 1374px;
-    height: 1374px;
-    bottom: -930px;
-
-}
-
-.arc-four{
-    width: 1486px;
-    height: 1486px;
-    bottom: -980px;
-
-} 
 
 .arc::before {
   content: '';
@@ -283,7 +224,53 @@
     transparent calc(100% - 1px),
     #fec416 100%
   );
+  z-index: 1;
 }
+
+@keyframes ripple {
+  0% {
+    transform: translateX(-50%) scale(0.9);
+  }
+  100% {
+    transform: translateX(-50%) scale(1.05);
+  }
+
+}
+
+
+.arc-one{
+    width: 1150px;
+    height: 1150px;
+    bottom: -830px;
+    
+}
+
+
+ .arc-two{
+    width: 1262px;
+    height: 1262px;
+    bottom: -880px;
+    opacity:0.4;
+
+}
+
+.arc-three{
+    width: 1374px;
+    height: 1374px;
+    bottom: -930px;
+     opacity:0.3;
+
+}
+
+.arc-four{
+    width: 1486px;
+    height: 1486px;
+    bottom: -980px;
+     opacity:0.2;
+
+} 
+
+
 
 
 
