@@ -19,6 +19,41 @@
       "name": "Bento Grid",
       "settings": {}
     },
+    "featured_collection_xjxjUg": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "airpods-2nd-generation",
+          "apple-ipad-10th-generation-2022-cellular",
+          "apple-ipad-air-13-m2-2024-wifi",
+          "ipad-pro-10-5-inch-cellular",
+          "apple-ipad-mini-4-wifi",
+          "apple-ipad-pro-12-9-inch-4th-generation-wifi",
+          "apple-ipad-pro-12-9-inch-3rd-generation-cellular",
+          "apple-iphone-13-pro-unlocked",
+          "apple-iphone-13-sim-free-unlocked"
+        ],
+        "full_width": false,
+        "stack_products": false,
+        "show_progress_bar": false,
+        "products_count": 5,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "",
+        "title": "Mobile Phones",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -100,32 +135,6 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": ""
-      }
-    },
-    "featured_collection_xjxjUg": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "collection": "mobile-phones",
-        "products": [],
-        "full_width": false,
-        "stack_products": false,
-        "show_progress_bar": false,
-        "products_count": 5,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 5,
-        "subheading": "",
-        "title": "Mobile Phones",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
       }
     },
     "featured-collection": {
@@ -364,9 +373,9 @@
   "order": [
     "custom_search_banner_YFxJUP",
     "bento_grid_tnK4rr",
+    "featured_collection_xjxjUg",
     "faq",
     "images_with_text_scrolling_p3Vthz",
-    "featured_collection_xjxjUg",
     "featured-collection",
     "collection_list_EpbWFA",
     "image-link-blocks"
