@@ -68,8 +68,8 @@
         "item_Pp7MPA": {
           "type": "item",
           "settings": {
-            "title": "Can I track my order?",
-            "content": "<p>Yes, once your order is shipped, we will send you a tracking number via email so you can monitor your delivery status.</p>"
+            "title": "When will my order be shipped if placed on the weekend?",
+            "content": "<p>Orders placed between Friday after 3:00 PM and Sunday will be shipped on the following Monday or the next business day.</p>"
           }
         },
         "item_LN6FFT": {
