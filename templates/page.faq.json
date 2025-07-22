@@ -75,8 +75,8 @@
         "item_LN6FFT": {
           "type": "item",
           "settings": {
-            "title": "Do you offer cash on delivery (COD)?",
-            "content": "<p>Yes, we offer <strong>Cash on Delivery</strong> across Pakistan for most products.</p>"
+            "title": "How can I get my order tracking ID?",
+            "content": "<p>Once the parcel is shipped, the customer receives a tracking number via email. If you have any questions or need further assistance, don’t hesitate to reach out!</p>"
           }
         }
       },
