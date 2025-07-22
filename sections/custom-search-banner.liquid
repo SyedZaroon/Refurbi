@@ -120,7 +120,7 @@
         text-align: center;
   }
   .banner-text span {
-   background: linear-gradient(180deg, #000000 64.4%, #FFC20D 100%);
+   background: linear-gradient(180deg, #000000 65%, #FFC20D 85%);
     background-clip: text; 
   color: transparent; 
 
@@ -192,6 +192,59 @@
     left:53px;
   }
 
+  /*  */
+ .review_section_gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background:
+    radial-gradient(
+      circle at 50% 120%,
+      #FEC416 0px,
+      #FEC416 1px,
+      rgba(255, 255, 255, 0) 1px 190px,
+      
+      rgba(254, 196, 22, 0.8) 190px,
+      rgba(254, 196, 22, 0.8) 191px,
+      rgba(254, 196, 22, 0) 191px 380px,
+
+      rgba(254, 196, 22, 0.7) 380px,
+      rgba(254, 196, 22, 0.7) 381px,
+      rgba(254, 196, 22, 0) 381px 570px,
+
+      rgba(254, 196, 22, 0.6) 570px,
+      rgba(254, 196, 22, 0.6) 571px,
+      rgba(254, 196, 22, 0) 571px 760px,
+
+      rgba(254, 196, 22, 0.5) 760px,
+      rgba(254, 196, 22, 0.5) 761px,
+      rgba(254, 196, 22, 0) 761px 950px,
+
+      rgba(254, 196, 22, 0.4) 950px,
+      rgba(254, 196, 22, 0.4) 951px,
+      rgba(254, 196, 22, 0) 951px 1140px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(248, 248, 255, 0) 0%,
+      rgba(245, 244, 252, 0) 50%,
+      rgba(243, 241, 252, 0) 100%
+    );
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
 
 </style>
 
@@ -232,14 +285,14 @@
         <div class="search-results-dropdown" id="search-results-dropdown"></div>
       </div>
     </div>
-  </div>
+  </div  >
 
   </div>
 
   <div class="gradient-box"></div>
 
-   <div class="hero-union"><img src="{{ 'HeroUnion.png' | asset_url }}" alt="herounion" width="100%" height="100%">
-</div> 
+   {% comment %} <div class="hero-union"><img src="{{ 'HeroUnion.png' | asset_url }}" alt="herounion" width="100%" height="100%">
+</div>  {% endcomment %}
 
 
 
@@ -251,6 +304,10 @@
 <div class="cloud-four" ><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud3" width="44px" height="23px" ></div>
 <div class="cloud-five" ><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud3" width="120px" height="49px" ></div>
 <div class="cloud-six" ><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud3" width="52px" height="27px" ></div>
+
+
+<div class="review_section_gradient">
+</div>
 
 
 </div>
