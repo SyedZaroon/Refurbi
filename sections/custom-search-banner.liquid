@@ -1,388 +1,414 @@
 <style>
-  .search-banner {
-    background: #fff;
-    height: 509px;
-    position: relative;
-    overflow:hidden;
-  }
+    .search-banner {
+      background: #fff;
+      height: 509px;
+      position: relative;
+      overflow: hidden;
 
-  .section.section-boxed.search-banner {
-    box-shadow: unset !important;
-}
+    }
 
+    .section.section-boxed.search-banner {
+      box-shadow: unset !important;
+    }
 
-  .search-banner-box {
-    width: 80%;
-    max-width: 700px;
-    z-index: 2;
-    font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family);
-  }
-  .search-input-wrapper {
-    position: relative;
-  }
+    .search-banner-box {
+      width: 80%;
+      max-width: 700px;
+      z-index: 2;
+      font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family);
+    }
+    .search-input-wrapper {
+      position: relative;
+    }
 
-  .search-input {
-    flex: 1;
-  }
+    .search-input {
+      flex: 1;
+    }
 
-  .search-icon {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 15px 20px;
-    border-radius: 50px;
-    border: 1.5px solid #F7EED0;
-    font-size: 16px;
-    background-color: white;
-  }
+    .search-icon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: 50px;
+      border: 1.5px solid #f7eed0;
+      font-size: 16px;
+      background-color: white;
+    }
 
+    .search-results-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 6%;
+      width: 90%;
+      background: white;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-height: 400px;
+      overflow-y: auto;
+      display: none;
+      z-index: 100;
+    }
 
+    .search-results-dropdown.active {
+      display: block;
+    }
 
-  .search-results-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 6%;
-    width: 90%;
-    background: white;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-height: 400px;
-    overflow-y: auto;
-    display: none;
-    z-index: 100;
-  }
+    .search-result-item {
+      padding: 12px 20px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+    }
 
-  .search-results-dropdown.active {
-    display: block;
-  }
+    .search-result-item:hover {
+      background: #f9f9f9;
+    }
 
-  .search-result-item {
-    padding: 12px 20px;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    align-items: center;
-  }
+    .search-result-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      margin-right: 15px;
+      border-radius: 4px;
+    }
 
-  .search-result-item:hover {
-    background: #f9f9f9;
-  }
+    .search-result-item-info {
+      flex: 1;
+      text-align: start;
+    }
 
-  .search-result-item img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    margin-right: 15px;
-    border-radius: 4px;
-  }
+    .search-result-item-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
 
-  .search-result-item-info {
-    flex: 1;
-    text-align: start;
-  }
+    .search-result-item-price {
+      color: var(--text-color);
+      font-size: 14px;
+    }
 
-  .search-result-item-title {
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
+    .no-results {
+      padding: 15px 20px;
+      text-align: center;
+      color: #666;
+    }
 
-  .search-result-item-price {
-    color: var(--text-color);
-    font-size: 14px;
-  }
+    .search-input-container input:focus {
+      border: 0px;
+      outline: #000;
+    }
 
-  .no-results {
-    padding: 15px 20px;
-    text-align: center;
-    color: #666;
-  }
+    .search-icon:has(input:focus) svg {
+      display: none;
+    }
 
-  .search-input-container input:focus {
-    border: 0px;
-    outline: #000;
-  }
+    .search-icon:has(input:focus) {
+      border-color: #000;
+    }
 
-  .search-icon:has(input:focus) svg {
-    display: none;
-  }
+    .search-icon:focus {
+      border: 0;
+    }
 
- .search-icon:has(input:focus) {
-  border-color: #FEC416;
-}
+    .gradient-box {
+      width: 1030px;
+      height: 1030px;
+      border-radius: 9999px;
+      background: linear-gradient(179.99deg, #ffbf00 0.01%, rgba(236, 236, 236, 0) 28.6%);
+      position: absolute;
+      bottom: -754px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    .banner-text {
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .banner-text span {
+      background: linear-gradient(180deg, #000000 65%, #ffc20d 85%);
+      background-clip: text;
+      color: transparent;
+    }
 
-  .search-icon:focus {
-    border: 0;
-  }
+    .icon-search {
+      min-width: 22px;
+    }
 
-  .gradient-box {
-    width: 1030px;
-    height: 1030px;
-    border-radius: 9999px;
-    background: linear-gradient(179.99deg, #FFBF00 0.01%, rgba(236, 236, 236, 0) 28.6%);
-    position: absolute;
-    bottom: -754px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-  .banner-text{
-    text-transform:uppercase;
-        text-align: center;
-  }
-  .banner-text span {
-   background: linear-gradient(180deg, #000000 65%, #FFC20D 85%);
-    background-clip: text; 
-  color: transparent; 
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 73px;
+      align-items: center;
 
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-  }
+      width: 100%;
+      z-index: 2;
+    }
+    .hero-union {
+      position: absolute;
+      bottom: -35px;
+      left: 0;
+    }
+    .right-birds {
+      position: absolute;
+      bottom: 48px;
+      right: 80px;
+    }
+    .left-birds {
+      position: absolute;
+      bottom: 51px;
+      left: 133px;
+    }
 
-  .icon-search {
-    min-width: 22px;
-  }
+    .cloud-one {
+      position: absolute;
+      top: 44px;
+      right: 42px;
+    }
+    .cloud-two {
+      position: absolute;
+      top: 86px;
+      right: 159px;
+    }
+    .cloud-three {
+      position: absolute;
+      top: 71px;
+      right: 433px;
+    }
+    .cloud-four {
+      position: absolute;
+      top: 23px;
+      left: 469px;
+    }
+    .cloud-five {
+      position: absolute;
+      top: 46px;
+      left: 117px;
+    }
+    .cloud-six {
+      position: absolute;
+      top: 169px;
+      left: 53px;
+    }
 
-  .content{
-    display:flex;
-    flex-direction:column;
-    gap:73px;
-    align-items:center;
+    .arc {
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+      animation: ripple 10s linear infinite;
+    }
 
-    position:absolute;
-    top:45%;
-    left:50%;
-    transform:translate(-50%,-50%);
+    .arc::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(closest-side, transparent calc(100% - 1px), #fec416 100%);
+      z-index: 1;
+    }
 
-    width:100%;
-    z-index:2;
-  }
-  .hero-union{
-    position:absolute;
-    bottom:-35px;
-    left:0;
-  }
-  .right-birds{
-     position:absolute;
-    bottom:48px;
-    right:80px;
-  }
-  .left-birds{
-    position:absolute;
-    bottom:51px;
-    left:133px;
-  }
+    @keyframes ripple {
+      0% {
+        transform: translateX(-50%) scale(0.9);
+      }
+      100% {
+        transform: translateX(-50%) scale(1.05);
+      }
+    }
 
-  .cloud-one{
-    position:absolute;
-    top:44px;
-    right:42px;
-  }
-  .cloud-two{
-    position:absolute;
-    top:86px;
-    right:159px;
-  }
-   .cloud-three{
-    position:absolute;
-    top:71px;
-    right:433px;
-  }
-    .cloud-four{
-    position:absolute;
-    top:23px;
-    left:469px;
-  }
-    .cloud-five{
-    position:absolute;
-    top:46px;
-    left:117px;
-  }
-   .cloud-six{
-    position:absolute;
-    top:169px;
-    left:53px;
-  }
+    .arc-one {
+      width: 1150px;
+      height: 1150px;
+      bottom: -830px;
+    }
 
-.arc {
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  pointer-events: none;
-  animation: ripple 10s linear infinite;
-}
+    .arc-two {
+      width: 1262px;
+      height: 1262px;
+      bottom: -880px;
+      opacity: 0.4;
+    }
 
-.arc::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(
-    closest-side,
-    transparent calc(100% - 1px),
-    #fec416 100%
-  );
-  z-index: 1;
-}
+    .arc-three {
+      width: 1374px;
+      height: 1374px;
+      bottom: -930px;
+      opacity: 0.3;
+    }
 
-@keyframes ripple {
-  0% {
-    transform: translateX(-50%) scale(0.9);
-  }
-  100% {
-    transform: translateX(-50%) scale(1.05);
-  }
+    .arc-four {
+      width: 1486px;
+      height: 1486px;
+      bottom: -980px;
+      opacity: 0.2;
+    }
 
-} 
-
-
-.arc-one{
-    width: 1150px;
-    height: 1150px;
-    bottom: -830px;
-    
-}
-
-
- .arc-two{
-    width: 1262px;
-    height: 1262px;
-    bottom: -880px;
-    opacity:0.4;
-
-}
-
-.arc-three{
-    width: 1374px;
-    height: 1374px;
-    bottom: -930px;
-     opacity:0.3;
-
-}
-
-.arc-four{
-    width: 1486px;
-    height: 1486px;
-    bottom: -980px;
-     opacity:0.2;
-
-}
-
-@media screen and (max-width:440px){
-  .search-banner{
+    @media screen and (max-width: 440px) {
+      .search-banner {
         height: 321px;
+      }
+
+      .gradient-box {
+        width: 506px;
+        height: 506px;
+        bottom: unset;
+        top: 145px;
+      }
+      .content {
+        gap: 44px;
+      }
+
+      .right-birds {
+        width: 240px;
+        height: 88px;
+        bottom: 3px;
+        right: -60px;
+      }
+      .left-birds {
+        width: 160px;
+        height: 52px;
+        bottom: 23px;
+        left: 29px;
+      }
+
+      .cloud-one {
+        top: 11px;
+        right: 22px;
+      }
+      .cloud-two {
+        top: 23px;
+        right: 73px;
+        width: 51px;
+        height: 20px;
+      }
+      .cloud-three {
+        top: 37px;
+        right: 171px;
+        width: 46px;
+        height: 22px;
+      }
+      .cloud-four {
+        top: 12px;
+        left: 136px;
+        width: 34px;
+        height: 18px;
+      }
+      .cloud-five {
+        top: 23px;
+        left: 14px;
+        width: 59px;
+        height: 24px;
+      }
+      .cloud-six {
+        display: none;
+      }
+
+      .arc-one {
+        width: 560px;
+        height: 560px;
+        bottom: -361px;
+      }
+      .arc-two {
+        width: 615px;
+        height: 615px;
+        bottom: -382px;
+      }
+      .arc-three {
+        width: 670px;
+        height: 670px;
+        bottom: -400px;
+      }
+      .arc-four {
+        width: 724px;
+        height: 724px;
+        bottom: -410px;
+      }
+    }
+
+    @media screen and (min-width:440px){
+         .search-results-dropdown
+         {
+
+      left: 2%;
+      width: 95%;
+         }
   }
-
-  .gradient-box {
-    width: 506px;
-    height: 506px;
-    bottom:unset;
-      top: 145px;
-
-}
-.content{
-    gap: 44px;
-  }
-
-  .right-birds{
-    width:240px;
-    height:88px;
-    bottom:3px;
-    right:-60px;
-  
-  }
-  .left-birds{
-    width:160px;
-    height:52px;
-    bottom:23px;
-    left:29px;
-  
-  }
-
-  .cloud-one{top:11px; right:22px;}
-  .cloud-two{top:23px; right:73px; width:51px; height:20px;}
-  .cloud-three{top:37px; right:171px; width:46px; height:22px}
-  .cloud-four{top:12px; left:136px; width:34px; height:18px}
-  .cloud-five{top:23px; left:14px; width:59px; height:24px}
-  .cloud-six{display:none;}
-
-  .arc-one{width:560px;height:560px; bottom:-361px}
-  .arc-two{width:615px;height:615px;bottom:-382px}
-  .arc-three{width:670px;height:670px;bottom:-400px}
-  .arc-four{width:724px;height:724px;bottom:-410px}
-}
-
-
-
-
-
+    }
 </style>
 
 <!-- Search Input -->
+<div>
 
 <div class="section section-boxed search-banner ">
 
-  <div class="content" >
- 
-  <div class="h2 banner-text ">Refurb. <span>Reliable.</span> Ready.</div>
+    <div class="gradient-box"></div>
+    <div class="arc-one arc"></div>
+    <div class="arc-two arc"></div>
+    <div class="arc-three arc"></div>
+    <div class="arc-four arc"></div>
 
-  <div class="search-banner-box">
-    <div class="search-input-container">
-      <div class="search-input-wrapper">
-        <label>
-          <div class=" search-icon ">
-            <input
-              type="text"
-              id="predictive-search-input"
-              placeholder="Search device"
-              autocomplete="off"
-              aria-label="Search products"
-            >
-            <svg
-              role="presentation"
-              stroke-width="2"
-              focusable="false"
-              width="22"
-              height="22"
-              class="icon icon-search"
-              viewBox="0 0 22 22"
-            >
-              <circle cx="11" cy="10" r="7" fill="none" stroke="#596066"></circle>
-              <path d="m16 15 3 3" stroke="#596066" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-        </label>
-        <div class="search-results-dropdown" id="search-results-dropdown"></div>
+    <div class="right-birds">
+      <img src="{{ 'rightbirds.png' | asset_url }}" alt="rightBirds" width="405px" height="149px">
+    </div>
+    <div class="left-birds">
+      <img src="{{ 'leftbird.png' | asset_url }}" alt="leftBirds" width="235px" height="76px">
+    </div>
+    <div class="cloud-one"><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud1" width="34px" height="17px"></div>
+    <div class="cloud-two"><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud2" width="98px" height="39px"></div>
+    <div class="cloud-three"><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud3" width="71px" height="34px"></div>
+    <div class="cloud-four"><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud3" width="44px" height="23px"></div>
+    <div class="cloud-five"><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud3" width="120px" height="49px"></div>
+    <div class="cloud-six"><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud3" width="52px" height="27px"></div>
+
+ 
+
+</div>
+   <div class="content">
+    <div class="h2 banner-text ">Refurb. <span>Reliable.</span> Ready.</div>
+
+    <div class="search-banner-box">
+      <div class="search-input-container">
+        <div class="search-input-wrapper">
+          <label>
+            <div class=" search-icon ">
+              <input
+                type="text"
+                id="predictive-search-input"
+                placeholder="Search device"
+                autocomplete="off"
+                aria-label="Search products"
+              >
+              <svg
+                role="presentation"
+                stroke-width="2"
+                focusable="false"
+                width="22"
+                height="22"
+                class="icon icon-search"
+                viewBox="0 0 22 22"
+              >
+                <circle cx="11" cy="10" r="7" fill="none" stroke="#596066"></circle>
+                <path d="m16 15 3 3" stroke="#596066" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </label>
+          <div class="search-results-dropdown" id="search-results-dropdown"></div>
+        </div>
       </div>
     </div>
-  </div  >
-
   </div>
-
-  <div class="gradient-box"></div>
-  <div class="arc-one arc" > </div>
-   <div class="arc-two arc" > </div>
-    <div class="arc-three arc" > </div>
-     <div class="arc-four arc" > </div>
-
-
-
-<div class="right-birds" ><img src="{{ 'rightbirds.png' | asset_url }}" alt="rightBirds" width="405px" height="149px" ></div>
-<div class="left-birds" ><img src="{{ 'leftbird.png' | asset_url }}" alt="leftBirds" width="235px" height="76px" ></div>
-<div class="cloud-one" ><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud1" width="34px" height="17px" ></div>
-<div class="cloud-two" ><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud2" width="98px" height="39px" ></div>
-<div class="cloud-three" ><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud3" width="71px" height="34px" ></div>
-<div class="cloud-four" ><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud3" width="44px" height="23px" ></div>
-<div class="cloud-five" ><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud3" width="120px" height="49px" ></div>
-<div class="cloud-six" ><img src="{{ 'cloud.png' | asset_url }}" alt="Cloud3" width="52px" height="27px" ></div>
-
-
-{% comment %} <div class="review_section_gradient">
-</div> {% endcomment %}
-
-
 </div>
 
 <script>

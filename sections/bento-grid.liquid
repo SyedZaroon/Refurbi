@@ -1,11 +1,12 @@
 <div class="section   section-blends section-full bento-section">
-
-  <h2 class="h2 bento-margin " >Shop By Category</h2>
+  <h2 class="h2 bento-margin ">Shop By Category</h2>
   <div class="bento-grid">
-
     <a class="item galaxy-watch" href="https://refurbi.co.uk/collections/galaxy-watches">
       <div>
-        <span class="galaxy-watch-text bold text ">Galaxy Watch</span>
+        <div class="galaxy-watch-text text text-wrap">
+          <p class="bold">Galaxy Watch</p>
+          <p class="shop">Shop Now</p>
+        </div>
         <div class="circle-gradient"></div>
         <div class="galaxy-watch-img">
           <img src="{{ 'Galaxywatch.png' | asset_url }}" width="100%" height="100%" alt="Galaxy Watch">
@@ -14,8 +15,11 @@
     </a>
 
     <a class="item galaxy-tab" href="https://refurbi.co.uk/collections/samsung-tablet">
-      <div >
-        <span class="galaxy-tab-text bold text">Galaxy Tab</span>
+      <div>
+        <div class="galaxy-tab-text text text-wrap">
+          <p class="bold">Galaxy Tab</p>
+          <p class="shop">Shop Now</p>
+        </div>
         <div class="galaxy-tab-img">
           <img src="{{ 'glaxytab.png' | asset_url }}" width="100%" height="100%" alt="Galaxy Tab">
         </div>
@@ -23,8 +27,11 @@
     </a>
 
     <a class="item google-pixel" href="https://refurbi.co.uk/collections/google-pixel">
-      <div >
-        <span class="google-pixel-text bold text">Google Pixel</span>
+      <div>
+        <div class="google-pixel-text text text-wrap">
+          <p class="bold">Google Pixel</p>
+          <p class="shop">Shop Now</p>
+        </div>
         <div class="google-pixel-img">
           <img src="{{ 'googlepixel.png' | asset_url }}" width="100%" height="100%" alt="Google Pixel">
         </div>
@@ -32,8 +39,11 @@
     </a>
 
     <a class="item samsung-galaxy" href="https://refurbi.co.uk/collections/samsung">
-      <div >
-        <span class="samsung-galaxy-text bold h6 text ">Samsung Galaxy</span>
+      <div>
+        <div class="samsung-galaxy-text text text-wrap">
+          <p class="bold">Samsung Galaxy</p>
+          <p class="shop">Shop Now</p>
+        </div>
         <div class="samsung-galaxy-overlay"></div>
         <div class="samsung-galaxy-img">
           <img src="{{ 'SamsungGalaxy.png' | asset_url }}" width="100%" height="100%px" alt="Samsung Galaxy">
@@ -42,8 +52,11 @@
     </a>
 
     <a class="item iphone" href="https://refurbi.co.uk/collections/iphone">
-      <div >
-        <span class="iphone-text bold h2 text ">iPhone</span>
+      <div>
+        <div class="iphone-text text text-wrap">
+          <p class="bold h2">iPhone</p>
+          <p class="shop">Shop Now</p>
+        </div>
         <div class="iphone-siriglow">
           <img src="{{ 'siriglow.png' | asset_url }}" width="100%" height="100%" alt="Siri Glow">
         </div>
@@ -54,8 +67,11 @@
     </a>
 
     <a class="item apple-watch" href="https://refurbi.co.uk/collections/apple-watches">
-      <div >
-        <span class="apple-watch-text bold h3 text ">Apple Watch</span>
+      <div>
+        <div class="apple-watch-text text text-wrap">
+          <p class="bold h3">Apple Watch</p>
+          <p class="shop">Shop Now</p>
+        </div>
         <div class="apple-watch-ellipse-up"></div>
         <div class="apple-watch-img-up">
           <img src="{{ 'applewatchup.png' | asset_url }}" width="100%" height="100%" alt="Apple Watch Up">
@@ -69,18 +85,19 @@
 
     <a class="item ipad" href="https://refurbi.co.uk/collections/ipad">
       <div>
-        <span class="ipad-text bold h3 text ">iPad</span>
+        <div class="ipad-text text text-wrap">
+          <p class="bold h3">iPad</p>
+          <p class="shop">Shop Now</p>
+        </div>
         <div class="ipad-img">
           <img src="{{ 'ipad.png' | asset_url }}" width="100%" height="100%" alt="iPad">
         </div>
       </div>
     </a>
-
   </div>
 </div>
 
 <style>
-
   .bento-section{
     padding-block-start:unset !important;
     padding-block-end:unset !important
@@ -127,6 +144,8 @@
   .item:hover .iphone-siriglow img {
     transform: none;
   }
+
+
   .bento-grid {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 2fr 1fr;
@@ -136,11 +155,11 @@
     border-radius: 16px;
     justify-content: center;
   }
+
   .galaxy-watch {
     grid-area: 1/ 1 / 2 / 2;
     background: #fbffee;
     height: 188px;
-    position: relative;
   }
 
   .circle-gradient {
@@ -181,7 +200,7 @@
 
   .google-pixel {
     grid-area: 2 / 1 / 3 / 3;
-    background: #f6f6f6;
+    background: #FFF9E3;
     height: 153px;
   }
 
@@ -305,12 +324,12 @@
   .ipad {
     grid-area: 4 / 4 / 5 / 5;
     height: 153px;
-    background: #f4f4f4;
+    background: #F0f0f0;
   }
 
   .ipad-text {
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -322,7 +341,15 @@
     transform: translateX(-50%);
   }
 
+  .shop{
+    display:none;
+  }
+
   @media screen and (max-width: 900px) {
+
+    .shop {
+    display:block;
+  }
     .bento-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -360,11 +387,39 @@
       height: 192px;
     }
 
+    .iphone-text,
+    .apple-watch-text,
+    .ipad-text,
+    .samsung-galaxy-text,
+    .galaxy-watch-text,
+    .galaxy-tab-text,
+    .google-pixel-text{
+      top:unset;
+      bottom:unset;
+      right:unset;
+      left:unset;
+      transform:unset;
+      width:unset;
+    }
+
+    .text-wrap{
+      display: flex
+;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+    }
+
     .text {
+      position:absolute;
+      bottom: 20px !important;
+      left: 28px !important;
+    }
+
+    .text p{
       font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family);
-      top: 50px;
-      left: 28px;
-      position: absolute;
+
     }
 
     .galaxy-watch-img {
@@ -373,7 +428,6 @@
     }
 
     .galaxy-tab-img {
-      position: absolute;
       right: 0px;
       left: unset;
     }
@@ -439,29 +493,6 @@
       left: 50px;
     }
 
-    .item::before {
-      content: 'Shop Now →';
-      position: absolute;
-      font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family);
-
-      left: 28px;
-      top: 70px;
-      opacity: 1;
-    }
-    .item.ipad::before {
-      left: 34px;
-    }
-    .item.apple-watch::before {
-      top: 60px;
-      left: 42px;
-    }
-  }
-
-  @media screen and (max-width: 699px) {
-    .item.samsung-galaxy::before {
-      left: 32px;
-    }
-  }
 
   @media screen and (max-width: 550px) {
     .bento-grid {
@@ -493,6 +524,12 @@
     }
     .google-pixel {
       grid-area: 7 / 1 / 8 / 2;
+    }
+  }
+
+  @media screen and (max-width:699px){
+    .bento-section{
+    padding-block-start: calc(var(--background-differs-from-previous) * var(--calculated-section-spacing-block-start)) !important;
     }
   }
 </style>
