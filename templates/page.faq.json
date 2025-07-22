@@ -129,7 +129,7 @@
           "type": "item",
           "settings": {
             "title": "Is my personal information secure on your site?",
-            "content": "<p>Yes, we prioritize your privacy and use secure encryption protocols to protect all user data. Please read our <a href=\"#\">Privacy Policy</a> for more details.</p>"
+            "content": "<p>Yes, we prioritize your privacy and use secure encryption protocols to protect all user data. Please read our <a href=\"https://refurbi.co.uk/pages/privacy-policy\" title=\"https://refurbi.co.uk/pages/privacy-policy\">Privacy Policy</a> for more details.</p>"
           }
         },
         "item_DpPqxT": {
