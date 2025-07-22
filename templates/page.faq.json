@@ -54,29 +54,29 @@
         "item_HkLFtD": {
           "type": "item",
           "settings": {
-            "title": "What is the delivery time for orders placed on Mobile Direct PK?",
-            "content": "<p>We offer delivery across Pakistan. Orders are usually delivered within <strong>2 to 5 business days</strong>, depending on your location.</p>"
+            "title": "When will my order be delivered?",
+            "content": "<p>Standard delivery generally takes 1-3 working days. For quicker delivery, choose our next-day delivery service.</p>"
           }
         },
         "item_QXxypF": {
           "type": "item",
           "settings": {
-            "title": "What are the delivery charges?",
-            "content": "<p>Our delivery charges range between <strong>PKR 150 to PKR 300</strong>, depending on the weight and location of your order.</p>"
+            "title": "What if the customer receives a damaged parcel?",
+            "content": "<p>If the parcel looks opened or damaged upon delivery, please refuse to accept it and report to us immediately. All other damages to be reported within 3 days of delivery. To help us resolve the problem, provide reference images of the damaged parcel.</p>"
           }
         },
         "item_Pp7MPA": {
           "type": "item",
           "settings": {
-            "title": "Can I track my order?",
-            "content": "<p>Yes, once your order is shipped, we will send you a tracking number via email so you can monitor your delivery status.</p>"
+            "title": "When will my order be shipped if placed on the weekend?",
+            "content": "<p>Orders placed between Friday after 3:00 PM and Sunday will be shipped on the following Monday or the next business day.</p>"
           }
         },
         "item_LN6FFT": {
           "type": "item",
           "settings": {
-            "title": "Do you offer cash on delivery (COD)?",
-            "content": "<p>Yes, we offer <strong>Cash on Delivery</strong> across Pakistan for most products.</p>"
+            "title": "How can I get my order tracking ID?",
+            "content": "<p>Once the parcel is shipped, the customer receives a tracking number via email. If you have any questions or need further assistance, don’t hesitate to reach out!</p>"
           }
         }
       },
@@ -89,7 +89,7 @@
       "settings": {
         "full_width": true,
         "subheading": "",
-        "title": "Shopping",
+        "title": "Shipping",
         "content": "<p>Get detailed information about our shipping methods, delivery timelines, and order handling. We aim to deliver your products safely and on time across Pakistan.</p>",
         "team_avatar_width": 160,
         "support_hours": "",
@@ -121,7 +121,7 @@
         "item_fr44bV": {
           "type": "item",
           "settings": {
-            "title": "How do I create an account on Mobile Direct PK?",
+            "title": "How do I create an account on Refurbi?",
             "content": "<p>Click on the “Account” icon or button on our website, enter your name, email, password, and you're ready to go!</p>"
           }
         },
@@ -129,7 +129,7 @@
           "type": "item",
           "settings": {
             "title": "Is my personal information secure on your site?",
-            "content": "<p>Yes, we prioritize your privacy and use secure encryption protocols to protect all user data. Please read our <a href=\"#\">Privacy Policy</a> for more details.</p>"
+            "content": "<p>Yes, we prioritize your privacy and use secure encryption protocols to protect all user data. Please read our <a href=\"https://refurbi.co.uk/pages/privacy-policy\" title=\"https://refurbi.co.uk/pages/privacy-policy\">Privacy Policy</a> for more details.</p>"
           }
         },
         "item_DpPqxT": {
@@ -150,7 +150,7 @@
         "full_width": true,
         "subheading": "",
         "title": "Account",
-        "content": "<p>Manage your orders with ease by creating an account. Track your purchases, save shipping details, and enjoy a personalized shopping experience with Mobile Direct PK.</p>",
+        "content": "<p>Manage your orders with ease by creating an account. Track your purchases, save shipping details, and enjoy a personalized shopping experience with Refurbi.</p>",
         "team_avatar_width": 160,
         "support_hours": "",
         "answer_time": "",
