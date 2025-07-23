@@ -144,7 +144,7 @@
         "@media (min-width: 993px) {.footer__wrapper {gap: 0px; }}"
       ],
       "settings": {
-        "show_social_media": true,
+        "show_social_media": false,
         "show_payment_icons": true,
         "show_policy_links": false,
         "show_country_selector": false,
