@@ -98,12 +98,10 @@
       {% assign specs = product.metafields.custom.product_specifications %}
       {% if specs != blank %}
         <table class="table table-bordered" style="margin-top: 10px; width: 100%;">
-          <thead>
             <tr>
               <th style="text-align: left;">Title</th>
               <th style="text-align: left;">Value</th>
             </tr>
-          </thead>
   {% for row in specs %}
     <tr>{{ specs }}</tr>
     <tr>
