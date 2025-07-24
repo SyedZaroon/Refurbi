@@ -1,66 +1,71 @@
 {%- comment -%}
-----------------------------------------------------------------------------------------------------------------------
-ACCORDION COMPONENT
-----------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------
+  ACCORDION COMPONENT
+  ----------------------------------------------------------------------------------------------------------------------
 
-This component is used to create an accordion (also called as collapsible). It internally uses the "details" HTML
-tag so that it can also be used without any JavaScript.
+  This component is used to create an accordion (also called as collapsible). It internally uses the "details" HTML
+  tag so that it can also be used without any JavaScript.
 
-********************************************
-Supported parameters
-********************************************
+  ********************************************
+  Supported parameters
+  ********************************************
 
-* title: the title to use for the toggle button
-* icon: an optional icon attached to the title
-* icon_width: an optional icon width (only work for image icons)
-* content: the hidden content inside the accordion
-* open: if set to true the accordion is open by default
-* size: if set to "lg", the font is and spacing is bigger
-* class: any additional class
-* id: an optional ID for the accordion
+  * title: the title to use for the toggle button
+  * icon: an optional icon attached to the title
+  * icon_width: an optional icon width (only work for image icons)
+  * content: the hidden content inside the accordion
+  * open: if set to true the accordion is open by default
+  * size: if set to "lg", the font is and spacing is bigger
+  * class: any additional class
+  * id: an optional ID for the accordion
 {%- endcomment -%}
 
-{% comment %} <details {% if id %}id="{{ id | escape }}"{% endif %} class="{{ class }} accordion {% if size %}accordion--{{ size }}{% endif %} group" aria-expanded="{% if open %}true{% else %}false{% endif %}" is="accordion-disclosure" {% if open %}open{% endif %} {{ block.shopify_attributes }}>
-  <summary>
-    {%- comment -%}iOS 14 does not support flex on the summary itself, so we have to use this extra div{%- endcomment -%}
-    <div class="accordion__toggle bold">
-      {%- if icon -%}
-        <div class="text-with-icon">
-          {%- if icon.src != blank -%}
-            {% capture icon_sizes %}{{ icon_width | default: 20 }}px{%- endcapture -%}
-            {% capture icon_widths %}{{ icon_width }},{{ icon_width | times: 2 }},{{ icon_width | times: 3 }}{%- endcapture -%}
-            {% capture icon_style %}--image-max-width: {{ icon_sizes }}{%- endcapture -%}
+{% comment %}
+  <details {% if id %}id="{{ id | escape }}"{% endif %} class="{{ class }} accordion {% if size %}accordion--{{ size }}{% endif %} group" aria-expanded="{% if open %}true{% else %}false{% endif %}" is="accordion-disclosure" {% if open %}open{% endif %} {{ block.shopify_attributes }}>
+    <summary>
+      {%- comment -%}iOS 14 does not support flex on the summary itself, so we have to use this extra div{%- endcomment -%}
+      <div class="accordion__toggle bold">
+        {%- if icon -%}
+          <div class="text-with-icon">
+            {%- if icon.src != blank -%}
+              {% capture icon_sizes %}{{ icon_width | default: 20 }}px{%- endcapture -%}
+              {% capture icon_widths %}{{ icon_width }},{{ icon_width | times: 2 }},{{ icon_width | times: 3 }}{%- endcapture -%}
+              {% capture icon_style %}--image-max-width: {{ icon_sizes }}{%- endcapture -%}
 
-            {{- icon | image_url: width: icon.width | image_tag: loading: 'lazy', sizes: icon_sizes, widths: icon_widths, style: icon_style -}}
-          {%- else -%}
-            {%- render 'icon' with icon, width: icon_width -%}
-          {%- endif -%}
+              {{- icon | image_url: width: icon.width | image_tag: loading: 'lazy', sizes: icon_sizes, widths: icon_widths, style: icon_style -}}
+            {%- else -%}
+              {%- render 'icon' with icon, width: icon_width -%}
+            {%- endif -%}
 
+            <span {% if size == 'lg' %}class="h6"{% endif %}>{{- title | escape -}}</span>
+          </div>
+        {%- else -%}
           <span {% if size == 'lg' %}class="h6"{% endif %}>{{- title | escape -}}</span>
-        </div>
-      {%- else -%}
-        <span {% if size == 'lg' %}class="h6"{% endif %}>{{- title | escape -}}</span>
-      {%- endif -%}
+        {%- endif -%}
 
-      <span class="circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate">{%- render 'icon' with 'chevron-bottom-small' -%}</span>
+        <span class="circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate">{%- render 'icon' with 'chevron-bottom-small' -%}</span>
+      </div>
+    </summary>
+
+    <div class="accordion__content">
+      {{- content -}}
     </div>
-  </summary>
+  </details>
+{% endcomment %}
 
-  <div class="accordion__content">
-    {{- content -}}
-  </div>
-</details> {% endcomment %}
-
-<details 
-  {% if id %}id="{{ id | escape }}"{% endif %}
+<details
+  {% if id %}
+    id="{{ id | escape }}"
+  {% endif %}
   class="{{ class }} accordion {% if size %}accordion--{{ size }}{% endif %} group"
   aria-expanded="{% if open %}true{% else %}false{% endif %}"
   is="accordion-disclosure"
-  {% if open %}open{% endif %}
+  {% if open %}
+    open
+  {% endif %}
   {{ block.shopify_attributes }}
 >
   <summary>
-    {%- comment -%}iOS 14 does not support flex on the summary itself, so we have to use this extra div{%- endcomment -%}
     <div class="accordion__toggle bold">
       {%- if icon -%}
         <div class="text-with-icon">
@@ -68,7 +73,11 @@ Supported parameters
             {% capture icon_sizes %}{{ icon_width | default: 20 }}px{%- endcapture -%}
             {% capture icon_widths %}{{ icon_width }},{{ icon_width | times: 2 }},{{ icon_width | times: 3 }}{%- endcapture -%}
             {% capture icon_style %}--image-max-width: {{ icon_sizes }}{%- endcapture -%}
-            {{- icon | image_url: width: icon.width | image_tag: loading: 'lazy', sizes: icon_sizes, widths: icon_widths, style: icon_style -}}
+            {{
+              icon
+              | image_url: width: icon.width
+              | image_tag: loading: 'lazy', sizes: icon_sizes, widths: icon_widths, style: icon_style
+            }}
           {%- else -%}
             {%- render 'icon' with icon, width: icon_width -%}
           {%- endif -%}
@@ -85,61 +94,65 @@ Supported parameters
 
   <div class="accordion__content">
     {% if title == 'Product Specifications' %}
-      {% assign specs = product.metafields.custom.specifications | parse_json %}
+      {% assign specs_raw = product.metafields.custom.product_specifications %}
+      {% if specs_raw != blank %}
+        {% assign specs = specs_raw | parse_json %}
+        {% if specs != blank and specs.size > 0 %}
+          <pre>Parsed Specs: {{ specs | json }}</pre>
 
-      {% if specs and specs.size > 0 %}
-        <table border="1" cellpadding="6" cellspacing="0" style="margin-top: 10px; width: 100%;">
-          <thead>
-            <tr>
-              <th style="text-align: left;">Title</th>
-              <th style="text-align: left;">Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for item in specs %}
+          <table border="1" cellpadding="6" cellspacing="0" style="margin-top: 10px; width: 100%;">
+            <thead>
               <tr>
-                <td>{{ item["1"] }}</td>
-                <td>{{ item["2"] }}</td>
+                <th style="text-align: left;">Title</th>
+                <th style="text-align: left;">Value</th>
               </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {% for item in specs %}
+                <tr>
+                  <td>{{ item['1'] }}</td>
+                  <td>{{ item['2'] }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        {% else %}
+          <p>No specifications available.</p>
+        {% endif %}
       {% else %}
         <p>No specifications available.</p>
       {% endif %}
     {% else %}
-      {{- content -}}
+      {{ content }}
     {% endif %}
   </div>
 </details>
 
 
+
+
 <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const accordions = document.querySelectorAll('details.accordion');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const accordions = document.querySelectorAll('details.accordion');
+    accordions.forEach((accordion) => {
+      if (accordion.closest('.collection__facets')) return;
 
-  accordions.forEach((accordion) => {
-    if (accordion.closest('.collection__facets')) return;
-
-    accordion.addEventListener('click', function () {
-      setTimeout(() => {
-        if (accordion.open) {
-          accordions.forEach((otherAccordion) => {
-            if (
-              otherAccordion !== accordion &&
-              otherAccordion.open &&
-              !otherAccordion.closest('.collection__facets')
-            ) {
-              otherAccordion.removeAttribute('open');
-            }
-          });
-        }
-      }, 0);
+      accordion.addEventListener('click', function () {
+        setTimeout(() => {
+          if (accordion.open) {
+            accordions.forEach((otherAccordion) => {
+              if (
+                otherAccordion !== accordion &&
+                otherAccordion.open &&
+                !otherAccordion.closest('.collection__facets')
+              ) {
+                otherAccordion.removeAttribute('open');
+              }
+            });
+          }
+        }, 0);
+      });
     });
   });
-});
-
-
-
 </script>
