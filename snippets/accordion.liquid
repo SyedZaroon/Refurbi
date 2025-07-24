@@ -100,7 +100,6 @@
       {% assign specs_raw = product.metafields.custom.product_specifications %}
       <p>{{ specs_raw | parse_json }}</p>
       {% if specs_raw != blank %}
-        <h1>hi</h1>
         {% assign specs = specs_raw | parse_json %}
         {% if specs != blank and specs.size > 0 %}
           <pre>Parsed Specs: {{ specs | json }}</pre>
