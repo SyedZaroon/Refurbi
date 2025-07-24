@@ -196,7 +196,7 @@
     top: 169px;
     left: 53px;
   }
-
+{% comment %} 
   @keyframes ripple {
     0% {
       transform: scale(0.93);
@@ -244,7 +244,62 @@
   }
   .arc-four::before {
     animation-delay: 6s;
+  } {% endcomment %}
+
+
+  @keyframes ripple {
+  0% {
+    transform: scale(0.93);
+    opacity: 0;
   }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.arc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  width: 1150px;
+  height: 1150px;
+  bottom: -830px;
+}
+
+.arc::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, transparent calc(100% - 1px), #fec416 100%);
+  animation: ripple 10s linear infinite;
+  animation-fill-mode: both;
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+/* Staggered delays to avoid visible pause */
+.arc-one::before {
+  animation-delay: 0s;
+}
+.arc-two::before {
+  animation-delay: 2.5s;
+}
+.arc-three::before {
+  animation-delay: 5s;
+}
+.arc-four::before {
+  animation-delay: 7.5s;
+}
+
 
   @media screen and (max-width: 440px) {
     .search-banner {
