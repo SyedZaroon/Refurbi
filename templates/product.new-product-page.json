@@ -121,8 +121,8 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Title",
-            "content": "<p>Write content to help your customers to better understand your products or policies.</p>",
+            "title": "Product Specifications",
+            "content": "<p>{{ block.settings.page.metafields.custom.faqs | metafield_tag }}</p>",
             "page": ""
           }
         },
