@@ -98,7 +98,7 @@
     {% if title == 'Product Specifications' %}
       <h1>Hi</h1>
       {% assign specs_raw = product.metafields.custom.product_specifications %}
-      <p>{{ specs_raw }}</p>
+      <p>{{ specs_raw | parse_json }}</p>
       {% if specs_raw != blank %}
         {% assign specs = specs_raw | parse_json %}
         {% if specs != blank and specs.size > 0 %}
