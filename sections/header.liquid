@@ -75,6 +75,14 @@ the underlying logic of the menu.
   {%- endif -%}
 </style>
 
+{% if template == 'index' %}
+  <style>
+    a[aria-controls="search-drawer"] {
+  display:none;
+}
+  </style>
+{% endif %}
+
 <height-observer variable="header">
   <store-header class="header" {% if section.settings.hide_on_scroll %}hide-on-scroll="100"{% endif %} {% if section.settings.enable_sticky %}sticky{% endif %}>
     <div class="header__wrapper">
