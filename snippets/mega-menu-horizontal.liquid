@@ -36,10 +36,27 @@
         --mega-menu-nav-gap: var(--spacing-20);
       }
     }
+
+
+    {% comment %} Custom Css for mega menu {% endcomment %}
+
+    .mega-menu__nav{
+      flex-wrap:nowrap;
+    }
+    div#mega-menu-mega_menu_6aEmUi{
+      max-width:unset;
+    }
+    div#mega-menu-mega_menu_6aEmUi {
+    position: absolute;
+    top: 90px;
+    left: 100px;
+}
+
+
   </style>
 {%- endif -%}
 
-<div id="mega-menu-{{ mega_menu_block.id }}" class="mega-menu {% if link.links.size == 0 %}justify-center{% endif %}">
+<div id="mega-menu-{{ mega_menu_block.id }}" class="dropdown-menu dropdown-menu--restrictable {% if link.links.size == 0 %}justify-center{% endif %}">
   {%- if link.links.size > 0 -%}
     <ul class="mega-menu__nav" role="list">
       {%- for sub_link in link.links -%}
