@@ -94,42 +94,37 @@
     </div>
   </summary>
 
-  <div class="accordion__content">
-    {% if title == 'Product Specifications' %}
-      <h1>Hi</h1>
-      {% assign specs_raw = product.metafields.custom.product_specifications %}
-      <p>{{ specs_raw | parse_json }}</p>
-      {% if specs_raw != blank %}
-        {% assign specs = specs_raw | parse_json %}
-        {% if specs != blank and specs.size > 0 %}
-          <pre>Parsed Specs: {{ specs | json }}</pre>
+ <div class="accordion__content">
+  {% if title == 'Product Specifications' %}
+    {% assign specs_raw = product.metafields.custom.product_specifications %}
+    {% assign specs = specs_raw | parse_json %}
 
-          <table border="1" cellpadding="6" cellspacing="0" style="margin-top: 10px; width: 100%;">
-            <thead>
-              <tr>
-                <th style="text-align: left;">Title</th>
-                <th style="text-align: left;">Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for item in specs %}
-                <tr>
-                  <td>{{ item['1'] }}</td>
-                  <td>{{ item['2'] }}</td>
-                </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        {% else %}
-          <p>No specifications available.</p>
-        {% endif %}
-      {% else %}
-        <p>No specifications available.</p>
-      {% endif %}
+    {% if specs != blank and specs.size > 0 %}
+      <table border="1" cellpadding="6" cellspacing="0" style="margin-top: 10px; width: 100%;">
+        <thead>
+          <tr>
+            <th style="text-align: left;">Title</th>
+            <th style="text-align: left;">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in specs %}
+            <tr>
+              <td>{{ item['1'] }}</td>
+              <td>{{ item['2'] }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     {% else %}
-      {{ content }}
+      <p>No specifications available.</p>
     {% endif %}
-  </div>
+  {% else %}
+    {{ content }}
+  {% endif %}
+</div>
+
+  
 </details>
 
 
