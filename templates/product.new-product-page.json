@@ -122,7 +122,7 @@
             "icon": "none",
             "icon_width": 20,
             "title": "Product Specifications",
-            "content": "",
+            "content": "{{ product.metafields.custom.product_faq_answer_1 | metafield_tag }}",
             "page": ""
           }
         },
