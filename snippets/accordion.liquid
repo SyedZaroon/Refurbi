@@ -96,7 +96,7 @@
   <div class="accordion__content">
     {% if title == 'Product Specifications' %}
       {% assign specs = product.metafields.custom.product_specifications %}
-      
+      <p>{{ specs }}</p>
       {% if specs != blank and specs.size > 0 %}
         <table class="table table-bordered" style="margin-top: 10px; width: 100%;">
           <thead>
