@@ -95,7 +95,7 @@
 
   <div class="accordion__content">
     {% if title == 'Product Specifications' %}
-      {% assign specs = product.metafields.custom.product_specifications | parse_json %}
+      {% assign specs = product.metafields.custom.product_specifications %}
       {% if specs != blank %}
         <p>{{ specs }}</p>
         <table class="table table-bordered" style="margin-top: 10px; width: 100%;">
@@ -106,9 +106,9 @@
             </tr>
           </thead>
   {% for row in specs %}
-    <tr>{{ row }}</tr>
+    <tr>{{ specs }}</tr>
     <tr>
-      <td>{{ specs['1'] }}</td>
+      <td>{{ row['1'] }}</td>
       <td>{{ row['2'] }}</td>
     </tr>
   {% endfor %}
