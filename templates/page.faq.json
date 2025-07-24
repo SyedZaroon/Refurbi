@@ -69,7 +69,7 @@
           "type": "item",
           "settings": {
             "title": "When will my order be shipped if placed on the weekend?",
-            "content": "<p>Orders placed between Friday after 3:00 PM and Sunday will be shipped on the following Monday or the next business day.</p>"
+            "content": "<p>Orders placed between Friday after 3:00 PM to Sunday will be shipped on the following Monday or the next business day.</p>"
           }
         },
         "item_LN6FFT": {
@@ -90,7 +90,7 @@
         "full_width": true,
         "subheading": "",
         "title": "Shipping",
-        "content": "<p>Get detailed information about our shipping methods, delivery timelines, and order handling. We aim to deliver your products safely and on time across Pakistan.</p>",
+        "content": "<p>Get detailed information about our shipping methods, delivery timelines, and order handling. We aim to deliver your products safely and on time across UK.</p>",
         "team_avatar_width": 160,
         "support_hours": "",
         "answer_time": "",
