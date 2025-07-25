@@ -79,6 +79,9 @@ Supported variables
             </div>
           {%- endif -%}
 
+        {%- when 'Key_Benefits' -%}
+          {%- render 'key-benefits'  -%}
+
         {%- when 'title' -%}
           {%- if request.page_type == 'product' -%}
             <h1 class="product-info__title {{ block.settings.heading_tag }}">

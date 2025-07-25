@@ -58,6 +58,8 @@
   </product-rerender>
 </div>
 
+
+
 {%- assign buy_buttons_block = section.blocks | where: 'type', 'buy_buttons' | first -%}
 
 {%- if section.settings.show_fixed_add_to_cart and product.available and buy_buttons_block != blank -%}
@@ -90,6 +92,12 @@
             {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, form_id: product_form_id -%}
           </div>
 
+          {% assign key_benefits_block = section.blocks | where: "type", "Key_Benefits" %}
+
+{% if key_benefits_block.size > 0 %}
+  {% render 'key-benefits', benefits: key_benefits_block %}
+{% endif %}
+
           <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button>
             {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true -%}
           </buy-buttons>
@@ -108,6 +116,9 @@ quick buy information in a template, that will be extracted in JS, but ensure it
 
 {%- render 'product-quick-buy', product: product -%}
 
+
+
+
 {% schema %}
 {
   "name": "Product page",
@@ -117,6 +128,12 @@ quick buy information in a template, that will be extracted in JS, but ensure it
     {
       "type": "@app"
     },
+    {
+  "type": "Key_Benefits",
+  "name": "Key Benefits",
+  "limit": 1
+},
+
     {
       "type": "vendor",
       "name": "Vendor",

@@ -1,0 +1,564 @@
+<div class="key-benifits">
+  <div class="benifit-drawer-one" onclick="openDrawer('drawer1')">
+    <span>Free Next Day Delivery</span>
+  </div>
+  <div class="benifit-drawer-two" onclick="openDrawer('drawer2')">
+    <span>Buy Now, Pay Later</span>
+  </div>
+  <div class="benifit-drawer-three" onclick="openDrawer('drawer3')">
+    <span>30 Days Return</span>
+  </div>
+  <div class="benifit-drawer-four" onclick="openDrawer('drawer4')">
+    <span>13 Months Warranty</span>
+  </div>
+</div>
+
+<!-- Free Next Day Delivery -->
+<cart-drawer id="drawer1" class="cart-drawer drawer drawer--lg" style="visibility:hidden;">
+  <!-- Close button -->
+  <button is="close-button" aria-label="Close">
+    <svg
+      role="presentation"
+      stroke-width="2"
+      focusable="false"
+      width="24"
+      height="24"
+      class="icon icon-close"
+      viewBox="0 0 24 24"
+    >
+      <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+    </svg>
+  </button>
+  <div class="custom-drawer-content">
+    <p class="h5">Free Next Day Delivery</p>
+
+    <div class="drawer-table-container" style="margin-top:20px">
+      <table class="drawer-delivery-table">
+        <thead class="delivery-thead">
+          <tr class="delivery-tr">
+            <th class="delivery-th">Spend</th>
+            <th class="delivery-th">Delivery</th>
+            <th class="delivery-th">Time</th>
+            <th class="delivery-th">Cost</th>
+          </tr>
+        </thead>
+        <tbody class="delivery-tbody">
+          <tr class="delivery-tr">
+            <td class="delivery-td">£249.99 or above</td>
+            <td class="delivery-td">Next Day</td>
+            <td class="delivery-td">Next working day (excludes Weekends)*</td>
+            <td class="delivery-td">Free</td>
+          </tr>
+          <tr class="delivery-tr">
+            <td class="delivery-td">Any</td>
+            <td class="delivery-td">Standard</td>
+            <td class="delivery-td">1 to 3 working days*</td>
+            <td class="delivery-td">Free</td>
+          </tr>
+          <tr class="delivery-tr">
+            <td class="delivery-td">Below <span class="delivery-span">£249.99</span></td>
+            <td class="delivery-td">Express</td>
+            <td class="delivery-td">Next working day (excludes Weekends)*</td>
+            <td class="delivery-td">£12.99</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top:20px"><strong>Important Details</strong></p>
+    <p>Working days are Monday to Friday, excluding public holidays and weekends.</p>
+
+    <p>Order Monday to Thursday by 3 pm: Get your order the next day.</p>
+
+    <p>Orders placed after 3 pm on Friday will be processed on Monday.</p>
+  </div>
+</cart-drawer>
+
+<!-- Buy Now Pay later -->
+<cart-drawer id="drawer2" class="cart-drawer drawer drawer--lg" style="visibility:hidden;">
+  <!-- Close button -->
+  <button is="close-button" aria-label="Close">
+    <svg
+      role="presentation"
+      stroke-width="2"
+      focusable="false"
+      width="24"
+      height="24"
+      class="icon icon-close"
+      viewBox="0 0 24 24"
+    >
+      <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+    </svg>
+  </button>
+  <div class="custom-drawer-content">
+    <p class="h5">Buy Now, Pay Later</p>
+    <div class="" style="margin-top:20px;">
+      <div class="Clearpay payment-box">
+        <img
+          loading="lazy"
+          class="lazyloadhdt"
+          src="//mobiledirectonline.co.uk/cdn/shopifycloud/shopify/assets/payment_icons/afterpay-c814f73b45b605f4c618ce52eb8c67427d3ae3cb8addb872e621dfbabae0b5f0.svg"
+          width="70px"
+          height=""
+          style="margin:auto;"
+          alt="afterpay"
+        >
+        <p>
+          Pay every <strong>2 weeks</strong> in <strong>4 interest-free</strong> payments.
+          <a href="https://www.clearpay.co.uk/en-GB/terms-of-service"><ins>Learn More</ins></a>
+        </p>
+        <div class="payment-method">
+          <div class="flex-center">
+            <img
+              src="{{ 'onethird.webp' | asset_url }}"
+              alt="Description of image"
+              width="32px"
+              height="32px"
+            >
+            <p>Today</p>
+            <ins
+              ><strong>£<span id="clearpay-installment-1"></span></strong
+            ></ins>
+          </div>
+          <div class="flex-center">
+            <img
+              src="{{ 'half.webp' | asset_url }}"
+              alt="Description of image"
+              width="32px"
+              height="32px"
+            >
+            <p>2 weeks</p>
+            <ins
+              ><strong>£<span id="clearpay-installment-2"></span></strong
+            ></ins>
+          </div>
+          <div class="flex-center">
+            <img
+              src="{{ 'onefourth.webp' | asset_url }}"
+              alt="Description of image"
+              width="32px"
+              height="32px"
+            >
+            <p>4 weeks</p>
+            <ins
+              ><strong>£<span id="clearpay-installment-3"></span></strong
+            ></ins>
+          </div>
+
+          <div class="flex-center">
+            <img
+              src="{{ 'full.webp' | asset_url }}"
+              alt="Description of image"
+              width="32px"
+              height="32px"
+            >
+            <p>6 weeks</p>
+            <ins
+              ><strong>£<span id="clearpay-installment-4"></span></strong
+            ></ins>
+          </div>
+        </div>
+      </div>
+
+      <div class="klarna payment-box">
+        <img
+          loading="lazy"
+          class="lazyloadhdt"
+          src="//mobiledirectonline.co.uk/cdn/shopifycloud/shopify/assets/payment_icons/klarna-389801c6056cb5600b4f05f72ebc2c58e4947688c6c4f5e6ccea41f7973d3a28.svg"
+          width="70px"
+          height=""
+          style="margin:auto;"
+          alt="klarna"
+        >
+        <p>
+          Klarna's Pay in 3 / Pay in 30 days are unregulated credit agreements. Borrowing more than you can afford or
+          paying late may negatively impact your financial status and ability to obtain credit. 18+, UK residents only.
+          Subject to status.
+          <a href="https://cdn.klarna.com/1.0/shared/content/legal/terms/en-GB/paylaterin3">
+            <ins>Late fees may apply.</ins>
+          </a>
+        </p>
+        <div class="payment-method">
+          <div class="flex-center">
+            <img
+              src="{{ 'today.webp' | asset_url }}"
+              alt="Description of image"
+              width="32px"
+              height="32px"
+            >
+            <p>Today</p>
+            <ins
+              ><strong>£<span id="klarna-installment-1"></span></strong
+            ></ins>
+          </div>
+          <div class="flex-center">
+            <img
+              src="{{ 'onefourth.webp' | asset_url }}"
+              alt="Description of image"
+              width="32px"
+              height="32px"
+            >
+            <p>30 days</p>
+            <ins
+              ><strong>£<span id="klarna-installment-2"></span></strong
+            ></ins>
+          </div>
+          <div class="flex-center">
+            <img
+              src="{{ 'full.webp' | asset_url }}"
+              alt="Description of image"
+              width="32px"
+              height="32px"
+            >
+            <p>60 days</p>
+            <ins
+              ><strong>£<span id="klarna-installment-3"></span></strong
+            ></ins>
+          </div>
+        </div>
+      </div>
+
+      <div class="paypal payment-box">
+        <img
+          loading="lazy"
+          class="lazyloadhdt"
+          src="//mobiledirectonline.co.uk/cdn/shopifycloud/shopify/assets/payment_icons/paypal-49e4c1e03244b6d2de0d270ca0d22dd15da6e92cc7266e93eb43762df5aa355d.svg"
+          width="70px"
+          height=""
+          style="margin:auto;"
+          alt="klarna"
+        >
+        <p>
+          Buy now, pay later interest free instalments.
+
+          No hidden fees. This is a credit product. 18+
+        </p>
+        <div class="payment-method">
+          <div class="flex-center">
+            <img
+              src="{{ 'today.webp' | asset_url }}"
+              alt="Description of image"
+              width="32px"
+              height="32px"
+            >
+            <p>Today</p>
+            <ins
+              ><strong>£<span id="paypal-installment-1"></span></strong
+            ></ins>
+          </div>
+          <div class="flex-center">
+            <img
+              src="{{ 'onefourth.webp' | asset_url }}"
+              alt="Description of image"
+              width="32px"
+              height="32px"
+            >
+            <p>30 days</p>
+            <ins
+              ><strong>£<span id="paypal-installment-2"></span></strong
+            ></ins>
+          </div>
+          <div class="flex-center">
+            <img
+              src="{{ 'full.webp' | asset_url }}"
+              alt="Description of image"
+              width="32px"
+              height="32px"
+            >
+            <p>60 days</p>
+            <ins
+              ><strong>£<span id="paypal-installment-3"></span></strong
+            ></ins>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</cart-drawer>
+
+<!-- 30 Days return -->
+<cart-drawer id="drawer3" class="cart-drawer drawer drawer--lg" style="visibility:hidden;">
+  <!-- Close button -->
+  <button is="close-button" aria-label="Close">
+    <svg
+      role="presentation"
+      stroke-width="2"
+      focusable="false"
+      width="24"
+      height="24"
+      class="icon icon-close"
+      viewBox="0 0 24 24"
+    >
+      <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+    </svg>
+  </button>
+  <div class="custom-drawer-content">
+    <p class="h5">30 Days Return</p>
+    <div class="" style="margin-top:20px">
+      <p style="font-weight:900">30 Days No-Questions–Asked Return Policy</p>
+      <br>
+      <strong>Hassle-Free Returns:</strong>
+      <p>
+        If you’re unhappy with your purchase, simply return it within 30 days for a full refund. No questions asked.
+      </p>
+      <br>
+      <strong>Convenient and Easy:</strong>
+      <p>Returning an item is straightforward—just send it back, and we’ll take care of the rest.</p>
+      <br>
+      <strong>Guaranteed Peace of Mind:</strong>
+      <p>
+        Our 30-day return policy ensures you can shop confidently, knowing you have the flexibility to change your mind.
+      </p>
+      <br>
+    </div>
+  </div>
+</cart-drawer>
+
+<!-- 13 Months Warranty -->
+<cart-drawer id="drawer4" class="cart-drawer drawer drawer--lg" style="visibility:hidden;">
+  <!-- Close button -->
+  <button is="close-button" aria-label="Close">
+    <svg
+      role="presentation"
+      stroke-width="2"
+      focusable="false"
+      width="24"
+      height="24"
+      class="icon icon-close"
+      viewBox="0 0 24 24"
+    >
+      <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+    </svg>
+  </button>
+  <div class="custom-drawer-content">
+    <p class="h5">13 Months Warranty</p>
+
+    <div class="" style="margin-top:20px">
+      <p style="font-weight:900">At Refurbi, we offer robust warranty options to ensure your satisfaction</p>
+      <br>
+      <strong>13-Month Seller Warranty:</strong>
+      <p>
+        All refurbished devices come with a 13-month warranty, covering defects and malfunctions for your peace of mind.
+      </p>
+      <br>
+      <strong>Dedicated Support:</strong>
+      <p>Our support team is here to help resolve any issues quickly and efficiently.</p>
+      <br>
+      <strong>Quality You Can Trust:</strong>
+      <p>We stand by the quality of our devices, ensuring reliability and value over time.</p>
+      <br>
+    </div>
+  </div>
+</cart-drawer>
+
+<style>
+  .key-benifits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #000;
+    cursor: pointer;
+  }
+
+  .key-benifits > div {
+    background: #f5f5f5;
+    padding: 12px 16px;
+    border-radius: 6px;
+    text-align: center;
+    transition: background 0.2s;
+  }
+
+  .key-benifits > div:hover {
+    background: #e2e2e2;
+  }
+
+
+  /* Payment Box Buy no pay letter section */
+
+  .payment-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid #e7e8e9;
+    padding: 20px 0px;
+  }
+
+  .payment-method {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .flex-center{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+  }
+
+     .pointinspection-list{
+        margin-top: 10px;
+    }
+    .pointinspection-list ul{
+       column-count: 2;
+    }
+    .check-list{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom:10px;
+        gap:10px;
+    }
+    .check-list span{
+
+    font-size:12px
+    }
+
+    .check-list img{
+        align-self: flex-start;
+    }
+
+  @media (max-width:370px){
+    .payment-method {
+      justify-content: center;
+      flex-wrap:wrap;
+    }
+  }
+
+  .Condition-details{
+    container-type: inline-size;
+  width: 100%; 
+  }
+
+  @container (max-width: 400px) {
+  .pointinspection-list ul {
+    column-count: 1;
+  }
+}
+
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    /////////////////// Dynamic Price Start ///////////////////
+    
+    let variants = {{ product.variants | json }};
+    let variantPriceDict = {};
+
+    variants.forEach(variant => {
+      variantPriceDict[variant.id] = variant.price;
+    });
+
+    function updatePriceDisplay(price) {
+
+      const priceInDollars = price / 100;
+      const priceDividedByThree = (Math.floor(priceInDollars / 3 * 100) / 100).toFixed(2); 
+      const priceRemaining = (priceInDollars - (priceDividedByThree * 2)).toFixed(2);
+      const priceDividedByFour = (Math.floor(priceInDollars / 4 * 100) / 100).toFixed(2); 
+      const clearPayRemaining = (priceInDollars - (priceDividedByFour * 3)).toFixed(2);
+
+      // Display installment amounts for PayPal
+      document.getElementById("paypal-installment-1").innerText = priceDividedByThree;
+      document.getElementById("paypal-installment-2").innerText = priceDividedByThree;
+      document.getElementById("paypal-installment-3").innerText = priceRemaining;
+
+      // Display installment amounts for Klarna
+      document.getElementById("klarna-installment-1").innerText = priceDividedByThree;
+      document.getElementById("klarna-installment-2").innerText = priceDividedByThree;
+      document.getElementById("klarna-installment-3").innerText = priceRemaining;
+
+      // Display installment amounts for Clearpay
+      document.getElementById("clearpay-installment-1").innerText = priceDividedByFour;
+      document.getElementById("clearpay-installment-2").innerText = priceDividedByFour;
+      document.getElementById("clearpay-installment-3").innerText = priceDividedByFour;
+      document.getElementById("clearpay-installment-4").innerText = clearPayRemaining;
+    }
+
+    function getSelectedVariantPrice() {
+      const variantSelect = document.querySelector('[name="id"]'); // Shopify's default variant dropdown
+      if (variantSelect) {
+        const selectedVariantId = variantSelect.value;
+        if (variantPriceDict[selectedVariantId]) {
+          updatePriceDisplay(variantPriceDict[selectedVariantId]);
+        }
+      }
+    }
+
+    // Check and update price on page load
+    getSelectedVariantPrice();
+
+    // Update price when the variant is changed
+    document.querySelector('[name="id"]').addEventListener('change', function () {
+      getSelectedVariantPrice();
+    });
+
+
+    ////////////////////// Dynamic Price End //////////////////////
+
+
+    const header = document.querySelector('.shopify-section--header');
+
+    // Get all benefit buttons
+    const benefitButtons = document.querySelectorAll("[onclick^='openDrawer']");
+
+    // Get all drawers
+    const drawers = document.querySelectorAll('.cart-drawer');
+
+    benefitButtons.forEach((btn) => {
+      btn.addEventListener('click', function () {
+        const drawerId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+        const drawer = document.getElementById(drawerId);
+
+        // Close all drawers first
+        drawers.forEach((d) => {
+          d.style.opacity = '0';
+          d.style.visibility = 'hidden';
+          d.removeAttribute('open');
+          d.classList.remove('open', 'animate');
+        });
+
+        // Open selected drawer
+        if (drawer) {
+          drawer.style.visibility = 'visible';
+          drawer.style.opacity = '1';
+          drawer.setAttribute('open', '');
+          drawer.classList.add('animate', 'open');
+          if (header) header.style.zIndex = '-1';
+
+          // Close button logic
+          const closeBtn = drawer.querySelector("button[aria-label='Close']");
+          if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+              drawer.style.opacity = '0';
+              drawer.style.visibility = 'hidden';
+              drawer.removeAttribute('open');
+              drawer.classList.remove('open', 'animate');
+
+              setTimeout(() => {
+                if (header) header.style.zIndex = '10';
+              }, 1000);
+            });
+          }
+
+          // Optional: If your <cart-drawer> has shadow DOM and an overlay, handle that
+          if (drawer.shadowRoot) {
+            const overlay = drawer.shadowRoot.querySelector('[part="overlay"]');
+            if (overlay) {
+              overlay.addEventListener('click', () => {
+                drawer.style.opacity = '0';
+                drawer.style.visibility = 'hidden';
+                drawer.removeAttribute('open');
+                drawer.classList.remove('open', 'animate');
+
+                setTimeout(() => {
+                  if (header) header.style.zIndex = '10';
+                }, 1000);
+              });
+            }
+          }
+        }
+      });
+    });
+  });
+</script>
