@@ -123,10 +123,11 @@
     text-align:center;
   }
 
-    table tr:hover:not::first-child {
-      background-color: #f2f8ff;
-      transition: background 0.3s ease;
-    }
+    table tr:hover:not(:first-child) {
+  background-color: #f2f8ff;
+  transition: background 0.3s ease;
+}
+
 
     @media (max-width: 600px) {
       th, td {
