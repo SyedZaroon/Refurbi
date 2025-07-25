@@ -441,61 +441,69 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
 
-    /////////////////// Dynamic Price Start ///////////////////
     
-    let variants = {{ product.variants | json }};
-    let variantPriceDict = {};
+/////////////////// Dynamic Price Start ///////////////////
+    
+let variants = {{ product.variants | json }};
+let variantPriceDict = {};
 
-    variants.forEach(variant => {
-      variantPriceDict[variant.id] = variant.price;
-    });
+variants.forEach(variant => {
+  variantPriceDict[variant.id] = variant.price;
+});
 
-    function updatePriceDisplay(price) {
+function updatePriceDisplay(price) {
+  const priceInDollars = price / 100;
 
-      const priceInDollars = price / 100;
-      const priceDividedByThree = (Math.floor(priceInDollars / 3 * 100) / 100).toFixed(2); 
-      const priceRemaining = (priceInDollars - (priceDividedByThree * 2)).toFixed(2);
-      const priceDividedByFour = (Math.floor(priceInDollars / 4 * 100) / 100).toFixed(2); 
-      const clearPayRemaining = (priceInDollars - (priceDividedByFour * 3)).toFixed(2);
+  const priceDividedByThree = (Math.floor(priceInDollars / 3 * 100) / 100).toFixed(2);
+  const priceRemaining = (priceInDollars - (priceDividedByThree * 2)).toFixed(2);
 
-      // Display installment amounts for PayPal
-      document.getElementById("paypal-installment-1").innerText = priceDividedByThree;
-      document.getElementById("paypal-installment-2").innerText = priceDividedByThree;
-      document.getElementById("paypal-installment-3").innerText = priceRemaining;
+  const priceDividedByFour = (Math.floor(priceInDollars / 4 * 100) / 100).toFixed(2);
+  const clearPayRemaining = (priceInDollars - (priceDividedByFour * 3)).toFixed(2);
 
-      // Display installment amounts for Klarna
-      document.getElementById("klarna-installment-1").innerText = priceDividedByThree;
-      document.getElementById("klarna-installment-2").innerText = priceDividedByThree;
-      document.getElementById("klarna-installment-3").innerText = priceRemaining;
+  // PayPal & Klarna
+  ['paypal', 'klarna'].forEach(provider => {
+    document.getElementById(`${provider}-installment-1`).innerText = priceDividedByThree;
+    document.getElementById(`${provider}-installment-2`).innerText = priceDividedByThree;
+    document.getElementById(`${provider}-installment-3`).innerText = priceRemaining;
+  });
 
-      // Display installment amounts for Clearpay
-      document.getElementById("clearpay-installment-1").innerText = priceDividedByFour;
-      document.getElementById("clearpay-installment-2").innerText = priceDividedByFour;
-      document.getElementById("clearpay-installment-3").innerText = priceDividedByFour;
-      document.getElementById("clearpay-installment-4").innerText = clearPayRemaining;
+  // Clearpay
+  document.getElementById("clearpay-installment-1").innerText = priceDividedByFour;
+  document.getElementById("clearpay-installment-2").innerText = priceDividedByFour;
+  document.getElementById("clearpay-installment-3").innerText = priceDividedByFour;
+  document.getElementById("clearpay-installment-4").innerText = clearPayRemaining;
+}
+
+function getSelectedVariantPrice() {
+  const variantSelect = document.querySelector('[name="id"]');
+  if (variantSelect) {
+    const selectedVariantId = variantSelect.value;
+    const price = variantPriceDict[selectedVariantId];
+
+    if (price) {
+      console.log("Selected variant ID:", selectedVariantId);
+      console.log("Selected variant price:", price / 100);
+      updatePriceDisplay(price);
+    } else {
+      console.warn("Variant price not found for ID:", selectedVariantId);
     }
+  }
+}
 
-    function getSelectedVariantPrice() {
-      const variantSelect = document.querySelector('[name="id"]'); // Shopify's default variant dropdown
-      if (variantSelect) {
-        const selectedVariantId = variantSelect.value;
-        if (variantPriceDict[selectedVariantId]) {
-          updatePriceDisplay(variantPriceDict[selectedVariantId]);
-        }
-      }
-    }
+// Initial load
+getSelectedVariantPrice();
 
-    // Check and update price on page load
-    getSelectedVariantPrice();
-
-    // Update price when the variant is changed
-    document.querySelector('[name="id"]').addEventListener('change', function () {
+// Fix: use setTimeout to ensure updated value is picked after DOM updates
+document.body.addEventListener('change', function (e) {
+  if (e.target && e.target.name === 'id') {
+    setTimeout(() => {
       getSelectedVariantPrice();
-    });
+    }, 0);
+  }
+});
 
 
-    ////////////////////// Dynamic Price End //////////////////////
-
+///////End....///////
 
     const header = document.querySelector('.shopify-section--header');
 
