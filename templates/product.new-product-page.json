@@ -61,6 +61,10 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "key_benefits_B7mXch": {
+          "type": "Key_Benefits",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -83,6 +87,7 @@
         "separator",
         "variant_picker",
         "quantity_selector",
+        "key_benefits_B7mXch",
         "buy_buttons"
       ],
       "settings": {
