@@ -10149,3 +10149,21 @@ shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
   padding: 10px;
 }
 
+product-gallery.product-gallery.product-gallery--mobile-dots.product-gallery--desktop-carousel.product-gallery--desktop-thumbnails-left.product-gallery--mobile-expanded {
+  position: sticky;
+  top: 130px;
+}
+
+@media screen and (max-width:1150px){
+  product-gallery.product-gallery.product-gallery--mobile-dots.product-gallery--desktop-carousel.product-gallery--desktop-thumbnails-left.product-gallery--mobile-expanded {
+      position: sticky;
+      top: 100px;
+    }
+}
+
+@media screen and (max-width:999px) {
+  product-gallery.product-gallery.product-gallery--mobile-dots.product-gallery--desktop-carousel.product-gallery--desktop-thumbnails-left.product-gallery--mobile-expanded {
+    position: unset;
+    top: unset;
+  }
+}
