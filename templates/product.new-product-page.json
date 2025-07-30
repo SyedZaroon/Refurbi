@@ -116,7 +116,7 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Product Description",
+            "title": "Description",
             "content": "{{ product.description }}",
             "page": ""
           }
@@ -126,7 +126,7 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Product Specifications",
+            "title": "Specifications",
             "content": "<p>ho</p>",
             "page": ""
           }
