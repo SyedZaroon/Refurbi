@@ -96,7 +96,7 @@
           "settings": {
             "title": "About",
             "content": "<p><strong>Express Traders Ltd</strong><br/>34a Vega Street, Manchester, England, M8 9TW<br/>Company No: 11789514<br/>Email: info@refurbi.co.uk<a href=\"mailto:info@mobiledirectonline.co.uk\" title=\"mailto:info@mobiledirectonline.co.uk\"><strong><br/></strong></a>Call Us: +44 798 440 4572</p>",
-            "enable_follow_on_shop": false
+            "enable_follow_on_shop": true
           }
         },
         "links": {
@@ -144,7 +144,7 @@
         "@media (min-width: 993px) {.footer__wrapper {gap: 0px; }}"
       ],
       "settings": {
-        "show_social_media": false,
+        "show_social_media": true,
         "show_payment_icons": true,
         "show_policy_links": false,
         "show_country_selector": false,
