@@ -10167,3 +10167,26 @@ product-gallery.product-gallery.product-gallery--mobile-dots.product-gallery--de
     top: unset;
   }
 }
+
+/* // Custom Css for mega menu header  */
+
+#mega-menu-mega_menu_6aEmUi .link-faded {
+  position: relative;
+
+
+}
+
+#mega-menu-mega_menu_6aEmUi .link-faded:not(.bold)::after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  width: 0;
+  height: 1px;
+  bottom: 1px;
+  left: 0px;
+  transition: width 0.3s ease-in-out;
+}
+
+#mega-menu-mega_menu_6aEmUi .link-faded:hover::after {
+  width: 100%;
+}
