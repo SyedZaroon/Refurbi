@@ -133,6 +133,7 @@
         },
         "item_7pY96N": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "icon_width": 20,
@@ -181,6 +182,7 @@
       "block_order": [
         "play_6rjzHR"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "allow_transparent_header": false,
