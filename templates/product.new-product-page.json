@@ -133,12 +133,11 @@
         },
         "item_7pY96N": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "icon_width": 20,
             "title": "Conditions Explained",
-            "content": "",
+            "content": "<p>hi</p>",
             "page": "condition-explained"
           }
         }
