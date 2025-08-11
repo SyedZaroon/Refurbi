@@ -137,8 +137,8 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Title",
-            "content": "<p>Write content to help your customers to better understand your products or policies.</p>",
+            "title": "Conditions Explained",
+            "content": "",
             "page": ""
           }
         }
