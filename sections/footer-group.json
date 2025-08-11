@@ -24,7 +24,8 @@
             "icon_background": "",
             "icon_color": "",
             "title": "Free shipping",
-            "content": "<p>Delivered in 1-3 business days</p>"
+            "content": "<p>Delivered in 1-3 business days</p>",
+            "custom_link": "shopify://pages/shipping-policy"
           }
         },
         "customer-support": {
@@ -37,7 +38,8 @@
             "icon_background": "",
             "icon_color": "",
             "title": "Customer service",
-            "content": "<p>Outstanding premium support</p>"
+            "content": "<p>Outstanding premium support</p>",
+            "custom_link": ""
           }
         },
         "discount": {
@@ -50,7 +52,8 @@
             "icon_background": "",
             "icon_color": "",
             "title": "Returns",
-            "content": "<p>We offer easy returns</p>"
+            "content": "<p>We offer easy returns</p>",
+            "custom_link": ""
           }
         },
         "payment": {
@@ -63,7 +66,8 @@
             "icon_background": "",
             "icon_color": "",
             "title": "Secure payment",
-            "content": "<p>Diverse secure payment choices</p>"
+            "content": "<p>Diverse secure payment choices</p>",
+            "custom_link": ""
           }
         }
       },
