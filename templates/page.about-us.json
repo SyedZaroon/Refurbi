@@ -84,29 +84,31 @@
         "collection_NwhyQY": {
           "type": "collection",
           "settings": {
-            "collection": "ipad",
+            "collection": "watch",
+            "image": "shopify://shop_images/Watch_2a0b6e21-8aac-4e54-993d-05dd9f7dae46.png",
             "subheading": "",
             "title": "",
             "url": "",
             "heading_tag": "h5",
             "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
+            "text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         },
         "collection_dnCgDe": {
           "type": "collection",
           "settings": {
-            "collection": "watch",
+            "collection": "gaming-consoles",
+            "image": "shopify://shop_images/refurbi_collection_images.png",
             "subheading": "",
             "title": "",
             "url": "",
             "heading_tag": "h5",
             "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
+            "text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         }
       },
