@@ -544,8 +544,6 @@ function getSelectedVariantPrice() {
     const price = variantPriceDict[selectedVariantId];
 
     if (price) {
-      console.log("Selected variant ID:", selectedVariantId);
-      console.log("Selected variant price:", price / 100);
       updatePriceDisplay(price);
     } else {
       console.warn("Variant price not found for ID:", selectedVariantId);

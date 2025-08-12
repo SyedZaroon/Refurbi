@@ -1,0 +1,148 @@
+<style>
+    .buttons{
+        display:flex;
+        gap:10px;
+    }
+    .drawer-button{
+        cursor:pointer;
+    }
+</style>
+{% comment %} <div class="buttons">
+  <p class="drawer-button" data-target="like-new">Like New</p>
+  <p class="drawer-button" data-target="excellent">Excellent</p>
+  <p class="drawer-button" data-target="very-good">Very Good</p>
+  <p class="drawer-button" data-target="fair">Fair</p>
+</div> {% endcomment %}
+
+<cart-drawer
+  class="cart-drawer drawer drawer--lg show-close-cursor"
+  id="custom-drawer"
+  role="dialog"
+  aria-modal="true"
+  style="left: auto; right: 0px; top: 0px; opacity: 1; visibility: hidden;"
+  data-drawer="like-new"
+>
+  <!-- Close button -->
+  <button is="close-button" aria-label="Close">
+    <svg role="presentation" stroke-width="2" focusable="false" width="24" height="24" class="icon icon-close" viewBox="0 0 24 24">
+      <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+    </svg>
+  </button>
+
+  <!-- 🔄 Custom content here -->
+  <div class="custom-drawer-content align-self-start">
+    <div class="custom-drawer__icon-wrapper">
+      <p class="h5">Like New</p>
+    </div>
+  </div>
+</cart-drawer>
+
+<cart-drawer
+  class="cart-drawer drawer drawer--lg show-close-cursor"
+  id="custom-drawer"
+  role="dialog"
+  aria-modal="true"
+  style="left: auto; right: 0px; top: 0px; opacity: 1; visibility: hidden;"
+  data-drawer="excellent"
+>
+  <!-- Close button -->
+  <button is="close-button" aria-label="Close">
+    <svg role="presentation" stroke-width="2" focusable="false" width="24" height="24" class="icon icon-close" viewBox="0 0 24 24">
+      <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+    </svg>
+  </button>
+
+  <!-- 🔄 Custom content here -->
+  <div class="custom-drawer-content align-self-start">
+    <div class="custom-drawer__icon-wrapper">
+      <p class="h5">Excellent</p>
+    </div>
+  </div>
+</cart-drawer>
+
+<cart-drawer
+  class="cart-drawer drawer drawer--lg show-close-cursor"
+  id="custom-drawer"
+  role="dialog"
+  aria-modal="true"
+  style="left: auto; right: 0px; top: 0px; opacity: 1; visibility: hidden;"
+  data-drawer="very-good"
+>
+  <!-- Close button -->
+  <button is="close-button" aria-label="Close">
+    <svg role="presentation" stroke-width="2" focusable="false" width="24" height="24" class="icon icon-close" viewBox="0 0 24 24">
+      <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+    </svg>
+  </button>
+
+  <!-- 🔄 Custom content here -->
+  <div class="custom-drawer-content align-self-start">
+    <div class="custom-drawer__icon-wrapper">
+      <p class="h5">Very Good</p>
+    </div>
+  </div>
+</cart-drawer>
+
+<cart-drawer
+  class="cart-drawer drawer drawer--lg show-close-cursor"
+  id="custom-drawer"
+  role="dialog"
+  aria-modal="true"
+  style="left: auto; right: 0px; top: 0px; opacity: 1; visibility: hidden;"
+  data-drawer="fair"
+>
+  <!-- Close button -->
+  <button is="close-button" aria-label="Close">
+    <svg role="presentation" stroke-width="2" focusable="false" width="24" height="24" class="icon icon-close" viewBox="0 0 24 24">
+      <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+    </svg>
+  </button>
+
+  <!-- 🔄 Custom content here -->
+  <div class="custom-drawer-content align-self-start">
+    <div class="custom-drawer__icon-wrapper">
+      <p class="h5">Fair</p>
+    </div>
+  </div>
+</cart-drawer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".shopify-section--header");
+
+  function openDrawer(drawerType) {
+    const drawer = document.querySelector(`cart-drawer[data-drawer="${drawerType}"]`);
+    if (!drawer) return;
+
+    const closeBtn = drawer.querySelector("button[aria-label='Close']");
+    const overlay = drawer.shadowRoot ? drawer.shadowRoot.querySelector('[part="overlay"]') : null;
+
+    // Open
+    drawer.classList.add("animate", "open");
+    drawer.setAttribute("open", "");
+    header.style.zIndex = "-1";
+
+    // Close function
+    function closeDrawer() {
+      drawer.classList.remove("open", "animate");
+      drawer.removeAttribute("open");
+      setTimeout(() => {
+        header.style.zIndex = "10";
+      }, 300);
+    }
+
+    if (closeBtn) closeBtn.onclick = closeDrawer;
+    if (overlay) overlay.onclick = closeDrawer;
+  }
+
+  // Event delegation
+  document.addEventListener("click", function (event) {
+const btn = event.target.closest(".drawer-button, .detail");
+    if (!btn) return;
+    openDrawer(btn.getAttribute("data-target"));
+  });
+});
+
+
+</script>

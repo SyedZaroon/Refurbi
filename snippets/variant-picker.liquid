@@ -1,21 +1,21 @@
 {%- comment -%}
-----------------------------------------------------------------------------------------------------------------------
-VARIANT PICKER
-----------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------
+  VARIANT PICKER
+  ----------------------------------------------------------------------------------------------------------------------
 
-Render the variant picker option selectors.
+  Render the variant picker option selectors.
 
-********************************************
-Supported variables
-********************************************
+  ********************************************
+  Supported variables
+  ********************************************
 
-* product: the product for which to render the selector (required)
-* form_id: the ID of the form to which the variant picker belongs (required)
-* update_url: if set to true, the URL is updated when the variant changes (usually used for product page)
-* hide_sold_out_variants: if set to true, the sold out or unavailable variants are hidden
-* hide_size_chart: if set to true, size chart is always hidden
-* force_dropdown_as_block: if set to true, the dropdown selectors are replaced by blocks, which is useful for quick buy where dropdown are not convenient to use
-* block: the block itself, for theme-specific options (such as selector types)
+  * product: the product for which to render the selector (required)
+  * form_id: the ID of the form to which the variant picker belongs (required)
+  * update_url: if set to true, the URL is updated when the variant changes (usually used for product page)
+  * hide_sold_out_variants: if set to true, the sold out or unavailable variants are hidden
+  * hide_size_chart: if set to true, size chart is always hidden
+  * force_dropdown_as_block: if set to true, the dropdown selectors are replaced by blocks, which is useful for quick buy where dropdown are not convenient to use
+  * block: the block itself, for theme-specific options (such as selector types)
 {%- endcomment -%}
 
 {% render 'custom-drawer' %}
@@ -25,9 +25,17 @@ Supported variables
 {%- assign variant_image_options = block.settings.variant_image_options | replace: ', ', ',' | downcase | split: ',' -%}
 
 {%- unless product.has_only_default_variant -%}
-  <variant-picker class="variant-picker" section-id="{{ section.id }}" handle="{{ product.handle }}" form-id="{{ form_id }}" {% if update_url %}update-url{% endif %}>
+  <variant-picker
+    class="variant-picker"
+    section-id="{{ section.id }}"
+    handle="{{ product.handle }}"
+    form-id="{{ form_id }}"
+    {% if update_url %}
+      update-url
+    {% endif %}
+  >
     {%- comment -%}
-    The variant data is outputted as a JSON, which allows the theme to emit an event with the data when the variant changes. This must not be removed.
+      The variant data is outputted as a JSON, which allows the theme to emit an event with the data when the variant changes. This must not be removed.
     {%- endcomment -%}
     <script data-variant type="application/json">
       {{- product.selected_or_first_available_variant | json -}}
@@ -66,18 +74,29 @@ Supported variables
           <div class="h-stack gap-2">
             <legend class="text-subdued">{{ option.name }}:</legend>
             <span>{{ option.selected_value }}</span>
-            {% if option.name=="Condition" %}
-              <div class="phonecheck" >
-              <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="25px" height="25px" >
-              <span>Phone Check</span>
-            </div>
-            {% endif %}          
+            {% if option.name == 'Condition' %}
+              <p data-target="fair" class="detail drawer-button" style="text-decoration:underline; cursor:pointer;">
+                Detail
+              </p>
+              <div class="phonecheck">
+                <img src="{{ 'phonecheck.webp' | asset_url }}" alt="Check Icon" width="25px" height="25px">
+                <span>Phone Check</span>
+              </div>
+            {% endif %}
           </div>
 
-          {%- if hide_size_chart != true and block.settings.size_chart_page != blank and size_label_list contains option_downcase -%}
+          {%- if hide_size_chart != true
+            and block.settings.size_chart_page != blank
+            and size_label_list contains option_downcase
+          -%}
             {%- capture drawer_id -%}size-chart-{{ option.position }}-{{ form_id }}{%- endcapture -%}
 
-            <button type="button" class="text-sm text-subdued" aria-controls="{{ drawer_id | escape }}" aria-expanded="false">
+            <button
+              type="button"
+              class="text-sm text-subdued"
+              aria-controls="{{ drawer_id | escape }}"
+              aria-expanded="false"
+            >
               <span class="link">{{ 'product.general.size_chart' | t }}</span>
             </button>
 
@@ -100,7 +119,14 @@ Supported variables
               {%- render 'icon' with 'chevron-bottom', class: 'select-chevron' -%}
             </button>
 
-            <x-popover id="{{ popover_id }}" class="popover" initial-focus="[aria-selected='true']" close-on-listbox-select anchor-horizontal="start" anchor-vertical="end">
+            <x-popover
+              id="{{ popover_id }}"
+              class="popover"
+              initial-focus="[aria-selected='true']"
+              close-on-listbox-select
+              anchor-horizontal="start"
+              anchor-vertical="end"
+            >
               <p class="h5" slot="title">{{ option.name }}</p>
 
               {%- assign param_name = form_id | append: '-option' | append: option.position -%}
@@ -110,15 +136,44 @@ Supported variables
                   {%- if hide_sold_out_variants == false or option_value.available or option_value.selected -%}
                     {%- if update_url and option_value.product_url != blank -%}
                       {%- if option_value.selected -%}
-                        <input class="sr-only" type="radio" id="{{ param_name }}-{{ option_value.id }}" form="{{ form_id }}" name="{{ param_name }}" data-option-position="{{ option.position }}" value="{{ option_value.id }}" checked>
+                        <input
+                          class="sr-only"
+                          type="radio"
+                          id="{{ param_name }}-{{ option_value.id }}"
+                          form="{{ form_id }}"
+                          name="{{ param_name }}"
+                          data-option-position="{{ option.position }}"
+                          value="{{ option_value.id }}"
+                          checked
+                        >
                       {%- endif -%}
 
-                      <a href="{{ option_value.variant.url | default: option_value.product_url }}" class="popover-listbox__option {% unless option_value.available %}is-disabled{% endunless %}">
+                      <a
+                        href="{{ option_value.variant.url | default: option_value.product_url }}"
+                        class="popover-listbox__option {% unless option_value.available %}is-disabled{% endunless %}"
+                      >
                         {{- option_value.name -}}
                       </a>
                     {%- else -%}
-                      <label class="popover-listbox__option {% unless option_value.available %}is-disabled{% endunless %}" for="{{ param_name }}-{{ option_value.id }}">
-                        <input class="sr-only" form="{{ form_id }}" type="radio" id="{{ param_name }}-{{ option_value.id }}" name="{{ param_name }}" {% if option_value.product_url != blank %}data-product-url="{{ option_value.product_url | escape }}"{% endif %} data-option-position="{{ option.position }}" value="{{ option_value.id }}" {% if option_value.selected %}checked{% endif %}>
+                      <label
+                        class="popover-listbox__option {% unless option_value.available %}is-disabled{% endunless %}"
+                        for="{{ param_name }}-{{ option_value.id }}"
+                      >
+                        <input
+                          class="sr-only"
+                          form="{{ form_id }}"
+                          type="radio"
+                          id="{{ param_name }}-{{ option_value.id }}"
+                          name="{{ param_name }}"
+                          {% if option_value.product_url != blank %}
+                            data-product-url="{{ option_value.product_url | escape }}"
+                          {% endif %}
+                          data-option-position="{{ option.position }}"
+                          value="{{ option_value.id }}"
+                          {% if option_value.selected %}
+                            checked
+                          {% endif %}
+                        >
 
                         {{- option_value.name -}}
                       </label>
@@ -129,7 +184,11 @@ Supported variables
             </x-popover>
           </div>
         {%- else -%}
-          <div {% unless block.settings.stack_blocks %}class="scroll-area bleed sm:unbleed"{% endunless %}>
+          <div
+            {% unless block.settings.stack_blocks %}
+              class="scroll-area bleed sm:unbleed"
+            {% endunless %}
+          >
             <div class="variant-picker__option-values {% if block.settings.stack_blocks %}wrap{% else %}scroll-area bleed sm:unbleed{% endif %} {% if resolved_option_selector_style == 'swatch' and settings.color_swatch_style == 'rectangle' %}variant-picker__option-values--color gap-4{% else %}gap-2{% endif %}">
               {% liquid
                 assign name = form_id | append: '-option' | append: option.position
@@ -153,62 +212,93 @@ Supported variables
       </fieldset>
     {%- endfor -%}
   </variant-picker>
+  {% render 'condition-explain-drawer' %}
 {%- endunless -%}
 
+
+
+
+
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector(".shopify-section--header");
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.shopify-section--header');
+  let variants = {{ product.variants | json }};
+  let optionNames = {{ product.options | json }};
+  let conditionIndex = optionNames.findIndex(opt => opt.toLowerCase() === 'condition');
 
-    function openDrawer() {
-      const drawer = document.getElementById("custom-drawer"); // ✅ fresh drawer element
-      if (!drawer) return;
+  /* ---------------- Drawer Open Function ---------------- */
+  function openDrawer() {
+    const drawer = document.getElementById('custom-drawer'); 
+    if (!drawer) return;
 
-      const closeBtn = drawer.querySelector("button[aria-label='Close']");
-      const overlay = drawer.shadowRoot.querySelector('[part="overlay"]');
+    const closeBtn = drawer.querySelector("button[aria-label='Close']");
+    const overlay = drawer.shadowRoot.querySelector('[part="overlay"]');
 
-      // Open
-      drawer.style.visibility = "visible";
-      drawer.style.opacity = "1";
-      drawer.setAttribute("open", "");
-      drawer.classList.add("animate", "open");
-      header.style.zIndex = "-1";
+    // Open drawer
+    drawer.style.visibility = 'visible';
+    drawer.style.opacity = '1';
+    drawer.setAttribute('open', '');
+    drawer.classList.add('animate', 'open');
+    header.style.zIndex = '-1';
 
-      // Close listeners — reattach every time
-      closeBtn.onclick = () => {
-        drawer.style.opacity = "0";
-        drawer.style.visibility = "hidden";
-        drawer.removeAttribute("open");
-        drawer.classList.remove("open", "animate");
-        setTimeout(() => { header.style.zIndex = "10"; }, 1000);
-      };
+    // Close drawer
+    const closeDrawer = () => {
+      drawer.style.opacity = '0';
+      drawer.style.visibility = 'hidden';
+      drawer.removeAttribute('open');
+      drawer.classList.remove('open', 'animate');
+      setTimeout(() => {
+        header.style.zIndex = '10';
+      }, 1000);
+    };
 
-      overlay.onclick = () => {
-        drawer.style.opacity = "0";
-        drawer.style.visibility = "hidden";
-        drawer.removeAttribute("open");
-        drawer.classList.remove("open", "animate");
-        setTimeout(() => { header.style.zIndex = "10"; }, 1000);
-      };
+    closeBtn.onclick = closeDrawer;
+    overlay.onclick = closeDrawer;
+  }
+
+  /* ---------------- Condition Target Update ---------------- */
+  function updateConditionTarget() {
+    const variantSelect = document.querySelector('[name="id"]');
+    if (!variantSelect) return;
+
+    const selectedVariantId = variantSelect.value;
+    const selectedVariant = variants.find(v => v.id == selectedVariantId);
+    if (!selectedVariant || conditionIndex === -1) return;
+
+let conditionValue = selectedVariant[`option${conditionIndex + 1}`]
+  .toLowerCase()
+  .trim()
+  .replace(/\s+/g, '-');
+  
+    // <p data-target="..."> element update karo
+    const detailP = document.querySelector('p.detail.drawer-button');
+    if (detailP) {
+      detailP.setAttribute('data-target', conditionValue);
     }
+  }
 
-    // Event delegation for .phonecheck
-    document.addEventListener("click", function (event) {
-      if (event.target.closest(".phonecheck")) {
-        openDrawer();
-      }
-    });
-
-    // Also re-bind after Shopify section reload (variant change)
-    document.addEventListener("shopify:section:load", function () {
-      console.log("Section reloaded — drawer will work on next click");
-    });
+  /* ---------------- Event Listeners ---------------- */
+  // Drawer open on .phonecheck click
+  document.addEventListener('click', function (event) {
+    if (event.target.closest('.phonecheck')) {
+      openDrawer();
+    }
   });
+
+  // Variant change → condition target update
+  document.body.addEventListener('change', function (e) {
+    if (e.target && e.target.name === 'id') {
+      setTimeout(updateConditionTarget, 0);
+    }
+  });
+
+  // Shopify section reload
+  document.addEventListener('shopify:section:load', function () {
+    console.log('Section reloaded — events rebound');
+    updateConditionTarget();
+  });
+
+  /* ---------------- Initial Run ---------------- */
+  updateConditionTarget();
+});
 </script>
-
-
-
-
-
-
-
-
