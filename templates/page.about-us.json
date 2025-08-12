@@ -70,14 +70,15 @@
           "type": "collection",
           "settings": {
             "collection": "tablets",
+            "image": "shopify://shop_images/iPads_7fb0f87a-aab6-41f9-b8de-aa1824021138.png",
             "subheading": "",
             "title": "",
             "url": "",
             "heading_tag": "h5",
             "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
+            "text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         },
         "collection_NwhyQY": {
