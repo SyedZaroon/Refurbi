@@ -72,7 +72,7 @@
           "type": "item",
           "settings": {
             "title": " What payment methods do you accept?",
-            "content": "<p>We accept a range of payment methods to make your shopping experience smooth and convenient. You can pay using credit/debit cards, PayPal, and digital payment options like Klarna and Clearpay. Simply choose your preferred method at checkout.</p>"
+            "content": "<p>We accept a variety of payment methods to ensure a smooth and convenient shopping experience. You can pay using credit/debit cards and PayPal. Choose your preferred method at checkout.</p>"
           }
         }
       },
