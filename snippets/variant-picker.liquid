@@ -157,41 +157,57 @@ Supported variables
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const phoneCheckDiv = document.querySelector(".phonecheck");
     const header = document.querySelector(".shopify-section--header");
-    const drawer = document.getElementById("custom-drawer");
-    const closeBtn = drawer.querySelector("button[aria-label='Close']");
-    const overlay = drawer.shadowRoot.querySelector('[part="overlay"]');
 
-    if (phoneCheckDiv && drawer && closeBtn && overlay) {
-      phoneCheckDiv.addEventListener("click", () => {
-        drawer.style.visibility = "visible";
-        drawer.style.opacity = "1";
-        drawer.setAttribute("open", "");
-        drawer.classList.add("animate", "open");
-        header.style.zIndex = "-1";
-      });
+    function openDrawer() {
+      const drawer = document.getElementById("custom-drawer"); // ✅ fresh drawer element
+      if (!drawer) return;
 
-      closeBtn.addEventListener("click", () => {
+      const closeBtn = drawer.querySelector("button[aria-label='Close']");
+      const overlay = drawer.shadowRoot.querySelector('[part="overlay"]');
+
+      // Open
+      drawer.style.visibility = "visible";
+      drawer.style.opacity = "1";
+      drawer.setAttribute("open", "");
+      drawer.classList.add("animate", "open");
+      header.style.zIndex = "-1";
+
+      // Close listeners — reattach every time
+      closeBtn.onclick = () => {
         drawer.style.opacity = "0";
         drawer.style.visibility = "hidden";
         drawer.removeAttribute("open");
-        drawer.classList.remove("open");
+        drawer.classList.remove("open", "animate");
+        setTimeout(() => { header.style.zIndex = "10"; }, 1000);
+      };
 
-        // Delay the z-index reset by 1.5 seconds (1500 ms)
-        setTimeout(() => {
-          header.style.zIndex = "10";
-        }, 1000);
-      });
-
-      overlay.addEventListener("click", () => {
-        setTimeout(() => {
-          header.style.zIndex = "10";
-        }, 1000);
-      });
+      overlay.onclick = () => {
+        drawer.style.opacity = "0";
+        drawer.style.visibility = "hidden";
+        drawer.removeAttribute("open");
+        drawer.classList.remove("open", "animate");
+        setTimeout(() => { header.style.zIndex = "10"; }, 1000);
+      };
     }
+
+    // Event delegation for .phonecheck
+    document.addEventListener("click", function (event) {
+      if (event.target.closest(".phonecheck")) {
+        openDrawer();
+      }
+    });
+
+    // Also re-bind after Shopify section reload (variant change)
+    document.addEventListener("shopify:section:load", function () {
+      console.log("Section reloaded — drawer will work on next click");
+    });
   });
 </script>
+
+
+
+
 
 
 
