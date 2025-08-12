@@ -72,7 +72,7 @@
           "type": "item",
           "settings": {
             "title": " What payment methods do you accept?",
-            "content": "<p>We accept a range of payment methods to make your shopping experience smooth and convenient. You can pay using credit/debit cards, PayPal, and digital payment options like Klarna and Clearpay. Simply choose your preferred method at checkout.</p>"
+            "content": "<p>We accept a variety of payment methods to ensure a smooth and convenient shopping experience. You can pay using credit/debit cards and PayPal. Choose your preferred method at checkout.</p>"
           }
         }
       },
@@ -87,7 +87,7 @@
         "title": "FAQ",
         "content": "<p>Have questions about our products or shipping? We're here to help! </p>",
         "team_avatar_width": 160,
-        "support_hours": "Our customer support is available 11 AM – 7 PM Monday – Friday",
+        "support_hours": "Our customer support is available 11 AM – 5 PM Monday–Friday",
         "answer_time": "Average answer time: 24h",
         "button_text": "",
         "button_url": "",
