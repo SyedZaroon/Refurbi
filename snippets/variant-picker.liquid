@@ -74,7 +74,7 @@
           <div class="h-stack gap-2">
             <legend class="text-subdued">{{ option.name }}:</legend>
             <span>{{ option.selected_value }}</span>
-            {% if product.tags=='Mobile Phones' and product.tags=='Tablets' %}
+            {% if product.tags contains 'Mobile Phones' or product.tags contains 'Tablets' %}
             {% if option.name == 'Condition' %}
               <p data-target="condition" class="detail drawer-button" style="text-decoration:underline; cursor:pointer;">
                 Detail
