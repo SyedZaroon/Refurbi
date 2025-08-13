@@ -74,6 +74,7 @@
           <div class="h-stack gap-2">
             <legend class="text-subdued">{{ option.name }}:</legend>
             <span>{{ option.selected_value }}</span>
+            {% if product.type=='iPhone' %}
             {% if option.name == 'Condition' %}
               <p data-target="condition" class="detail drawer-button" style="text-decoration:underline; cursor:pointer;">
                 Detail
@@ -83,6 +84,7 @@
                 <span>Phone Check</span>
               </div> {% endcomment %}
             {% endif %}
+          {% endif %}
           </div>
 
           {%- if hide_size_chart != true
