@@ -10182,3 +10182,15 @@ shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
 #mega-menu-mega_menu_6aEmUi .link-faded:hover::after {
   width: 100%;
 }
+
+product-gallery.product-gallery.product-gallery--mobile-dots.product-gallery--desktop-carousel.product-gallery--desktop-thumbnails-left.product-gallery--mobile-expanded {
+  position: sticky;
+  top: 120px;
+}
+
+@media  screen and (max-width:1000px) {
+  product-gallery.product-gallery.product-gallery--mobile-dots.product-gallery--desktop-carousel.product-gallery--desktop-thumbnails-left.product-gallery--mobile-expanded {
+      position: unset;
+      top: unset;
+    }
+}

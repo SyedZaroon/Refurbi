@@ -78,7 +78,7 @@
             <span>{{ option.selected_value }}</span>
             {% if product.tags contains 'Mobile Phones' or product.tags contains 'Tablets' %}
             {% if option.name == 'Condition' %}
-              <p data-target="condition" class="detail drawer-button" style="text-decoration:underline; cursor:pointer;">
+              <p data-target="condition" target="like-new" class="detail drawer-button" style="text-decoration:underline; cursor:pointer;">
                 Detail
               </p>
               {% comment %} <div class="phonecheck">
@@ -223,42 +223,11 @@
 
 
 
-{% comment %} <script>
+<script>
 document.addEventListener('DOMContentLoaded', function () {
-  const header = document.querySelector('.shopify-section--header');
   let variants = {{ product.variants | json }};
   let optionNames = {{ product.options | json }};
   let conditionIndex = optionNames.findIndex(opt => opt.toLowerCase() === 'condition');
-
-  /* ---------------- Drawer Open Function ---------------- */
-  function openDrawer() {
-    const drawer = document.getElementById('custom-drawer'); 
-    if (!drawer) return;
-
-    const closeBtn = drawer.querySelector("button[aria-label='Close']");
-    const overlay = drawer.shadowRoot.querySelector('[part="overlay"]');
-
-    // Open drawer
-    drawer.style.visibility = 'visible';
-    drawer.style.opacity = '1';
-    drawer.setAttribute('open', '');
-    drawer.classList.add('animate', 'open');
-    header.style.zIndex = '-1';
-
-    // Close drawer
-    const closeDrawer = () => {
-      drawer.style.opacity = '0';
-      drawer.style.visibility = 'hidden';
-      drawer.removeAttribute('open');
-      drawer.classList.remove('open', 'animate');
-      setTimeout(() => {
-        header.style.zIndex = '10';
-      }, 1000);
-    };
-
-    closeBtn.onclick = closeDrawer;
-    overlay.onclick = closeDrawer;
-  }
 
   /* ---------------- Condition Target Update ---------------- */
   function updateConditionTarget() {
@@ -269,27 +238,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const selectedVariant = variants.find(v => v.id == selectedVariantId);
     if (!selectedVariant || conditionIndex === -1) return;
 
-let conditionValue = selectedVariant[`option${conditionIndex + 1}`]
-  .toLowerCase()
-  .trim()
-  .replace(/\s+/g, '-');
-  
-    // <p data-target="..."> element update karo
+    let conditionValue = selectedVariant[`option${conditionIndex + 1}`]
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-');
+
     const detailP = document.querySelector('p.detail.drawer-button');
     if (detailP) {
-      detailP.setAttribute('data-target', conditionValue);
+      detailP.setAttribute('target', conditionValue);
     }
   }
 
-  /* ---------------- Event Listeners ---------------- */
-  // Drawer open on .phonecheck click
-  document.addEventListener('click', function (event) {
-    if (event.target.closest('.phonecheck')) {
-      openDrawer();
-    }
-  });
-
-  // Variant change → condition target update
+  /* ---------------- Events ---------------- */
+  // Variant change
   document.body.addEventListener('change', function (e) {
     if (e.target && e.target.name === 'id') {
       setTimeout(updateConditionTarget, 0);
@@ -298,11 +259,10 @@ let conditionValue = selectedVariant[`option${conditionIndex + 1}`]
 
   // Shopify section reload
   document.addEventListener('shopify:section:load', function () {
-    console.log('Section reloaded — events rebound');
     updateConditionTarget();
   });
 
-  /* ---------------- Initial Run ---------------- */
+  // Initial run
   updateConditionTarget();
 });
-</script> {% endcomment %}
+</script>

@@ -69,7 +69,6 @@
     gap: 8px;
     flex-wrap: wrap;
     margin-top: 20px;
-    max-width:240px;
   }
 
 
@@ -262,7 +261,16 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.condition-battery-health').textContent = data.battery;
     document.querySelector('.condition-desc').textContent = data.desc;
 
-    swiper.update();
+     swiper.destroy(true, true);
+  swiper = new Swiper('.condition-slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.custom-button-next',
+      prevEl: '.custom-button-prev',
+    },
+  });
 
     // Mark active tab
     document.querySelectorAll('.drawer-condition-buttons .block-swatch').forEach(tab => {
@@ -294,9 +302,11 @@ document.addEventListener('DOMContentLoaded', function () {
     header.style.zIndex = '-1';
 
     // 🔹 Reset to default condition when opening condition drawer
-    if (drawerType === 'condition') {
-      updateCondition('like-new');
-    }
+   if (drawerType === 'condition') {
+  const detailP = document.querySelector('p.detail.drawer-button');
+  let currentTarget = detailP ? detailP.getAttribute('target') : 'like-new';
+  updateCondition(currentTarget);
+}
 
     function closeDrawer() {
       drawer.classList.remove('open', 'animate');
@@ -318,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ✅ Set default on first page load
-  updateCondition('like-new');
+  updateCondition(conditionValue);
 });
 </script>
 
