@@ -63,22 +63,13 @@
     background-color:#FFE3E3;
   }
 
-
-  .drawer-condition-buttons-slider{
-    width:100%;
-    overflow: visible;
-  }
-
    .drawer-condition-buttons {
     display: flex;
     gap: 8px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-top: 20px;
   }
 
-  condition-btn{
-    flex: 0 0 auto;
-  }
 
   .condition-content-box {
     margin-top: 20px;
@@ -120,30 +111,10 @@
   }
 
   .drawer-condition-buttons .block-swatch.active-tab {
-    border: 1px solid #000; /* Example border */
+    border: 1px solid #000; 
   }
 
-     @media (max-width: 400px) {
-      .drawer-condition-buttons-slider {
-        overflow-x: auto;               /* enable horizontal scroll */
-        -webkit-overflow-scrolling: touch;
-      }
 
-      .drawer-condition-buttons {
-        width: max-content;             /* row sizes to its content so it can overflow */
-        scroll-snap-type: x mandatory;  /* optional: nice snapping */
-        padding-bottom: 6px;            /* space for scrollbar */
-      }
-
-      .condition-btn { scroll-snap-align: start; }
-
-      /* Optional: subtle scrollbar styling (WebKit only) */
-      .drawer-condition-buttons-slider::-webkit-scrollbar { height: 8px; }
-      .drawer-condition-buttons-slider::-webkit-scrollbar-thumb {
-        background: #d1d5db; border-radius: 8px;
-      }
-      .drawer-condition-buttons-slider::-webkit-scrollbar-track { background: transparent; }
-    }
 
 
 </style>
