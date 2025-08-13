@@ -63,17 +63,23 @@
     background-color:#FFE3E3;
   }
   
-  .drawer-condition-buttons-slider {
+.drawer-condition-buttons-slider {
+  width: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
-  .drawer-condition-buttons {
-    display: flex;
-    gap: 8px;
-    flex-wrap: nowrap;
-    margin-top: 20px;
-  }
+.drawer-condition-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap; /* tabs ek line me rahenge */
+}
+
+.drawer-condition-buttons .block-swatch {
+  flex: 0 0 auto; /* tab apni width rakhega */
+  white-space: nowrap;
+}
 
   
 
