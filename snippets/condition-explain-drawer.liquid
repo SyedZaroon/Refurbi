@@ -187,130 +187,134 @@
   </div>
 </cart-drawer>
 
+
 {% comment %} <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('.shopify-section--header');
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.shopify-section--header');
 
-    function openDrawer(drawerType) {
-      const drawer = document.querySelector(`cart-drawer[data-drawer="${drawerType}"]`);
-      if (!drawer) return;
+  const conditionData = {
+    'like-new': {
+      slides: [
+        { img: "{{ 'LikeNewOne.png' | asset_img_url: 'medium' }}" },
+        { img: "{{ 'LikeNewTwo.png' | asset_img_url: 'medium' }}" },
+      ],
+      battery: 'Battery Health +85%',
+      desc: `Like New mobiles present an almost flawless appearance, mirroring devices that have just been manufactured. These phones are in excellent condition, with minimal to no signs of previous use, ensuring they perform at their best. Each device has been thoroughly tested and comes with the latest software updates. You can trust in receiving a nearly perfect product that combines high performance with reliability.`,
+    },
+    excellent: {
+      slides: [
+        { img: "{{ 'ExcellentOne.png' | asset_img_url: 'medium' }}" },
+        { img: "{{ 'ExcellentTwo.png' | asset_img_url: 'medium' }}" },
+      ],
+      battery: 'Battery Health +85%',
+      desc: `Mobiles in Excellent condition undergo thorough inspection and exhibit only minor signs of previous handling. Each device is rigorously tested to ensure it performs reliably and upholds high standards of quality. These phones offer a superb level of performance and functionality, providing an excellent user experience.`,
+    },
+    'very-good': {
+      slides: [
+        { img: "{{ 'VeryGoodOne.png' | asset_img_url: 'medium' }}" },
+        { img: "{{ 'VeryGoodTwo.png' | asset_img_url: 'medium' }}" },
+      ],
+      battery: 'Battery Health +85%',
+      desc: `Very Good mobiles feature devices with subtle signs of prior use. While they may show some light wear, these phones are still in excellent condition and have been thoroughly tested to ensure they are fully functional. Offering substantial value, these devices deliver reliable performance and a high-quality experience.`,
+    },
+    fair: {
+      slides: [
+        { img: "{{ 'FairOne.png' | asset_img_url: 'medium' }}" },
+        { img: "{{ 'FairTwo.png' | asset_img_url: 'medium' }}" },
+      ],
+      battery: 'Battery Health +85%',
+      desc: `Fair mobiles feature devices with subtle signs of prior use. While they may show some light wear, these phones are still in excellent condition and have been thoroughly tested to ensure they are fully functional. Offering substantial value, these devices deliver reliable performance and a high-quality experience.`,
+    },
+  };
 
-      const closeBtn = drawer.querySelector("button[aria-label='Close']");
-      const overlay = drawer.shadowRoot ? drawer.shadowRoot.querySelector('[part="overlay"]') : null;
-
-      // Open
-      drawer.classList.add('animate', 'open');
-      drawer.setAttribute('open', '');
-      header.style.zIndex = '-1';
-
-      // Close function
-      function closeDrawer() {
-        drawer.classList.remove('open', 'animate');
-        drawer.removeAttribute('open');
-        setTimeout(() => {
-          header.style.zIndex = '10';
-        }, 300);
-      }
-
-      if (closeBtn) closeBtn.onclick = closeDrawer;
-      if (overlay) overlay.onclick = closeDrawer;
-    }
-
-    // Event delegation
-    document.addEventListener('click', function (event) {
-      const btn = event.target.closest('.drawer-button, .detail');
-      if (!btn) return;
-      openDrawer(btn.getAttribute('data-target'));
-    });
+  // ✅ Init Swiper once
+  let swiper = new Swiper('.condition-slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.custom-button-next',
+      prevEl: '.custom-button-prev',
+    },
   });
 
-  //////////////  Slider   /////////////////
+  // ✅ Function to update condition content
+  function updateCondition(type) {
+    const data = conditionData[type];
+    if (!data) return;
 
-  document.addEventListener('DOMContentLoaded', function () {
+    const wrapper = document.querySelector('.condition-slider .swiper-wrapper');
+    wrapper.innerHTML = data.slides
+      .map(
+        (slide, index) => `
+        <div class="swiper-slide condition-img-box condition-${type}">
+          <img class="condition-img-${index + 1}" src="${slide.img}" alt="${type}" width="320px">
+        </div>
+      `
+      )
+      .join('');
 
-    const conditionData = {
-      'like-new': {
-        slides: [
-          { img: "{{ 'LikeNewOne.png' | asset_img_url: 'medium' }}" },
-          { img: "{{ 'LikeNewTwo.png' | asset_img_url: 'medium' }}" },
-        ],
-        battery: 'Battery Health +85%',
-        desc: `Like New mobiles present an almost flawless appearance, mirroring devices that have just been manufactured. These phones are in excellent condition, with minimal to no signs of previous use, ensuring they perform at their best. Each device has been thoroughly tested and comes with the latest software updates. You can trust in receiving a nearly perfect product that combines high performance with reliability.`,
-      },
-      excellent: {
-        slides: [
-          { img: "{{ 'ExcellentOne.png' | asset_img_url: 'medium' }}" },
-          { img: "{{ 'ExcellentTwo.png' | asset_img_url: 'medium' }}" },
-        ],
-        battery: 'Battery Health +85%',
-        desc: `Mobiles in Excellent condition undergo thorough inspection and exhibit only minor signs of previous handling. Each device is rigorously tested to ensure it performs reliably and upholds high standards of quality. These phones offer a superb level of performance and functionality, providing an excellent user experience.`,
-      },
-      'very-good': {
-        slides: [
-          { img: "{{ 'VeryGoodOne.png' | asset_img_url: 'medium' }}" },
-          { img: "{{ 'VeryGoodTwo.png' | asset_img_url: 'medium' }}" },
-        ],
-        battery: 'Battery Health +85%',
-        desc: `Very Good mobiles feature devices with subtle signs of prior use. While they may show some light wear, these phones are still in excellent condition and have been thoroughly tested to ensure they are fully functional. Offering substantial value, these devices deliver reliable performance and a high-quality experience.`,
-      },
-      fair: {
-        slides: [
-          { img: "{{ 'FairOne.png' | asset_img_url: 'medium' }}" },
-          { img: "{{ 'FairTwo.png' | asset_img_url: 'medium' }}" },
-        ],
-        battery: 'Battery Health +85%',
-        desc: `Fair mobiles feature devices with subtle signs of prior use. While they may show some light wear, these phones are still in excellent condition and have been thoroughly tested to ensure they are fully functional. Offering substantial value, these devices deliver reliable performance and a high-quality experience.`,
-      },
-    };
+    document.querySelector('.condition-battery-health').textContent = data.battery;
+    document.querySelector('.condition-desc').textContent = data.desc;
 
-    let swiper = new Swiper('.condition-slider', {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.custom-button-next',
-        prevEl: '.custom-button-prev',
-      },
+    swiper.update();
+
+    // Mark active tab
+    document.querySelectorAll('.drawer-condition-buttons .block-swatch').forEach(tab => {
+      tab.classList.remove('active-tab');
     });
+    document
+      .querySelector(`.drawer-condition-buttons .block-swatch[data-target="${type}"]`)
+      ?.classList.add('active-tab');
+  }
 
-    function updateCondition(type) {
-      const data = conditionData[type];
-      if (!data) return;
-
-      const wrapper = document.querySelector('.condition-slider .swiper-wrapper');
-      wrapper.innerHTML = data.slides
-        .map(
-          (slide,index) => `
-      <div class="swiper-slide condition-img-box condition-${type}">
-        <img class="condition-img-${index+1}" src="${slide.img}" alt="${type}" width="320px">
-      </div>
-    `
-        )
-        .join('');
-
-      document.querySelector('.condition-battery-health').textContent = data.battery;
-      document.querySelector('.condition-desc').textContent = data.desc;
-
-      swiper.update();
-
-      document.querySelectorAll('.drawer-condition-buttons .block-swatch').forEach((tab) => {
-        tab.classList.remove('active-tab');
-      });
-      document
-        .querySelector(`.drawer-condition-buttons .block-swatch[data-target="${type}"]`)
-        ?.classList.add('active-tab');
+  // ✅ Event delegation for condition tab clicks
+  document.addEventListener('click', function (event) {
+    const tab = event.target.closest('.drawer-condition-buttons .block-swatch');
+    if (tab) {
+      updateCondition(tab.getAttribute('data-target'));
     }
-
-    document.querySelectorAll('.drawer-condition-buttons .block-swatch').forEach((tab) => {
-      tab.addEventListener('click', function () {
-        const target = this.getAttribute('data-target');
-        updateCondition(target);
-      });
-    });
-
-    updateCondition('like-new');
   });
 
+  // ✅ Drawer open logic
+  function openDrawer(drawerType) {
+    const drawer = document.querySelector(`cart-drawer[data-drawer="${drawerType}"]`);
+    if (!drawer) return;
+
+    const closeBtn = drawer.querySelector("button[aria-label='Close']");
+    const overlay = drawer.shadowRoot ? drawer.shadowRoot.querySelector('[part="overlay"]') : null;
+
+    drawer.classList.add('animate', 'open');
+    drawer.setAttribute('open', '');
+    header.style.zIndex = '-1';
+
+    // 🔹 Reset to default condition when opening condition drawer
+    if (drawerType === 'condition') {
+      updateCondition('like-new');
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('open', 'animate');
+      drawer.removeAttribute('open');
+      setTimeout(() => {
+        header.style.zIndex = '10';
+      }, 300);
+    }
+
+    if (closeBtn) closeBtn.onclick = closeDrawer;
+    if (overlay) overlay.onclick = closeDrawer;
+  }
+
+  // ✅ Button click to open drawer
+  document.addEventListener('click', function (event) {
+    const btn = event.target.closest('.drawer-button, .detail');
+    if (!btn) return;
+    openDrawer(btn.getAttribute('data-target'));
+  });
+
+  // ✅ Set default on first page load
+  updateCondition('like-new');
+});
 </script> {% endcomment %}
 
 <script>
@@ -441,4 +445,3 @@ document.addEventListener('DOMContentLoaded', function () {
   updateCondition('like-new');
 });
 </script>
-
