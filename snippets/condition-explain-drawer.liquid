@@ -63,9 +63,31 @@
     background-color:#FFE3E3;
   }
 
-  .drawer-condition-buttons-slider{
-    overflow-x:scroll;
-  }
+ .drawer-condition-buttons-slider {
+  overflow-x: scroll; /* auto ke jagah scroll use karein */
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  scrollbar-width: thin; /* Firefox ke liye */
+  scrollbar-color: #888 #f1f1f1; /* Firefox scrollbar colors */
+}
+
+/* Chrome, Safari, Edge ke liye */
+.drawer-condition-buttons-slider::-webkit-scrollbar {
+  height: 8px; /* Horizontal scrollbar height */
+}
+
+.drawer-condition-buttons-slider::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.drawer-condition-buttons-slider::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.drawer-condition-buttons-slider::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
    .drawer-condition-buttons {
     display: flex;
