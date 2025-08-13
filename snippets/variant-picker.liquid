@@ -19,6 +19,8 @@
 {%- endcomment -%}
 
 {% comment %} {% render 'custom-drawer' %} {% endcomment %}
+{% render 'condition-explain-drawer' %}
+
 
 {%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
 {%- assign size_label_list = 'general.label.size' | t | replace: ', ', ',' | downcase | split: ',' -%}
@@ -214,7 +216,7 @@
       </fieldset>
     {%- endfor -%}
   </variant-picker>
-  {% render 'condition-explain-drawer' %}
+ 
 {%- endunless -%}
 
 
