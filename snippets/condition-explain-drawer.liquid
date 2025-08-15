@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelector('.condition-battery-health').textContent = data.battery;
     document.querySelector('.condition-desc').textContent = data.desc;
-    document.querySelector('.condition-title').textContent = data.conditiontype Conditio Detail
+document.querySelector('.condition-title').textContent = `${data.conditiontype} Condition Detail`;
 
      swiper.destroy(true, true);
   swiper = new Swiper('.condition-slider', {
