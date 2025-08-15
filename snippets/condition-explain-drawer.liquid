@@ -203,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { img: "{{ 'LikeNewTwo.png' | asset_img_url: 'medium' }}" },
       ],
       battery: 'Battery Health +85%',
+      conditiontype: "Like New",
       desc: `Like New mobiles present an almost flawless appearance, mirroring devices that have just been manufactured. These phones are in excellent condition, with minimal to no signs of previous use, ensuring they perform at their best. Each device has been thoroughly tested and comes with the latest software updates. You can trust in receiving a nearly perfect product that combines high performance with reliability.`,
     },
     excellent: {
@@ -211,6 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { img: "{{ 'ExcellentTwo.png' | asset_img_url: 'medium' }}" },
       ],
       battery: 'Battery Health +85%',
+      conditiontype: "Excellent",
       desc: `Mobiles in Excellent condition undergo thorough inspection and exhibit only minor signs of previous handling. Each device is rigorously tested to ensure it performs reliably and upholds high standards of quality. These phones offer a superb level of performance and functionality, providing an excellent user experience.`,
     },
     'very-good': {
@@ -219,6 +221,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { img: "{{ 'VeryGoodTwo.png' | asset_img_url: 'medium' }}" },
       ],
       battery: 'Battery Health +85%',
+      conditiontype: "Very Good",
       desc: `Very Good mobiles feature devices with subtle signs of prior use. While they may show some light wear, these phones are still in excellent condition and have been thoroughly tested to ensure they are fully functional. Offering substantial value, these devices deliver reliable performance and a high-quality experience.`,
     },
     fair: {
@@ -227,6 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { img: "{{ 'FairTwo.png' | asset_img_url: 'medium' }}" },
       ],
       battery: 'Battery Health +85%',
+      conditiontype: "Fair",
       desc: `Fair mobiles feature devices with subtle signs of prior use. While they may show some light wear, these phones are still in excellent condition and have been thoroughly tested to ensure they are fully functional. Offering substantial value, these devices deliver reliable performance and a high-quality experience.`,
     },
   };
@@ -260,6 +264,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelector('.condition-battery-health').textContent = data.battery;
     document.querySelector('.condition-desc').textContent = data.desc;
+    document.querySelector('.condition-title').textContent = data.conditiontype Conditio Detail
 
      swiper.destroy(true, true);
   swiper = new Swiper('.condition-slider', {
