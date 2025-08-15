@@ -578,6 +578,38 @@
   }
 }
 
+
+.custom-drawer__icon-wrapper{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.certification-box,
+.highlights{
+    margin-top:40px
+}
+
+.highlights{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap:20px; 
+}
+
+.highlight-item{
+    display:flex;
+    justify-content:start;
+    gap:5px
+}
+
+@media screen and (max-width:416px){
+    .highlights{
+    display:grid;
+    grid-template-columns: 1fr;
+    row-gap:10px; 
+}
+}
+
 </style>
 
 <script>
