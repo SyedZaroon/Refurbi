@@ -99,7 +99,7 @@
           "type": "text",
           "settings": {
             "title": "About",
-            "content": "<p>34a Vega Street, Manchester, England,<br/>M8 9TW<br/>Company No: 11789514<br/>Email: info@refurbi.co.uk<a href=\"mailto:info@mobiledirectonline.co.uk\" title=\"mailto:info@mobiledirectonline.co.uk\"><strong><br/></strong></a>Call Us: +44 798 440 4572</p>",
+            "content": "<p>34a Vega Street, Manchester, England,<br/>M8 9TW<br/>Company No: 11789514<br/>Email: <a href=\"mailto:info@refurbi.co.uk\" title=\"mailto:info@refurbi.co.uk\">info@refurbi.co.uk</a><a href=\"mailto:info@mobiledirectonline.co.uk\" title=\"mailto:info@mobiledirectonline.co.uk\"><strong><br/></strong></a>Call Us: +44 798 440 4572</p>",
             "enable_follow_on_shop": true
           }
         },
