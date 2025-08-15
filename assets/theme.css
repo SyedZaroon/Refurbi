@@ -5793,6 +5793,7 @@ product-rerender {
 
   .footer__aside-top, .footer__aside-bottom {
     display: flex;
+    margin-top:5px;
   }
 
   .footer__copyright {
