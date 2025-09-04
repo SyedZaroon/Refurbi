@@ -18,15 +18,27 @@
     },
     "image_with_text_overlay_eCFVRE": {
       "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_NyhrbH": {
+          "type": "heading",
+          "settings": {
+            "text": "Return",
+            "heading_tag": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NyhrbH"
+      ],
       "settings": {
         "full_width": true,
         "allow_transparent_header": false,
         "enable_parallax": false,
-        "image_size": "lg",
-        "image": "shopify://shop_images/Contactpus-banner.jpg",
+        "image_size": "auto",
+        "image": "shopify://shop_images/bg-img.webp",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
-        "text_color": "#ffffff",
+        "text_color": "#1a1a1a",
         "overlay_color": "#000000",
         "overlay_opacity": 0
       }
