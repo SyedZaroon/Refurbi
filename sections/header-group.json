@@ -76,7 +76,7 @@
         "logo": "shopify://shop_images/Refurbi_final_logo.png",
         "logo_max_width": 165,
         "logo_mobile_max_width": 100,
-        "menu": "main-menu",
+        "menu": "outstock-main-menu",
         "sidebar_menu": "",
         "secondary_menu": "",
         "menu_open_trigger": "hover",
