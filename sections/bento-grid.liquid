@@ -1,57 +1,57 @@
 <div class="section   section-blends section-full bento-section">
   <h2 class="h2 bento-margin ">Shop By Category</h2>
   <div class="bento-grid">
-    <a class="item galaxy-watch" href="https://refurbi.co.uk/collections/galaxy-watches">
+    <a class="item galaxy-watch" href="{{ settings.galaxywatchurl }}">
       <div>
         <div class="galaxy-watch-text text text-wrap">
           <p class="bold">Galaxy Watch</p>
           <p class="shop">Shop Now</p>
         </div>
         <div class="circle-gradient"></div>
-        <div class="galaxy-watch-img">
+        <div class="galaxy-watch-img img">
           <img src="{{ 'Galaxywatch.png' | asset_url }}" width="100%" height="100%" alt="Galaxy Watch">
         </div>
       </div>
     </a>
 
-    <a class="item galaxy-tab" href="https://refurbi.co.uk/collections/samsung-tablet">
+    <a class="item galaxy-tab" href="{{ settings.galaxytaburl }}">
       <div>
         <div class="galaxy-tab-text text text-wrap">
           <p class="bold">Galaxy Tab</p>
           <p class="shop">Shop Now</p>
         </div>
-        <div class="galaxy-tab-img">
+        <div class="galaxy-tab-img img">
           <img src="{{ 'glaxytab.png' | asset_url }}" width="100%" height="100%" alt="Galaxy Tab">
         </div>
       </div>
     </a>
 
-    <a class="item google-pixel" href="https://refurbi.co.uk/collections/google-pixel">
+    <a class="item google-pixel" href=" {{ settings.googlepixelurl }}">
       <div>
         <div class="google-pixel-text text text-wrap">
           <p class="bold">Google Pixel</p>
           <p class="shop">Shop Now</p>
         </div>
-        <div class="google-pixel-img">
+        <div class="google-pixel-img img">
           <img src="{{ 'googlepixel.png' | asset_url }}" width="100%" height="100%" alt="Google Pixel">
         </div>
       </div>
     </a>
 
-    <a class="item samsung-galaxy" href="https://refurbi.co.uk/collections/samsung">
+    <a class="item samsung-galaxy" href="{{ settings.samsunggalaxyurl }}">
       <div>
         <div class="samsung-galaxy-text text text-wrap">
           <p class="bold">Samsung Galaxy</p>
           <p class="shop">Shop Now</p>
         </div>
         <div class="samsung-galaxy-overlay"></div>
-        <div class="samsung-galaxy-img">
+        <div class="samsung-galaxy-img img">
           <img src="{{ 'SamsungGalaxy.png' | asset_url }}" width="100%" height="100%px" alt="Samsung Galaxy">
         </div>
       </div>
     </a>
 
-    <a class="item iphone" href="https://refurbi.co.uk/collections/iphone">
+    <a class="item iphone" href="{{ settings.iphoneurl }}">
       <div>
         <div class="iphone-text text text-wrap">
           <p class="bold h2">iPhone</p>
@@ -60,13 +60,13 @@
         <div class="iphone-siriglow">
           <img src="{{ 'siriglow.png' | asset_url }}" width="100%" height="100%" alt="Siri Glow">
         </div>
-        <div class="iphone-img">
+        <div class="iphone-img img">
           <img src="{{ 'iphoneimg.png' | asset_url }}" width="100%" height="100%" alt="iPhone">
         </div>
       </div>
     </a>
 
-    <a class="item apple-watch" href="https://refurbi.co.uk/collections/apple-watches">
+    <a class="item apple-watch" href="{{ settings.applewatchurl }}">
       <div>
         <div class="apple-watch-text text text-wrap">
           <p class="bold h3">Apple Watch</p>
@@ -83,26 +83,38 @@
       </div>
     </a>
 
-    <a class="item ipad" href="https://refurbi.co.uk/collections/ipad">
+    <a class="item ipad" href="{{ settings.ipadurl }}">
       <div>
         <div class="ipad-text text text-wrap">
-          <p class="bold h3">iPad</p>
+          <p class="bold h6">iPad</p>
           <p class="shop">Shop Now</p>
         </div>
-        <div class="ipad-img">
+        <div class="ipad-img img">
           <img src="{{ 'ipad.png' | asset_url }}" width="100%" height="100%" alt="iPad">
         </div>
       </div>
     </a>
 
-    <a class="item game" href="https://refurbi.co.uk/collections/gaming-consoles">
+    <a class="item game" href="{{ settings.gamingconsolesurl }}">
       <div>
         <div class="game-text text text-wrap">
           <p class="bold">Gaming consoles</p>
           <p class="shop">Shop Now</p>
         </div>
-        <div class="game-img">
+        <div class="game-img img">
           <img src="{{ 'game.png' | asset_url }}" width="100%" height="100%" alt="iPad">
+        </div>
+      </div>
+    </a>
+
+    <a class="item airpods" href="{{ settings.airpodsurl }}">
+      <div>
+        <div class="ipad-text text text-wrap">
+          <p class="bold h6">AirPods</p>
+          <p class="shop">Shop Now</p>
+        </div>
+        <div class="airpods-img img">
+          <img src="{{ 'airpodsimg.png' | asset_url }}" width="100%" height="100%" alt="airpds">
         </div>
       </div>
     </a>
@@ -110,6 +122,9 @@
 </div>
 
 <style>
+  .img{
+    z-index: -1;
+  }
     .bento-section{
       padding-block-start:unset !important;
       padding-block-end:unset !important
@@ -160,7 +175,7 @@
 
     .bento-grid {
       display: grid;
-      grid-template-columns: 0.5fr 0.5fr 2fr 1fr;
+      grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
       grid-template-rows: repeat(4, auto);
       gap: 16px;
       margin: auto;
@@ -283,7 +298,7 @@
     }
 
     .apple-watch {
-      grid-area: 1 / 4 / 3 / 5;
+      grid-area: 1 / 4 / 3 / 6;
       background: #ececec;
     }
 
@@ -352,11 +367,13 @@
       bottom: 0px;
       left: 50%;
       transform: translateX(-50%);
+      width:150px;
     }
 
     .game{
       background-color:#F0F0F0;
       height:153px;
+      grid-area: 3 / 4 / 3 / 6;
     }
 
     .game-img{
@@ -367,6 +384,17 @@
 
   .game-text p{
     width:100px;
+  }
+
+  .airpods{
+    background-color:#F0F0F0;
+  }
+  .airpods-img{
+    width:110px;
+    position:absolute;
+    right:50%;
+    bottom:0px;
+    transform:translateX(50%);
   }
 
     .shop{
@@ -381,7 +409,6 @@
       .bento-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
         text-align: left;
       }
 
@@ -409,6 +436,20 @@
       }
       .google-pixel {
         grid-area: 4;
+      }
+
+      .game{
+            grid-area: 5 / 1 / 6 / 3;
+      }
+
+      .airpods{
+        grid-area: 4 / 2 / 5 / 3;
+      }
+
+      .airpods-img{
+        max-width: 177px;
+    width: 100%;
+    right: 120px;
       }
 
       .item {
@@ -534,36 +575,9 @@
 
     @media screen and (max-width: 550px) {
       .bento-grid {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction:column;
       }
-
-      .iphone {
-        grid-area: 1 / 1 / 2 / 2;
-      }
-
-      .apple-watch {
-        grid-area: 2 / 1 / 3 / 2;
-      }
-      .ipad {
-        grid-area: 3 / 1 / 4 / 2;
-      }
-
-      .samsung-galaxy {
-        grid-area: 4 / 1 / 5 / 2;
-      }
-
-      .galaxy-watch {
-        grid-area: 5 / 1 / 6 / 2;
-      }
-
-      .galaxy-tab {
-        grid-area: 6 / 1 / 7 / 2;
-      }
-      .google-pixel {
-        grid-area: 7 / 1 / 8 / 2;
-      }
-
      
     }
 
@@ -596,7 +610,48 @@
   "name": "Bento Grid",
   "tag": "section",
   "class": "bento-grid-section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "url",
+      "id": "galaxywatchurl",
+      "label": "Galaxy Watch URL"
+    },
+    {
+      "type": "url",
+      "id": "galaxytaburl",
+      "label": "Galaxy Tab URL"
+    },
+    {
+      "type": "url",
+      "id": "googlepixelurl",
+      "label": "Google Pixel URL"
+    },
+    {
+      "type": "url",
+      "id": "iphoneurl",
+      "label": "iPhone URL"
+    },
+    {
+      "type": "url",
+      "id": "applewatchurl",
+      "label": "Apple Watch URL"
+    },
+    {
+      "type": "url",
+      "id": "gamingconsoleurl",
+      "label": "Gaming Console URL"
+    },
+    {
+      "type": "url",
+      "id": "ipadurl",
+      "label": "iPad URL"
+    },
+    {
+      "type": "url",
+      "id": "airpodsurl",
+      "label": "Airpods URL"
+    }
+  ],
   "presets": [
     {
       "name": "Bento Grid"
