@@ -17,7 +17,16 @@
     "bento_grid_tnK4rr": {
       "type": "bento-grid",
       "name": "Bento Grid",
-      "settings": {}
+      "settings": {
+        "galaxywatchurl": "https://refurbi.co.uk/collections/galaxy-watches",
+        "galaxytaburl": "https://refurbi.co.uk/collections/samsung-tablet",
+        "googlepixelurl": "https://refurbi.co.uk/collections/google-pixel",
+        "iphoneurl": "https://refurbi.co.uk/collections/iphone",
+        "applewatchurl": "https://refurbi.co.uk/collections/apple-watches",
+        "gamingconsoleurl": "https://refurbi.co.uk/collections/gaming-consoles",
+        "ipadurl": "https://refurbi.co.uk/collections/ipad",
+        "airpodsurl": "https://refurbi.co.uk/collections/airpods"
+      }
     },
     "featured_collection_xjxjUg": {
       "type": "featured-collection",
