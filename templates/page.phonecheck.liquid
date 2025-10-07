@@ -1,1 +1,374 @@
-<h1>Phone Check</h1>
+<style>
+  .search-banner {
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 3% 0 0 !important;
+
+  }
+
+  .section.section-boxed.search-banner {
+    box-shadow: unset !important;
+  }
+
+  .cloud-one {
+    position: absolute;
+    top: 4%;
+    right: 6%;
+  }
+  .cloud-two {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+  }
+  .cloud-three {
+    position: absolute;
+    top: 7%;
+    right: 20%;
+  }
+  .cloud-five {
+    position: absolute;
+    top: 7%;
+    left: 10%;
+  }
+  .cloud-six {
+    position: absolute;
+    top: 20%;
+    left: 3%;
+  }
+
+  .phonecheck-text {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  }
+  .gradient-text {
+    background: linear-gradient(88.95deg, #24a1b7 24.38%, #75cf7e 75.62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-clip: text;
+  }
+  .phonecheck-image {
+    margin-top: 40px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .phonecheck-logo{
+    position:absolute;
+    left:8%;
+    top:0
+}
+
+@media screen and (max-width:1300px){
+  .phonecheck-logo{  left:2%;
+  }
+}
+
+  .phonecheck-about {
+    text-align: center;
+    margin: auto;
+    max-width: 744px;
+        margin-block-start: var(--calculated-section-spacing-block-end) !important;
+  }
+
+  .phonecheck-about p {
+    margin-top: 20px;
+    color: rgba(101, 101, 101, 1);
+  }
+
+  .phonecheck-point {
+    text-align: center;
+    margin: auto;
+  }
+
+  .phonecheck-point-list {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px 72px;
+  }
+
+  .grading-guide{
+    padding-block-end:0px !important;
+}
+
+  .condition-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .condition-item {
+    border: 1px solid #EBEBEB;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 16px;
+    container-type: inline-size;
+  }
+
+  .img-even-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top:12px;
+  }
+
+  .condition-description{
+    color: #282828;
+}
+.Condition-details{
+    min-height:170px
+}
+
+.img-bg{
+    border-radius:16px;
+}
+
+.likenew-img-bg{background-color:#dff7ff}
+.verygood-img-bg{background-color:#ececec}
+.fair-img-bg{background-color:#ffe3e3}
+.excellent-img-bg{background-color:#fbffee}
+
+.img-even-columns .img-bg:first-child{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+}
+
+.img-even-columns .img-bg:last-child{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+@media screen and (max-width:900px){
+ 
+.Condition-details {
+    min-height: unset;
+}
+}
+
+  @media screen and (max-width: 590px) {
+    .phonecheck-point-list {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 50px;
+    }
+    .phonecheck-point-list {
+      text-align: left;
+      line-height: 16px;
+    }
+  }
+
+  @container (max-width: 386px) {
+    .img-even-columns {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .condition-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+</style>
+
+<div>
+  <div class="section section-boxed search-banner ">
+    <div class="cloud-one">
+      <img
+        src="//refurbi.co.uk/cdn/shop/t/9/assets/cloud.png?v=82942008431412551731753171831"
+        alt="Cloud1"
+        width="34px"
+        height="17px"
+      >
+    </div>
+    <div class="cloud-two">
+      <img
+        src="//refurbi.co.uk/cdn/shop/t/9/assets/cloud.png?v=82942008431412551731753171831"
+        alt="Cloud2"
+        width="98px"
+        height="39px"
+      >
+    </div>
+    <div class="cloud-three">
+      <img
+        src="//refurbi.co.uk/cdn/shop/t/9/assets/cloud.png?v=82942008431412551731753171831"
+        alt="Cloud3"
+        width="71px"
+        height="34px"
+      >
+    </div>
+    <div class="cloud-five">
+      <img
+        src="//refurbi.co.uk/cdn/shop/t/9/assets/cloud.png?v=82942008431412551731753171831"
+        alt="Cloud3"
+        width="120px"
+        height="49px"
+      >
+    </div>
+    <div class="cloud-six">
+      <img
+        src="//refurbi.co.uk/cdn/shop/t/9/assets/cloud.png?v=82942008431412551731753171831"
+        alt="Cloud3"
+        width="52px"
+        height="27px"
+      >
+    </div>
+
+    <div class="phonecheck-text ">
+      <h2 class="h2">Refurbished Right.</h2>
+      <h2 class="h2 gradient-text">Tested to Perfection.</h2>
+    </div>
+
+    <div class="phonecheck-image">
+      <img
+        src="{{ 'phonecheckbannerimage.png' | asset_url }}"
+        alt="Phone Check Banner Image"
+        width="100%"
+        height="100%"
+      >
+        <div class="phonecheck-logo">
+            <img src="{{'phonechecklogo.png' | asset_url }}" alt="Phone Check Logo" width="25%" height="100%">
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="phonecheck-about section">
+  <h2 class="h2">What is Phonecheck?</h2>
+  <p>
+    At Refurbi, we believe buying refurbished should feel just like buying new. That’s why each phone undergoes our
+    professional inspection process, checking both hardware and software so your phone works as expected — right out of
+    the box.
+  </p>
+</div>
+
+<div class="phonecheck-point section">
+  <h2 class="h2">90+ Point Device Check</h2>
+  {% assign services = 'Battery Charge Cycles|Fingerprint Sensor|Power Button functionality|Home Button cracks|Volume Buttons functionality|Secondary microphone|Battery Health|Face ID|WiFi|GPS|Bluetooth|Loud Speaker|Earpiece|Headset Port|Front Camera|Rear Camera|Flashlight|Touch Screen|Network connectivity|UltraWide Camera Quality|Sim Reader|Glass chipped|Main microphone|Glass deep scratched|Liquid damage marks|Police stolen property|Network blocked phones|Insurance claim check|Screen lifted'
+    | split: '|'
+  %}
+  <div class="phonecheck-point-list">
+    {% for service in services %}
+      <div style="display:flex;align-items:center;gap:15px; justify-content:flex-start">
+        <img src="{{ 'phonecheckimg.png' | asset_url }}" width="20px" height="20px">
+        <p>{{ service }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="grading-guide section">
+  <h2 class="h2" style="text-align:center">Refurbi Grading Guide</h2>
+  <div class="condition-container">
+    <!-- ------------------------     Like New      ------------------- -->
+
+    <section class=" condition-item">
+      <div class="">
+        <div class="even-columns">
+          <div class="Condition-details">
+            <h5 class="condition-heading h5">Like New</h5>
+            <p class="condition-description">
+              Like New mobiles present an almost flawless appearance, mirroring devices that have just been
+              manufactured. These phones are in excellent condition, with minimal to no signs of previous use, ensuring
+              they perform at their best. Each device has been thoroughly tested and comes with the latest software
+              updates. You can trust in receiving a nearly perfect product that combines high performance with
+              reliability.
+            </p>
+          </div>
+
+            <div class="img-even-columns">
+                <div class="likenew-img-bg img-bg" >
+                    <img class="main--img" src="{{ 'LikeNewOne.png' | asset_url }}" alt="Like New One" width="248px" height="248px">
+                </div>
+                 <div class="likenew-img-bg img-bg">
+                    <img class="main--img" src="{{ 'LikeNewTwo.png' | asset_url }}" alt="Like New One" width="248px" height="248px">
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------     Excellent      ------------------- -->
+
+    <section class=" condition-item">
+      <div class="">
+        <div class="even-columns">
+          <div class="Condition-details">
+            <h5 class="condition-heading h5">Excellent</h5>
+            <p class="condition-description">
+              Mobiles in Excellent condition undergo thorough inspection and exhibit only minor signs of previous
+              handling. Each device is rigorously tested to ensure it performs reliably and upholds high standards of
+              quality. These phones offer a superb level of performance and functionality, providing an excellent user
+              experience.
+            </p>
+          </div>
+          <div class="img-even-columns">
+                <div class="excellent-img-bg img-bg">
+                    <img class="main--img" src="{{ 'ExcellentOne.png' | asset_url }}" alt="Like New One" width="248px" height="248px">
+                </div>
+                 <div class="excellent-img-bg img-bg">
+                    <img class="main--img" src="{{ 'ExcellentTwo.png' | asset_url }}" alt="Like New One" width="248px" height="248px">
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------     Very Good      ------------------- -->
+
+    <section class=" condition-item">
+      <div class="">
+        <div class="even-columns">
+          <div class="Condition-details">
+            <h5 class="condition-heading h5">Very Good</h5>
+            <p class="condition-description">
+              Very Good mobiles feature devices with subtle signs of prior use. While they may show some light wear,
+              these phones are still in excellent condition and have been thoroughly tested to ensure they are fully
+              functional. Offering substantial value, these devices deliver reliable performance and a high-quality
+              experience.
+            </p>
+          </div>
+         <div class="img-even-columns">
+                <div class="verygood-img-bg img-bg">
+                    <img class="main--img" src="{{ 'VeryGoodOne.png' | asset_url }}" alt="Like New One" width="248px" height="248px">
+                </div>
+                 <div class="verygood-img-bg img-bg">
+                    <img class="main--img" src="{{ 'VeryGoodTwo.png' | asset_url }}" alt="Like New One" width="248px" height="248px">
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------     Fair      ------------------- -->
+
+    <section class=" condition-item">
+      <div class="">
+        <div class="even-columns">
+          <div class="Condition-details">
+            <h5 class="condition-heading h5">Fair</h5>
+            <p class="condition-description">
+              Fair mobiles feature devices with subtle signs of prior use. While they may show some light wear, these
+              phones are still in excellent condition and have been thoroughly tested to ensure they are fully
+              functional. Offering substantial value, these devices deliver reliable performance and a high-quality
+              experience.
+            </p>
+          </div>
+        <div class="img-even-columns">
+                <div class="fair-img-bg img-bg">
+                    <img class="main--img" src="{{ 'FairOne.png' | asset_url }}" alt="Like New One" width="248px" height="248px">
+                </div>
+                 <div class="fair-img-bg img-bg">
+                    <img class="main--img" src="{{ 'FairTwo.png' | asset_url }}" alt="Like New One" width="248px" height="248px">
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
