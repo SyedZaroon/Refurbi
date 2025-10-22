@@ -62,7 +62,7 @@
 <div class="benefit-drawer-overlay" id="benefit-drawer-overlay"></div>
 
 <!-- Free Next Day Delivery -->
-<benefit-drawer id="drawer1" class="benefit-drawer drawer drawer--lg" style="visibility:hidden;">
+<benefit-drawer id="drawer1" class="benefit-drawer cart-drawer drawer drawer--lg" style="visibility:hidden;">
   <!-- Close button -->
   <button class="benefit-close-button" aria-label="Close">
     <svg
@@ -615,15 +615,19 @@
   /* Benefit drawer overlay and positioning */
   .benefit-drawer {
     position: fixed;
+    border-radius: 0.37rem;
+    max-width: 91vw;
+    height: 96vh;
+    margin: 1rem 1rem 1rem 0;
+
+    
     top: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
-    max-width: 550px;
     z-index: 999;
     background: white;
     transform: translateX(100%);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease-in-out;
     overflow-y: auto;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -642,12 +646,13 @@
     z-index: 998;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 
   .benefit-drawer-overlay.active {
     opacity: 1;
     visibility: visible;
+    cursor: var(--cursor-close-svg-url) 28 28, auto;
   }
 
   .custom-drawer-content {
@@ -663,6 +668,10 @@
     cursor: pointer;
     z-index: 10;
     padding: 8px;
+  }
+
+  .drawer-table-container{
+    overflow-x: scroll;
   }
 </style>
 
@@ -774,9 +783,13 @@ document.body.addEventListener('change', function (e) {
             if (overlay) overlay.classList.remove('active');
             document.body.style.overflow = '';
 
-            setTimeout(() => {
-              if (header) header.style.zIndex = '10';
-            }, 300);
+            drawer.addEventListener(
+              "transitionend",
+              () => {
+                if (header) header.style.zIndex = '10';
+              },
+              { once: true }
+            );
           };
 
           // Close button logic
