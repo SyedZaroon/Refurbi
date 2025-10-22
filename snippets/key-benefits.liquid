@@ -1,6 +1,6 @@
 <div class="key-benifits">
 
-  <div class="benifit-drawer-one benifit" onclick="openDrawer('drawer1')">
+  <div class="benifit-drawer-one benifit" data-drawer-id="drawer1">
     <div>
       <span class="bold">Free Next Day Delivery</span>
       <p class="learn">Learn More</p>
@@ -17,7 +17,7 @@
     </svg>
   </div>
 
-    <div class="benifit-drawer-four" onclick="openDrawer('drawer4')">
+    <div class="benifit-drawer-four" data-drawer-id="drawer4">
     <div>
       <span class="bold">13 Months Warranty </span>
       <p class="learn">Learn More</p>
@@ -29,7 +29,7 @@
   </div>
 
 
-  <div class="benifit-drawer-three" onclick="openDrawer('drawer3')">
+  <div class="benifit-drawer-three" data-drawer-id="drawer3">
     <div>
       <span class="bold">90 Point Inspection </span>
       <p class="learn">Learn More</p>
@@ -42,7 +42,7 @@
     </svg>
   </div>
 
-    <div class="benifit-drawer-two benifit" onclick="openDrawer('drawer2')">
+    <div class="benifit-drawer-two benifit" data-drawer-id="drawer2">
     <div>
       <span class="bold">Buy Now, Pay Later </span>
       <p class="learn">Learn More</p>
@@ -56,13 +56,15 @@
   </div>
 
 
-
 </div>
 
+<!-- Overlay for benefit drawers -->
+<div class="benefit-drawer-overlay" id="benefit-drawer-overlay"></div>
+
 <!-- Free Next Day Delivery -->
-<cart-drawer id="drawer1" class="cart-drawer drawer drawer--lg" style="visibility:hidden;">
+<benefit-drawer id="drawer1" class="benefit-drawer drawer drawer--lg" style="visibility:hidden;">
   <!-- Close button -->
-  <button is="close-button" aria-label="Close">
+  <button class="benefit-close-button" aria-label="Close">
     <svg
       role="presentation"
       stroke-width="2"
@@ -116,14 +118,13 @@
 
     <p>Order Monday to Thursday by 3 pm: Get your order the next day.</p>
 
-    <p>Orders placed after 3 pm on Friday will be processed on Monday.</p>
-  </div>
-</cart-drawer>
-
+      <p>Orders placed after 3 pm on Friday will be processed on Monday.</p>
+    </div>
+</benefit-drawer>
 <!-- Buy Now Pay later -->
-<cart-drawer id="drawer2" class="cart-drawer drawer drawer--lg" style="visibility:hidden;">
+<benefit-drawer id="drawer2" class="benefit-drawer drawer drawer--lg" style="visibility:hidden;">
   <!-- Close button -->
-  <button is="close-button" aria-label="Close">
+  <button class="benefit-close-button" aria-label="Close">
     <svg
       role="presentation"
       stroke-width="2"
@@ -317,12 +318,12 @@
       </div>
     </div>
   </div>
-</cart-drawer>
+</benefit-drawer>
 
 <!-- 90 Point Inspection -->
-<cart-drawer id="drawer3" class="cart-drawer drawer drawer--lg" style="visibility:hidden;">
+<benefit-drawer id="drawer3" class="benefit-drawer drawer drawer--lg" style="visibility:hidden;">
   <!-- Close button -->
-  <button is="close-button" aria-label="Close">
+  <button class="benefit-close-button" aria-label="Close">
     <svg
       role="presentation"
       stroke-width="2"
@@ -436,12 +437,12 @@
       </div>
     </div>
   </div>
-</cart-drawer>
+</benefit-drawer>
 
 <!-- 13 Months Warranty -->
-<cart-drawer id="drawer4" class="cart-drawer drawer drawer--lg" style="visibility:hidden;">
+<benefit-drawer id="drawer4" class="benefit-drawer drawer drawer--lg" style="visibility:hidden;">
   <!-- Close button -->
-  <button is="close-button" aria-label="Close">
+  <button class="benefit-close-button" aria-label="Close">
     <svg
       role="presentation"
       stroke-width="2"
@@ -473,7 +474,7 @@
       <br>
     </div>
   </div>
-</cart-drawer>
+</benefit-drawer>
 
 <style>
   .key-benifits {
@@ -610,6 +611,59 @@
       row-gap: 10px;
     }
   }
+
+  /* Benefit drawer overlay and positioning */
+  .benefit-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 550px;
+    z-index: 999;
+    background: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .benefit-drawer.open {
+    transform: translateX(0);
+  }
+
+  .benefit-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .benefit-drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .custom-drawer-content {
+    padding: 24px;
+  }
+
+  .benefit-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 8px;
+  }
 </style>
 
 <script>
@@ -680,65 +734,75 @@ document.body.addEventListener('change', function (e) {
     const header = document.querySelector('.shopify-section--header');
 
     // Get all benefit buttons
-    const benefitButtons = document.querySelectorAll("[onclick^='openDrawer']");
+    const benefitButtons = document.querySelectorAll("[data-drawer-id]");
 
     // Get all drawers
-    const drawers = document.querySelectorAll('.cart-drawer');
+    const drawers = document.querySelectorAll('.benefit-drawer');
+    const overlay = document.getElementById('benefit-drawer-overlay');
 
     benefitButtons.forEach((btn) => {
-      btn.addEventListener('click', function () {
-        const drawerId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const drawerId = this.getAttribute('data-drawer-id');
         const drawer = document.getElementById(drawerId);
 
         // Close all drawers first
         drawers.forEach((d) => {
-          d.style.opacity = '0';
           d.style.visibility = 'hidden';
-          d.removeAttribute('open');
           d.classList.remove('open', 'animate');
         });
 
         // Open selected drawer
         if (drawer) {
           drawer.style.visibility = 'visible';
-          drawer.style.opacity = '1';
-          drawer.setAttribute('open', '');
           drawer.classList.add('animate', 'open');
+          if (overlay) overlay.classList.add('active');
           if (header) header.style.zIndex = '-1';
+          document.body.style.overflow = 'hidden';
+
+          // Close drawer function
+          const closeDrawer = (e) => {
+            if (e) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+            
+            drawer.style.visibility = 'hidden';
+            drawer.classList.remove('open', 'animate');
+            if (overlay) overlay.classList.remove('active');
+            document.body.style.overflow = '';
+
+            setTimeout(() => {
+              if (header) header.style.zIndex = '10';
+            }, 300);
+          };
 
           // Close button logic
-          const closeBtn = drawer.querySelector("button[aria-label='Close']");
+          const closeBtn = drawer.querySelector(".benefit-close-button");
           if (closeBtn) {
-            closeBtn.addEventListener('click', () => {
-              drawer.style.opacity = '0';
-              drawer.style.visibility = 'hidden';
-              drawer.removeAttribute('open');
-              drawer.classList.remove('open', 'animate');
-
-              setTimeout(() => {
-                if (header) header.style.zIndex = '10';
-              }, 1000);
-            });
+            closeBtn.removeEventListener('click', closeDrawer);
+            closeBtn.addEventListener('click', closeDrawer);
           }
 
-          // Optional: If your <cart-drawer> has shadow DOM and an overlay, handle that
-          if (drawer.shadowRoot) {
-            const overlay = drawer.shadowRoot.querySelector('[part="overlay"]');
-            if (overlay) {
-              overlay.addEventListener('click', () => {
-                drawer.style.opacity = '0';
-                drawer.style.visibility = 'hidden';
-                drawer.removeAttribute('open');
-                drawer.classList.remove('open', 'animate');
-
-                setTimeout(() => {
-                  if (header) header.style.zIndex = '10';
-                }, 1000);
-              });
-            }
+          // Overlay click to close
+          if (overlay) {
+            overlay.removeEventListener('click', closeDrawer);
+            overlay.addEventListener('click', closeDrawer);
           }
         }
       });
     });
   });
+
+  // Define benefit-drawer as a simple custom element to prevent conflicts with cart-drawer
+  if (!window.customElements.get('benefit-drawer')) {
+    class BenefitDrawer extends HTMLElement {
+      constructor() {
+        super();
+      }
+    }
+    window.customElements.define('benefit-drawer', BenefitDrawer);
+  }
 </script>
