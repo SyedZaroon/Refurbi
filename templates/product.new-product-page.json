@@ -140,12 +140,23 @@
             "content": "<p>hi</p>",
             "page": "condition-explained"
           }
+        },
+        "item_VkT983": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Shipping & Returns",
+            "content": "<p>Learn more about our fast shipping options and hassle-free return & refund process. For complete details, please visit our <a href=\"https://refurbi.co.uk/pages/shipping-policy\" title=\"https://refurbi.co.uk/pages/shipping-policy\">Shipping page</a> and our <a href=\"https://refurbi.co.uk/pages/return-refund-policy\" title=\"https://refurbi.co.uk/pages/return-refund-policy\">Returns & Refunds</a> page.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "item_mJ8Wwg",
         "item_giDGLT",
-        "item_7pY96N"
+        "item_7pY96N",
+        "item_VkT983"
       ],
       "custom_css": [
         "@media screen and (min-width: 1150px) {.section-stack__main {width: 100%; }}"
